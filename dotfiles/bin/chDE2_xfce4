@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+#
+cp ~/bin/xinitFiles/xinitrc_xfce4 ~/.xinitrc
+## logout
+echo "xfce4 set.. you need to logout/login now..."

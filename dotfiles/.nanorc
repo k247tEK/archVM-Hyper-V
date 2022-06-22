@@ -1,0 +1,9 @@
+include /usr/share/nano-syntax-highlighting/*.nanorc
+set constantshow
+set mouse
+#set smooth
+#set morespace
+set nohelp
+set softwrap
+set atblanks
+#set boldtext
