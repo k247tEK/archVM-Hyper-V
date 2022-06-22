@@ -1,41 +1,41 @@
 # Arch Linux 2022-06 virtual machine on Windows10 <br>Hyper-V with Enhanced Session Mode
 ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [archWiki - Hyper-V](https://wiki.archlinux.org/title/Hyper-V).
 
-## Enabling Windows Hyper-V and OpenSSH Client features
+### Enabling Windows Hyper-V and OpenSSH Client features
 _Note that Hyper-V is not available on the Windows 10 Home edition, and requires Windows 10 Pro or equivalent._ 
 
-- ### [Enabling Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
+- #### [Enabling Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
 
-- ### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
+- #### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
 _Note: ssh client is only required if you wish to install guest OS using ssh session.._<br>
 
-- ## Setup Host
+- ### Setup Host
 
-    - ### Hyper-V Settings...
+    - #### Hyper-V Settings...
        - ### Disabling Server NUMA Spanning
        - ### Setting Server Enchanced Session Mode Policy
        - ### Setting User Enhanced Session Mode
-   - ### Virtual Switch Manager...
+   - #### Virtual Switch Manager...
         - ### Creating the Internal / External Network Switch
-- ## Setup Client
-   - ### Creating the virtual machine in Hyper-V Manager...
-        - ### Setting Hyper-V Generation 2 for a UEFI virtual machine
-        - ### Setting Hardware Firmware Boot order, ensure Network Adapter is last
-        - ### Disabling Secure Boot
-        - ### Disabling Dynamic Memory & Specifing RAM size 2048 MB
-        - ### Setting Number of virtual processors 2 cores
-        - ### Setting Hard Drive 32GB / DvD Drive & Network Adapter
-        - ### Setting Name 'Arch' & Description for virtual machine
-        - ### Enabling all Intergration Services
-        - ### Disabling Checkpoints
-        - ### Setting Automatic Start Action to Nothing
-        - ### Setting Automatic Stop Action to Power Off
-### _<p align="center">Note: check all setings before powering on virtual machine and connecting to it..</p>_
+- ### Setup Client
+   - #### Creating the virtual machine in Hyper-V Manager...
+        - #### Setting Hyper-V Generation 2 for a UEFI virtual machine
+        - #### Setting Hardware Firmware Boot order, ensure Network Adapter is last
+        - #### Disabling Secure Boot
+        - #### Disabling Dynamic Memory & Specifing RAM size 2048 MB
+        - #### Setting Number of virtual processors 2 cores
+        - #### Setting Hard Drive 32GB / DvD Drive & Network Adapter
+        - #### Setting Name 'Arch' & Description for virtual machine
+        - #### Enabling all Intergration Services
+        - #### Disabling Checkpoints
+        - #### Setting Automatic Start Action to Nothing
+        - #### Setting Automatic Stop Action to Power Off
+#### _<p align="center">Note: check all setings before powering on virtual machine and connecting to it..</p>_
 
 ###### <p align="center">[Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads), 8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
-## [First Boot of virtual machine & installing OS](#firstboot)
+### [First Boot of virtual machine & installing OS](#firstboot)
 <img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="600" />
 
 Arch linux 2022-06 now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
@@ -50,7 +50,7 @@ This guided installer will perform (query) the following steps:<br>
 - create users with sudo administrator authority
 - install a boot loader.<br>
 
-## [Setting up SSH on the installation image](#setupsshinstall)
+### [Setting up SSH on the installation image](#setupsshinstall)
 To setup OS using SSH session, set keybord language, find IP address of virtual machine & set the root password.
 - set your keyboard layout using `loadkeys`.
 ```console
@@ -75,14 +75,14 @@ check service has started and enabled..
 Now if you wish, you can connect to the installation image using the `root` account.<br>
 <br>
 
-## [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
+### [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
 _Note: to manually install arch, follow steps detailed in the wiki's [installation
 guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
-### Create Config folder to save installtion settings to..
+#### Create Config folder to save installtion settings to..
 ```console
 # mkdir /insCONFIG
 ```
-### & run archinstall...
+#### & run archinstall...
 ```console
 # archinstall
 ```
@@ -129,7 +129,7 @@ $ sudo lsblk
 ```console
 $ sudo fdisk -l
 ```
-## Apply a System Update..
+### Apply a System Update..
 ```console
 $ sudo pacman -Syu
 ```
@@ -198,7 +198,7 @@ $
 </code></pre>
 _Note: $ prompt is in new line.._ 
 
-### [Check root account access with sudo..](#chkrootacc)
+#### [Check root account access with sudo..](#chkrootacc)
 ```console
 $ sudo su -
 ```
@@ -226,7 +226,7 @@ copy `.bashrc` & `.bash_profile` files from k247 home folder to root home folder
 ```
 use exit, to retun to k247 bash shell..<br>
 
-## [Creating default directories](#createdefdir)
+### [Creating default directories](#createdefdir)
 ```console
 $ sudo pacman -S xdg-user-dirs
 $ cd
@@ -271,7 +271,7 @@ $ cd Downloads
 ref: https://itsfoss.com/best-aur-helpers/
 <br>
 
-## [yay..](#yay) <br>
+### [yay..](#yay) <br>
 >is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
 
 make sure you have <b>git</b> & Required Packages to build yay..
@@ -284,7 +284,7 @@ $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
 $ makepkg -si
 ```
-## [Update yay..](#updateyay)
+### [Update yay..](#updateyay)
 ```console
 $ yay -Syu
 ```
@@ -303,13 +303,13 @@ $ yay -Syu
 $
 </code></pre>
 now, getting ready to enable Enchanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh` 
-## Setup ssh Keys..
+### Setup ssh Keys..
 ```console
 $ cd ~/.ssh
 $ ssh-keygen -b 4096
 $ cd
 ```
-## [Install packages required for Enchanced Session Mode](#pkgsforenhsession)
+### [Install packages required for Enchanced Session Mode](#pkgsforenhsession)
 from https://wiki.archlinux.org/title/Hyper-V
 > In order to use Hyper-V integration services, install hyperv and start/enable the services hv_fcopy_daemon.service, hv_kvp_daemon.service and hv_vss_daemon.service
 ```console
@@ -325,20 +325,20 @@ Get-VMIntegrationService -VMName "Arch"
 ```
 <img src="images/powerShell_01Capture.PNG" alt="powerShell Get-VM" width="600" /><br>
 
-## [Install, `xrdp`](#instxrdp) 
+### [Install, `xrdp`](#instxrdp) 
 > provides a graphical login to remote machines using RDP (Microsoft Remote Desktop Protocol).
 http://xrdp.org
 
 ```console
 $ yay -S xrdp
 ```
-## [Install, `xorgxrdp`](#instxorgxrdp)
+### [Install, `xorgxrdp`](#instxorgxrdp)
 > is a collection of modules to be used with a pre-existing X.Org install to make the X server act like X11rdp. Unlike X11rdp, you don't have to recompile the whole X Window System. Instead, additional modules are installed to a location where the existing Xorg installation would pick them.
 https://github.com/neutrinolabs/xorgxrdp
 ```console
 $ yay -S xorgxrdp
 ```
-## [Install, `pulseaudio-module-xrdp`](#instpulsexrdp)
+### [Install, `pulseaudio-module-xrdp`](#instpulsexrdp)
 > xrdp implements Audio Output redirection using PulseAudio, which is a sound system used on POSIX operating systems.
 https://github.com/neutrinolabs/pulseaudio-module-xrdp
 ```console
@@ -347,7 +347,7 @@ $ yay -S pulseaudio-module-xrdp
 ```
 _Note: sbc is required in order to successfully build pulseaudio-module-xrdp.._
 
-## [Configure the XRDP server..](#confxrdp)
+### [Configure the XRDP server..](#confxrdp)
 > By default, you may suffer from poor mouse and desktop experience. 
 Enhanced session mode features better mouse and video experience and integrated clipboard.
 ```console
@@ -357,7 +357,7 @@ $ cd linux-vm-tools/arch
 $ sudo ./install-config.sh
 ```
 _Note: only need to configure the xrdp server, no need for makepkg.sh..._
-## [Edit ~/.xinitrc to start Desktop Environment](#editxinitrc)
+### [Edit ~/.xinitrc to start Desktop Environment](#editxinitrc)
 copy the system default xinitrc file, to home folder..
 ```console
 $ cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -383,7 +383,7 @@ replace __Your_Arch_Machine__ with your virtual machine name.. ie.. Arch..
 Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 ```
 
-## [Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)
+### [Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)
 <!-- 
 <img src="images/enhSessionMode.png" alt="enchanced Session Mode" width="600" /><br>
 -->
@@ -400,7 +400,7 @@ video here...
 https://youtu.be/8R3ZZj5bMX4 
 -->
 
-## [PulseAudio Sound Server](#pulseaudiosrv)
+### [PulseAudio Sound Server](#pulseaudiosrv)
 even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable PulseAudio Sound System(start-pulseaudio-x11) from Session and Startup & create a new entry..
 ```
 pulseaudio --start
@@ -409,13 +409,13 @@ pulseaudio --start
 logout & back in again.. and that should fix the sound.. ;-]..<br>
 <br>
 
-## [polkit & xfce-Desktop with xrdp](#polkitxfcexrdp)
+### [polkit & xfce-Desktop with xrdp](#polkitxfcexrdp)
 ref: https://wiki.archlinux.org/title/Polkit
 
 these three don't play nice with each other.. sooo will have to add some rules for polkit..<br>
 but please be adviced..<br>
-### <b>THIS SHOULD NOT BE DONE ON PRODUCTIONS SYSTEMS...</b>
-## Bypass password prompt - Globally
+#### <b>THIS SHOULD NOT BE DONE ON PRODUCTIONS SYSTEMS...</b>
+### Bypass password prompt - Globally
 > Create the following file as root: 
 ```console
 $ sudo nano /etc/polkit-1/rules.d/49-nopasswd_global.rules
@@ -440,7 +440,7 @@ for more info, have a read of blog post below..
 
 <br>
 
-## [Disable suspend and hibernate](#suspendhibernate)
+### [Disable suspend and hibernate](#suspendhibernate)
 > The following rule disables suspend and hibernate for all users.
 ```console
 $ sudo nano /etc/polkit-1/rules.d/10-disable-suspend.rules
@@ -468,7 +468,7 @@ Reboot virtual machine..
 
 <img src="images/xfce_xrdpLogoutCapture.PNG" alt="xfce xrdp logout" width="auto" /><br>no more suspend / hibernate or Hybrid-sleep..
 
-### [xorg packages..](#xorgpkgs)
+#### [xorg packages..](#xorgpkgs)
 ```console
 $ sudo pacman -S xorg-xhost xorg-xdpyinfo xorg-xdriinfo xorg-xlsclients \
 xorg-xvinfo xorg-xvinfo xorg-font-util --needed
@@ -479,21 +479,21 @@ xhost +local:root > /dev/null 2>&1
 ```
 save and exit, then source the `.bashrc` file or logout / login again..<br><br>
 
-### [dbus packages..](#dbuspkgs)
+#### [dbus packages..](#dbuspkgs)
 ```console
 $ sudo pacman -S accountsservice
 ```
 not sure if this is needed, but found related `dbus` error in logs..<br><br>
 
-## [caja File Manger](#cajafileman)
+### [caja File Manger](#cajafileman)
 ```console
 $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
 
-## [thunar Root File Manager](#thunarroot)
+### [thunar Root File Manager](#thunarroot)
 <img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /><br>
 
-### create Custom Action..
+#### create Custom Action..
 from edit menu..<br>
 
 <img src="images/configCustAction.png" alt="xfce xrdp logout" width="480" /><br>
@@ -513,7 +513,7 @@ works.. ;-]... sometimes the `$`implest things are the most profound..<br>
 
 <br>
 
-## [File managers & Network scanning](#filemanscan)
+### [File managers & Network scanning](#filemanscan)
 thunar and caja, both will fail to find any network shares until the required packages `gvfs-smb`, `cifs-utils` are installed.. first, optionally.. enable.. avahi-daemon.. https://www.avahi.org
 ```console
 $ sudo systemctl enable --now avahi-daemon
@@ -537,7 +537,7 @@ $ sudo touch /etc/samba/smb.conf
 ```
 Reboot virtual machine..
 
-## [Configure Samba server](#confsamba)
+### [Configure Samba server](#confsamba)
 ref: https://wiki.archlinux.org/title/Samba,<br>
 https://wiki.manjaro.org/index.php/Using_Samba_in_your_File_Manager,<br>
 https://forum.manjaro.org/t/root-tip-basic-samba-setup-and-troubleshooting/100420/1<br>
@@ -654,7 +654,7 @@ k247@yoga700-11isk:</code></pre>
 https://help.ubuntu.com/community/Samba/SambaClientGuide<br>
 <br>
 
-## [Whisker Menu & xfce-Desktop Panel](#whiskermenu)
+### [Whisker Menu & xfce-Desktop Panel](#whiskermenu)
 by default, arch linux 2022-06 does not use Whisker menu & you will have to manually add it to the desktop panel.<br>
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start<br>
 https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/<br>
@@ -663,7 +663,7 @@ https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
-## [Mugshot & xfce-Desktop](#mugshotid)
+### [Mugshot & xfce-Desktop](#mugshotid)
  > is a lightweight user configuration utility for Linux designed for simplicity and ease of use. Quickly update your personal profile and sync your updates across applications.<br>
  https://github.com/bluesabre/mugshot
 
@@ -672,7 +672,7 @@ $ yay -S mugshot
 ```
 _Note: the user icon image file is `~/.face`_
 
-## [xfce4 Places plugin](#xfceplaces)
+### [xfce4 Places plugin](#xfceplaces)
 https://docs.xfce.org/panel-plugins/xfce4-places-plugin/start
 
 install xfce places plugin from `AUR`..
@@ -683,14 +683,14 @@ $ yay -S xfce4-places-plugin
 
 then add to panel..
 
-## [xfce-Desktop panel Action Buttons](#actionbuttons)
+### [xfce-Desktop panel Action Buttons](#actionbuttons)
 <img src="images/xfcepanelActionBut.PNG" alt="xfce panel action buttons" width="320" /><br>
 select Restart & de-select Suspend..
 
-## [xfce-Desktop Wallpapers](#wallpapers)
+### [xfce-Desktop Wallpapers](#wallpapers)
 <img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" /><br>
 
-## [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)<br>
+### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)<br>
 ```
 org.xfce.ScreenSaver[452]: Xlib:  extension "DPMS" missing on display ":10.0"
 ```
@@ -700,13 +700,13 @@ $ sudo pacman -R xfce4-screensaver
 ```
 thats one less thing to start.. assigned only 2GB of RAM to this VM..<br>
 
-## [Clipman - clipboard Manager](#clipman)<br>
+### [Clipman - clipboard Manager](#clipman)<br>
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a pitcure there..<br>
 <img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /><br>
 <br>
 
-## [xfce4-notes-plugin - Notes](#xfcenotes)
+### [xfce4-notes-plugin - Notes](#xfcenotes)
 can't seem to find setting to change background colour..<br>
 online search, suggests to use style sheets..<br>
  temp fix.. is to hard code it.. find in `gtk-main.css` 
@@ -731,30 +731,30 @@ well.. for now.. this works for notes 1.9.0.<br>
 
 <br>
 
-## [Eye candy](#eyecndy)
+### [Eye candy](#eyecndy)
 https://wiki.archlinux.org/title/Category:Eye_candy
 ```console
 $ sudo pacman -S archey3 fortune-mod cmatrix --needed
 ```
 
-## [Microsoft fonts](#msfonts)
+### [Microsoft fonts](#msfonts)
 https://wiki.archlinux.org/title/Microsoft_fonts
 ```console
 $ yay -S ttf-ms-fonts
 ```
 
-## [GTK and Qt themes](#gtkqt)
+### [GTK and Qt themes](#gtkqt)
 https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
 tbc..
 
-## [Multimedia apps](#multimedia)
+### [Multimedia apps](#multimedia)
 https://wiki.archlinux.org/title/List_of_applications/Multimedia
 ```console
 $ sudo pacman -S vlc gst-libav
 ```
 _Note: snap vlc.. does not play nice with xrdp.._
 
-## [Web browsers](#webbrowsers)
+### [Web browsers](#webbrowsers)
 https://wiki.archlinux.org/title/List_of_applications#Web_browsers
 ```console
 $ sudo pacman -S opera
@@ -766,7 +766,7 @@ useful bash shell tools..
 ```console
 $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 ```
-## [bash Shell & Tumx - Session management](#bashtmux)
+### [bash Shell & Tumx - Session management](#bashtmux)
 Home Folder dotfiles:
 [.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
 
@@ -822,7 +822,7 @@ _Note: `.insCONFIG` folder contains the saved installation files used by archins
 
 <br>
 
-## [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
+### [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
 https://github.com/tmux-plugins/tpm, https://github.com/tmux-plugins/tmux-resurrect
 
 Clone TPM:
@@ -830,7 +830,7 @@ Clone TPM:
 $ cd
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-### [install Tmux plugins](#tmuxplugins)
+#### [install Tmux plugins](#tmuxplugins)
 create or download [~/.tmux.conf](dotfiles/.tmux.conf) & run tmux session..
 ```console
 $ tmux
@@ -845,7 +845,7 @@ now both plugins should be installed.. run tmux.. set layout.. and save it with.
 [Ctrl] + [b] then [s] & to restore session layout [Ctrl] + [b] then [r]..<br>
 <br>
 
-## [install snap & Flatpak](#snapflatpak)
+### [install snap & Flatpak](#snapflatpak)
 https://snapcraft.io/docs/installing-snap-on-arch-linux, https://flatpak.org/setup/Arch
 ```console
 $ sudo pacman -S flatpak
@@ -871,7 +871,7 @@ _Note: some apps will not start in xrdp.. have to look into snap with xrpd.. tbc
 
 <br>
 
-## [install Pamac - package Manager, & setup with AUR](#pamacaur)
+### [install Pamac - package Manager, & setup with AUR](#pamacaur)
 
 ```console
 $ yay -S pamac-aur
@@ -879,7 +879,7 @@ $ yay -S pamac-aur
 <img src="images/pamac-aur.PNG" alt="tmux session" width="600" /><br>
 _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for major updates.._
 
-### [List of installed packages](#lstinstalledpkgs) 
+#### [List of installed packages](#lstinstalledpkgs) 
 > Maintain a list of all installed packages so that if a complete re-installation is inevitable, it is easier to re-create the original environment.<br>
 https://wiki.archlinux.org/title/Pacman_tips#List_of_installed_packages
 
@@ -899,7 +899,7 @@ which can be reinstalled with --asdeps.<br>
 Use pacman -Qqem > foreignpkglist.txt<br>
 to create the list of AUR and other foreign packages that have been explicitly installed.<br>
 
-### [Pacman database](#pacmandb)
+#### [Pacman database](#pacmandb)
 See pacman/Tips and tricks#Back up the pacman database.
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Back_up_the_pacman_database
 
@@ -912,7 +912,7 @@ FIX Pamac.. if pamac ever fails to update categories..
 ```console
 $ sudo pacman -Syu archlinux-appstream-data
 ```
-## [Mirrors & pacman](#mirrorspacman)
+### [Mirrors & pacman](#mirrorspacman)
 https://wiki.archlinux.org/title/Mirrors<br>
 use the Pacman Mirrorlist Generator page.<br>
 https://archlinux.org/mirrorlist/<br>
@@ -931,7 +931,7 @@ except for the most recent three, by default:
 $ sudo  paccache -r
 ```
 
-### [System backup](#systembackup)
+#### [System backup](#systembackup)
 https://wiki.archlinux.org/title/System_backup<br>
 
 Using `rsync`
@@ -941,14 +941,14 @@ https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
 $ sudo pacman -S rsync
 ```
 
-## [ooh.. install the F..ing manual..](#installman)
+### [ooh.. install the F..ing manual..](#installman)
 ```console
 $ sudo pacman -S man
 ```
 
 <br>
 
-## [setup i3 with xfce-Desktop](#i3xfcedsk)
+### [setup i3 with xfce-Desktop](#i3xfcedsk)
 https://wiki.archlinux.org/title/I3
 ```console
 $ sudo pacman -S i3-gaps i3status i3blocks i3lock
@@ -961,11 +961,11 @@ https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
 </a><br>
 
 
-### Background - wallpaper manager for i3
+#### Background - wallpaper manager for i3
 ```console
 $ sudo pacman -S feh
 ```
-### picom - Compositor Manager
+#### picom - Compositor Manager
 ```console
 $ sudo pacman -S picom
 ```
@@ -981,11 +981,11 @@ if you have problems with `vsync`.. not supported.. then..
 ```console
 picom --no-vsync --config ~/.config/i3/picom.conf
 ```
-### dmenu - Application launcher
+#### dmenu - Application launcher
 ```console
 $ sudo pacman -S dmenu
 ```
-## [chDE2_i3](dotfiles/bin/chDE2_i3) & [chDE2_xfce4](dotfiles/bin/chDE2_xfce4)
+### [chDE2_i3](dotfiles/bin/chDE2_i3) & [chDE2_xfce4](dotfiles/bin/chDE2_xfce4)
 change desktop environment to i3 & change desktop environment to xfce-Desktop..<br>
 <b>caution:</b> shell scripts will overwrite `.xinitrc` file in users home folder..<br>
 & they require [xinitrc_i3](dotfiles/bin/xinitFiles/xinitrc_i3) & [xinitrc_xfce4](dotfiles/bin/xinitFiles/xinitrc_xfce4) be in `~/bin/xinitFiles`..<br>
