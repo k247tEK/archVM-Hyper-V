@@ -32,7 +32,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
         - #### Setting Automatic Stop Action to Power Off
 #### _<p align="center">Note: check all setings before powering on virtual machine and connecting to it..</p>_
 
-###### <p align="center">[Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads), 8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
+###### <p align="center">[Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads), <br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
 ### [First Boot of virtual machine & installing OS](#firstboot)
