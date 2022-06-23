@@ -273,7 +273,6 @@ $ cd Downloads
 ```
 > Yaourt is Dead! Use These Alternatives for AUR in Arch Linux<br>
 ref: https://itsfoss.com/best-aur-helpers/
-<br>
 
 ## [yay..](#yay) <br>
 >is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
