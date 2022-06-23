@@ -39,7 +39,8 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 ### [First Boot of virtual machine & installing OS](#firstboot)
 <br>
-<p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="580" /></p>
+<p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
+<br>
 
 Arch linux 2022-06 now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
 This guided installer will perform (query) the following steps:<br>
@@ -98,9 +99,9 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
 
 <!-- [![archinstall](images/archinstall_ytb.png)](https://youtu.be/KA16fFaSFv4) -->
 
-<a href="https://youtu.be/KA16fFaSFv4" target="_blank">
+<p align="center"><a href="https://youtu.be/KA16fFaSFv4" target="_blank">
  <img src="images/archinstall_ytb.png" alt="archinstall" width="600" height="auto" border="3" />
-</a>
+</a></p>
 <br>
 
 archinstall - has setup user k247 with sudo administrator authority & has diabled root account..<br>
@@ -117,7 +118,7 @@ SSH session can now be used to continue setup & customization of arch xfce-Deskt
 ```console
 $ ssh k247@192.168.0.100
 ```
-<img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /><br>
+<p align="center"><img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /></p><br>
 
 _Note: archinstall - optional user packages.. firefox htop lsof iftop net-tools lnav tmux neofetch mc_<br>
 
@@ -274,7 +275,7 @@ $ cd Downloads
 ref: https://itsfoss.com/best-aur-helpers/
 <br>
 
-### [yay..](#yay) <br>
+## [yay..](#yay) <br>
 >is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
 
 make sure you have <b>git</b> & Required Packages to build yay..
