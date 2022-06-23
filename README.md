@@ -703,9 +703,8 @@ thats one less thing to start.. assigned only 2GB of RAM to this VM..<br>
 
 ### [Clipman - clipboard Manager](#clipman)<br>
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a pitcure there..<br>
-<img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
-<img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /><br>
-<br>
+<p align="center"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
+<img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p><br>
 
 ### [xfce4-notes-plugin - Notes](#xfcenotes)
 can't seem to find setting to change background colour..<br>
@@ -723,7 +722,7 @@ $ sudo nano /usr/share/xfce4-notes-plugin/gtk-3.0/gtk-main.css
 ```
 save & exit.. right click on notes icon on panel, & click remove.. then run notes again from application menu..<br>
 
-[<img src="images/xfceNotesBKfix.PNG" alt="clpman setting" width="600" /><br>](https://youtu.be/0hiUuL5uTKc?t=11)
+[<p align="center"><img src="images/xfceNotesBKfix.PNG" alt="clpman setting" width="600" />](https://youtu.be/0hiUuL5uTKc?t=11)</p>
 
 now.. I don't know if this is setting the background colour, or braking the 
 `@notes_bg_color` variable,<br>
@@ -877,7 +876,7 @@ _Note: some apps will not start in xrdp.. have to look into snap with xrpd.. tbc
 ```console
 $ yay -S pamac-aur
 ```
-<img src="images/pamac-aur.PNG" alt="tmux session" width="600" /><br>
+<p align="center"><img src="images/pamac-aur.PNG" alt="tmux session" width="600" /></p><br>
 _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for major updates.._
 
 #### [List of installed packages](#lstinstalledpkgs) 
