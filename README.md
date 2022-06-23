@@ -35,8 +35,11 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 ###### <p align="center">[Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads), <br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
+<br>
+
 ### [First Boot of virtual machine & installing OS](#firstboot)
-<img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="600" />
+<br>
+<p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="580" /></p>
 
 Arch linux 2022-06 now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
 This guided installer will perform (query) the following steps:<br>
