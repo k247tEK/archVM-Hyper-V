@@ -61,10 +61,10 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 ### <p align="center">[First Boot of virtual machine & installing OS](#firstboot)</p>
 
 <p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
-<br>
 
 Arch linux 2022-06 now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
-This guided installer will perform (query) the following steps:<br>
+This guided installer will perform (query) the following steps:
+
 - configure the locale;
 - select the mirrors;
 - partition the disks;
@@ -73,57 +73,66 @@ This guided installer will perform (query) the following steps:<br>
 - set the hostname;
 - set the root password;
 - create users with sudo administrator authority
-- install a boot loader.<br>
+- install a boot loader.
 
 ### [Setting up SSH on the installation image](#setupsshinstall)
+
 To setup OS using SSH session, set keybord language, find IP address of virtual machine & set the root password.
+
 - set your keyboard layout using `loadkeys`.
+
 ```console
 # loadkeys uk
 ```
+
 - Note down the DHCP-assigned IP address of the virtual machine.
+
 ```console
 # ip addr
 ```
+
 - Set the password of the root user so that you can connect to it via SSH.
+
 ```console
 # passwd
 ```
+
 _Note: sshd service must be running.._
+
 ```console
 # systemctl enable --now sshd
 ```
+
 check service has started and enabled..
+
 ```console
 # systemctl status sshd
 ```
-Now if you wish, you can connect to the installation image using the `root` account.<br>
+
+Now if you wish, you can connect to the installation image using the `root` account.
+
 <br>
 
 ### [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
+
 _Note: to manually install arch, follow steps detailed in the wiki's [installation
 guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
+
 #### Create Config folder to save installtion settings to..
+
 ```console
 # mkdir /insCONFIG
 ```
+
 #### & run archinstall...
+
 ```console
 # archinstall
 ```
-<!--
-<img src="images/archinstall_ytb.png" alt="archinstall full youtube video" width="600" /><br>
-<br>
--->
-
-<!-- https://youtu.be/KA16fFaSFv4 -->
-
-<!-- [![archinstall](images/archinstall_ytb.png)](https://youtu.be/KA16fFaSFv4) -->
 
 <p align="center"><a href="https://youtu.be/KA16fFaSFv4" target="_blank">
  <img src="images/archinstall_ytb.png" alt="archinstall" width="600" height="auto" border="3" />
 </a></p>
-<br>
 
 archinstall - has setup user k247 with sudo administrator authority & has diabled root account..<br>
 Also sshd service has to be re-enabled & started:<br>
@@ -131,33 +140,46 @@ Also sshd service has to be re-enabled & started:<br>
 ```console
 $ sudo systemctl enable --now sshd
 ```
+
 check service has started and enabled..
+
 ```console
 $ sudo systemctl status sshd
 ```
+
 SSH session can now be used to continue setup & customization of arch xfce-Desktop.
+
 ```console
 $ ssh k247@192.168.0.100
 ```
-<p align="center"><img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /></p><br>
 
-_Note: archinstall - optional user packages.. firefox htop lsof iftop net-tools lnav tmux neofetch mc_<br>
+<p align="center"><img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /></p>
+
+#### _Note: archinstall - optional user packages.. firefox htop lsof iftop net-tools lnav tmux neofetch mc_
 
 Check EFI setup..
+
 ```console
 $ sudo efivar -l
 ```
+
 Check hard drive / Block storage..
+
 ```console
 $ sudo lsblk
 ```
+
 ```console
 $ sudo fdisk -l
 ```
+
 ### Apply a System Update..
+
 ```console
 $ sudo pacman -Syu
+
 ```
+
 <pre><code>:: Synchronising package databases...
  core is up to date
  extra is up to date
@@ -168,7 +190,7 @@ $ sudo pacman -Syu
  there is nothing to do
 [k247@archlinux ~]$</code></pre>
 
-add aliases, nano ~/.bashrc 
+add aliases, nano `~/.bashrc`
 <pre><code>#
 # ~/.bashrc
 #
@@ -194,11 +216,14 @@ alias pblink='tput cvvis'
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\n\$ '
 </code></pre>
+
 save and exit with [Ctrl+x], then source `.bashrc` for changes to take effect..
+
 ```console
 $ source .bashrc
 ```
-test ll alias..
+
+test `ll` alias..
 <pre><code>[k247@archlinux ~]
 $ ll
 total 64K
@@ -223,10 +248,12 @@ $
 </code></pre>
 _Note: $ prompt is in new line.._ 
 
-#### [Check root account access with sudo..](#chkrootacc)
+### [Check root account access with sudo..](#chkrootacc)
+
 ```console
 $ sudo su -
 ```
+
 <pre><code>[k247@archlinux ~]
 $ sudo su -
 [sudo] password for k247:
@@ -243,22 +270,27 @@ drwx------  3 root root 4.0K Jun 18 18:46 .gnupg/
 drwxr-xr-x  2 root root 4.0K Jun 18 18:57 insCONFIG/
 -rw-------  1 root root   20 Jun 18 23:00 .lesshst
 [root@archlinux ~]#</code></pre>
+
 copy `.bashrc` & `.bash_profile` files from k247 home folder to root home folder..
+
 ```console
 # cp /home/k247/.bashrc .
 # cp /home/k247/.bash_profile .
 # exit
 ```
-use exit, to retun to k247 bash shell..<br>
+use exit, to retun to k247 bash shell..
 
 ### [Creating default directories](#createdefdir)
+
 ```console
 $ sudo pacman -S xdg-user-dirs
 $ cd
 $ xdg-user-dirs-update
 $ ll
 ```
-_Note: see https://wiki.archlinux.org/title/XDG_user_directories#Creating_default_directories_
+
+###### _Note: see https://wiki.archlinux.org/title/XDG_user_directories#Creating_default_directories_
+
 <pre><code>[k247@archlinux ~]
 $ ll
 total 92K
@@ -289,13 +321,16 @@ drwxr-xr-x  2 k247 k247 4.0K Jun 19 00:59 Videos/
 $
 </code></pre>
 now that user folders are setup, change to Downloads folder and setup yay..
+
 ```console
 $ cd Downloads
 ```
+
 > Yaourt is Dead! Use These Alternatives for AUR in Arch Linux<br>
 ref: https://itsfoss.com/best-aur-helpers/
 
-## [yay..](#yay) <br>
+## [yay..](#yay)
+
 >is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
 
 make sure you have <b>git</b> & Required Packages to build yay..
