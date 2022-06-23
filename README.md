@@ -18,7 +18,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### Disabling Server NUMA Spanning
 
-        - #### Setting Server Enchanced Session Mode Policy
+        - #### Setting Server Enhanced Session Mode Policy
 
         - #### Setting User Enhanced Session Mode
 
@@ -36,7 +36,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - #### Disabling Secure Boot
 
-    - #### Disabling Dynamic Memory & Specifing RAM size 2048 MB
+    - #### Disabling Dynamic Memory & Specifying RAM size 2048 MB
 
     - #### Setting Number of virtual processors 2 cores
 
@@ -44,7 +44,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - #### Setting Name 'Arch' & Description for virtual machine
 
-    - #### Enabling all Intergration Services
+    - #### Enabling all Integrations Services
 
     - #### Disabling Checkpoints
 
@@ -52,7 +52,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - #### Setting Automatic Stop Action to Power Off
 
-#### <p align="center"> _Note: check all setings before powering on virtual machine and connecting to it.._</p>
+#### <p align="center"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
 
 ##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
@@ -152,7 +152,7 @@ before restarting VM, remove ISO image file from DvD.. in Virtual Machines Setti
 
 ## post Installation configuration
 
-archinstall - has setup user k247 with sudo administrator authority & has diabled root account..<br>
+archinstall - has setup user k247 with sudo administrator authority & has disabled root account..<br>
 Also sshd service has to be re-enabled & started:<br>
 
 ```console
@@ -173,7 +173,7 @@ $ ssh k247@192.168.0.100
 
 <p align="center"><img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /></p>
 
-#### _Note: archinstall - optional user packages.. firefox htop lsof iftop net-tools lnav tmux neofetch mc_
+#### Note: archinstall - optional user packages.. firefox htop lsof iftop net-tools lnav tmux neofetch mc
 
 Check EFI setup..
 
@@ -195,7 +195,6 @@ $ sudo fdisk -l
 
 ```console
 $ sudo pacman -Syu
-
 ```
 
 <pre><code>:: Synchronising package databases...
@@ -264,7 +263,7 @@ drwxr-xr-x 3 k247 k247 4.0K Jun 18 18:59 .local/
 [k247@archlinux ~]
 $ 
 </code></pre>
-_Note: $ prompt is in new line.._ 
+_Note: $ prompt is in new line.._
 
 ### [Check root account access with sudo..](#chkrootacc)
 
@@ -296,7 +295,7 @@ copy `.bashrc` & `.bash_profile` files from k247 home folder to root home folder
 # cp /home/k247/.bash_profile .
 # exit
 ```
-use exit, to retun to k247 bash shell..
+use exit, to return to k247 bash shell..
 
 ### [Creating default directories](#createdefdir)
 
@@ -385,7 +384,7 @@ $ yay -Syu
 [k247@archlinux yay]
 $
 </code></pre>
-now, getting ready to enable Enchanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
+now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
 ### Setup ssh Keys..
 
@@ -395,7 +394,7 @@ $ ssh-keygen -b 4096
 $ cd
 ```
 
-### [Install packages required for Enchanced Session Mode](#pkgsforenhsession)
+### [Install packages required for Enhanced Session Mode](#pkgsforenhsession)
 
 from https://wiki.archlinux.org/title/Hyper-V
 
@@ -692,7 +691,7 @@ $ sudo usermod -a -G sambashare k247
 $ sudo smbpasswd -a k247
 ```
 
-then check SAM database with 
+then check SAM database with
 
 ```console
 $ sudo pdbedit -L -v
@@ -771,7 +770,7 @@ $ sudo chown root:sambashare /srv/samba/public/
 $ sudo chmod -R ugo+rwx /srv/samba/public/
 ```
 
-for [ k247Public ] folder.. 
+for [ k247Public ] folder..
 
 ```console
 $ sudo chown k247:sambashare /home/k247/Public/
