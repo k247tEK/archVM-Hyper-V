@@ -573,10 +573,8 @@ Reboot virtual machine..
 
 #### [xorg packages..](#xorgpkgs)
 
-```console
-$ sudo pacman -S xorg-xhost xorg-xdpyinfo xorg-xdriinfo xorg-xlsclients \
-xorg-xvinfo xorg-xvinfo xorg-font-util --needed
-```
+<pre><code>$ sudo pacman -S xorg-xhost xorg-xdpyinfo xorg-xdriinfo xorg-xlsclients \
+xorg-xvinfo xorg-xvinfo xorg-font-util --needed</code></pre>
 
 have to also edit `~/.bashrc`, and add at EOF..
 
