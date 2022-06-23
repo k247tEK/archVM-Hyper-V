@@ -1044,7 +1044,7 @@ now both plugins should be installed.. run tmux.. set layout.. and save it with.
 [Ctrl] + [b] then [s] & to restore session layout [Ctrl] + [b] then [r]..<br>
 <br>
 
-### [install snap & Flatpak](#snapflatpak)
+## [install snap & Flatpak](#snapflatpak)
 
 https://snapcraft.io/docs/installing-snap-on-arch-linux, https://flatpak.org/setup/Arch
 
@@ -1234,7 +1234,7 @@ The `.bash_profile` file adds the users home `bin` folder to the path variable..
 soooo, you can use.. ssh or terminal in VM to set desktop environment with chDE2..<br>
 then.. logout & login.. to change session.. ;-]..
 
-<b>dotfiles</b> folder.. contains `i3` configuration files in `.config` folder & shell scripts in `bin` folder..
+[<b>dotfiles</b>](dotfiles) folder.. contains `i3` configuration files in `.config` folder & shell scripts in `bin` folder..
 
 ```
 [k247@archlinux ~]
