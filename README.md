@@ -1,44 +1,65 @@
-# Arch Linux 2022-06 virtual machine on Windows10 <br>Hyper-V with Enhanced Session Mode
+## Arch Linux 2022-06 virtual machine on Windows10 <br>Hyper-V with Enhanced Session Mode
+
 ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [archWiki - Hyper-V](https://wiki.archlinux.org/title/Hyper-V).
 
 ### Enabling Windows Hyper-V and OpenSSH Client features
+
 _Note that Hyper-V is not available on the Windows 10 Home edition, and requires Windows 10 Pro or equivalent._ 
 
-- #### [Enabling Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
+- ### [Enabling Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
 
-- #### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
-_Note: ssh client is only required if you wish to install guest OS using ssh session.._<br>
+- ### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
+
+_Note: ssh client is only required if you wish to install guest OS using ssh session.._
 
 - ### Setup Host
 
-    - #### Hyper-V Settings...
-       - ### Disabling Server NUMA Spanning
-       - ### Setting Server Enchanced Session Mode Policy
-       - ### Setting User Enhanced Session Mode
-   - #### Virtual Switch Manager...
-        - ### Creating the Internal / External Network Switch
-- ### Setup Client
-   - #### Creating the virtual machine in Hyper-V Manager...
-        - #### Setting Hyper-V Generation 2 for a UEFI virtual machine
-        - #### Setting Hardware Firmware Boot order, ensure Network Adapter is last
-        - #### Disabling Secure Boot
-        - #### Disabling Dynamic Memory & Specifing RAM size 2048 MB
-        - #### Setting Number of virtual processors 2 cores
-        - #### Setting Hard Drive 32GB / DvD Drive & Network Adapter
-        - #### Setting Name 'Arch' & Description for virtual machine
-        - #### Enabling all Intergration Services
-        - #### Disabling Checkpoints
-        - #### Setting Automatic Start Action to Nothing
-        - #### Setting Automatic Stop Action to Power Off
-#### _<p align="center">Note: check all setings before powering on virtual machine and connecting to it..</p>_
+    - ### Hyper-V Settings
 
-###### <p align="center">[Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads), <br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
+        - #### Disabling Server NUMA Spanning
+
+        - #### Setting Server Enchanced Session Mode Policy
+
+        - #### Setting User Enhanced Session Mode
+
+    - ### Virtual Switch Manager
+
+        - #### Creating the Internal / External Network Switch
+
+- ### Setup Client
+
+    - #### Creating the virtual machine in Hyper-V Manager
+
+    - #### Setting Hyper-V Generation 2 for a UEFI virtual machine
+
+    - #### Setting Hardware Firmware Boot order, ensure Network Adapter is last
+
+    - #### Disabling Secure Boot
+
+    - #### Disabling Dynamic Memory & Specifing RAM size 2048 MB
+
+    - #### Setting Number of virtual processors 2 cores
+
+    - #### Setting Hard Drive 32GB / DvD Drive & Network Adapter
+
+    - #### Setting Name 'Arch' & Description for virtual machine
+
+    - #### Enabling all Intergration Services
+
+    - #### Disabling Checkpoints
+
+    - #### Setting Automatic Start Action to Nothing
+
+    - #### Setting Automatic Stop Action to Power Off
+
+#### <p align="center"> _Note: check all setings before powering on virtual machine and connecting to it.._</p>
+
+##### <p align="center"> [Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
-<br>
 
-### [First Boot of virtual machine & installing OS](#firstboot)
-<br>
+### <p align="center">[First Boot of virtual machine & installing OS](#firstboot)</p>
+
 <p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
 <br>
 
