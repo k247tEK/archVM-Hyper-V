@@ -326,7 +326,7 @@ from the windows Host, with an admin powershell, check..
 Get-VM
 Get-VMIntegrationService -VMName "Arch"
 ```
-<img src="images/powerShell_01Capture.PNG" alt="powerShell Get-VM" width="600" /><br>
+<p align="center"><img src="images/powerShell_01Capture.PNG" alt="powerShell Get-VM" width="600" /></p>
 
 ### [Install, `xrdp`](#instxrdp) 
 > provides a graphical login to remote machines using RDP (Microsoft Remote Desktop Protocol).
@@ -390,10 +390,8 @@ Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 <!-- 
 <img src="images/enhSessionMode.png" alt="enchanced Session Mode" width="600" /><br>
 -->
-<a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
- <img src="images/enhSessionMode.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" />
-</a>
-<br>
+<p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
+ <img src="images/enhSessionMode.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
 
 _note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually, with `pulseaudio --start` command.._
 
@@ -494,7 +492,7 @@ $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
 
 ### [thunar Root File Manager](#thunarroot)
-<img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /><br>
+<p align="center"><img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /></p>
 
 #### create Custom Action..
 from edit menu..<br>
@@ -662,7 +660,7 @@ by default, arch linux 2022-06 does not use Whisker menu & you will have to manu
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start<br>
 https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/<br>
 
-<img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /><br>
+<p align="center"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
