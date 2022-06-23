@@ -831,7 +831,7 @@ install xfce places plugin from `AUR`..
 $ yay -S xfce4-places-plugin
 ```
 
-<img src="images/xfceplaces.PNG" alt="xfce places menu" width="420" /><br>
+<img src="images/xfceplaces.PNG" alt="xfce places menu" width="420" />
 
 then add to panel..
 
@@ -842,9 +842,9 @@ select Restart & de-select Suspend..
 
 ### [xfce-Desktop Wallpapers](#wallpapers)
 
-<img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" /><br>
+<img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" />
 
-### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)<br>
+### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)
 
 ```
 org.xfce.ScreenSaver[452]: Xlib:  extension "DPMS" missing on display ":10.0"
@@ -856,7 +856,7 @@ sooo just remove it & enable Ramdom Order wallpapers every 10 mins.. ;-]...
 $ sudo pacman -R xfce4-screensaver
 ```
 
-thats one less thing to start.. assigned only 2GB of RAM to this VM..<br>
+thats one less thing to start.. assigned only 2GB of RAM to this VM..
 
 ### [Clipman - clipboard Manager](#clipman)<br>
 
@@ -892,53 +892,67 @@ save & exit.. right click on notes icon on panel, & click remove.. then run note
 now.. I don't know if this is setting the background colour, or braking the 
 `@notes_bg_color` variable,<br>
 and it is the good coding.. that is.. defaulting to the user's set preference, ie.. Dark mode..<br>
-well.. for now.. this works for notes 1.9.0.<br>
+well.. for now.. this works for notes 1.9.0.
 
 ## [Eye candy](#eyecndy)
+
 https://wiki.archlinux.org/title/Category:Eye_candy
+
 ```console
 $ sudo pacman -S archey3 fortune-mod cmatrix --needed
 ```
 
 ### [Microsoft fonts](#msfonts)
+
 https://wiki.archlinux.org/title/Microsoft_fonts
+
 ```console
 $ yay -S ttf-ms-fonts
 ```
 
 ### [GTK and Qt themes](#gtkqt)
+
 https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
 tbc..
 
 ### [Multimedia apps](#multimedia)
+
 https://wiki.archlinux.org/title/List_of_applications/Multimedia
+
 ```console
 $ sudo pacman -S vlc gst-libav
 ```
+
 _Note: snap vlc.. does not play nice with xrdp.._
 
 ### [Web browsers](#webbrowsers)
+
 https://wiki.archlinux.org/title/List_of_applications#Web_browsers
+
 ```console
 $ sudo pacman -S opera
 ```
 
-<br>
-
 useful bash shell tools..
+
 ```console
 $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 ```
+
 ### [bash Shell & Tumx - Session management](#bashtmux)
+
 Home Folder dotfiles:
 [.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
 
 create bash shell folders & fix Home dotfiles permisstions:
+
 ```console
 $ mkdir -p ~/code ~/bin ~/temp
 $ sudo chmod 644 .dir_colors .nanorc .tmux.conf .bashrc
 ```
+
 fix root dotfile & create root Home folders:
+
 ```console
 $ sudo su -
 # mkdir -p ~/code ~/bin ~/temp
@@ -949,6 +963,7 @@ $ sudo su -
 $ sudo su -
 # ll
 ```
+
 <pre><code>[archlinux ~]
 # ll
 total 108K
@@ -981,27 +996,31 @@ drwxr-xr-x  2 root root 4.0K Jun 21 06:35 Videos/
 [archlinux ~]
 # exit
 </code></pre>
-_Note: `.insCONFIG` folder contains the saved installation files used by archinstall.._
 
-<br>
+_Note: `.insCONFIG` folder contains the saved installation files used by archinstall.._<br><br>
 
-### [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
+## [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
+
 https://github.com/tmux-plugins/tpm, https://github.com/tmux-plugins/tmux-resurrect
 
 Clone TPM:
+
 ```console
 $ cd
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-#### [install Tmux plugins](#tmuxplugins)
+
+### [install Tmux plugins](#tmuxplugins)
+
 create or download [~/.tmux.conf](dotfiles/.tmux.conf) & run tmux session..
 ```console
 $ tmux
 ```
+
 Press [prefix] + I (capital i, as in Install) to fetch the plugins.<br>
 soooo [Ctrl] + [b] then [Shift] + [i], esc & exit after install of plugins..<br>
 now both plugins should be installed.. run tmux.. set layout.. and save it with..<br>
-<!-- <img src="images/tmuxSession.png" alt="tmux session" width="600" /><br> -->
+
 <a href="https://youtu.be/BVmGL96zq1g " target="_blank">
  <img src="images/tmuxSession.png" alt="tmux session" width="600" height="auto" border="3" />
 </a><br>
@@ -1009,41 +1028,51 @@ now both plugins should be installed.. run tmux.. set layout.. and save it with.
 <br>
 
 ### [install snap & Flatpak](#snapflatpak)
+
 https://snapcraft.io/docs/installing-snap-on-arch-linux, https://flatpak.org/setup/Arch
+
 ```console
 $ sudo pacman -S flatpak
 ```
+
 then insatll snap..
+
 ```console
 $ yay -S snapd
 ```
+
 start and enable the snapd service..
+
 ```console
 $ sudo systemctl enable --now snapd
 ```
+
 Reboot virtual machine..
 
 test snap,
+
 ```console
 $ snap list
 $ snap install hello-world
 $ hello-world
 $ whereis hello-world
 ```
+
 _Note: some apps will not start in xrdp.. have to look into snap with xrpd.. tbc.._
+<br><br>
 
-<br>
-
-### [install Pamac - package Manager, & setup with AUR](#pamacaur)
+## [install Pamac - package Manager, & setup with AUR](#pamacaur)
 
 ```console
 $ yay -S pamac-aur
 ```
+
 <p align="center"><img src="images/pamac-aur.PNG" alt="tmux session" width="600" /></p>
 
 _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for major updates.._
 
-#### [List of installed packages](#lstinstalledpkgs) 
+#### [List of installed packages](#lstinstalledpkgs)
+
 > Maintain a list of all installed packages so that if a complete re-installation is inevitable, it is easier to re-create the original environment.<br>
 https://wiki.archlinux.org/title/Pacman_tips#List_of_installed_packages
 
@@ -1064,55 +1093,66 @@ Use pacman -Qqem > foreignpkglist.txt<br>
 to create the list of AUR and other foreign packages that have been explicitly installed.<br>
 
 #### [Pacman database](#pacmandb)
+
 See pacman/Tips and tricks#Back up the pacman database.
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Back_up_the_pacman_database
 
 install extra packages..
+
 ```console
 $ sudo pacman -S expac moreutils pacgraph fzf pacutils
 ```
 
 FIX Pamac.. if pamac ever fails to update categories..
+
 ```console
 $ sudo pacman -Syu archlinux-appstream-data
 ```
+
 ### [Mirrors & pacman](#mirrorspacman)
+
 https://wiki.archlinux.org/title/Mirrors<br>
 use the Pacman Mirrorlist Generator page.<br>
 https://archlinux.org/mirrorlist/<br>
 
 Pacman stores its downloaded packages in `/var/cache/pacman/pkg/`
 https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
+
 ```console
 $ du -sh /var/cache/pacman/pkg/
 ```
-1.3G in `/var/cache/pacman/pkg/` hhhhhmm..<br>
+
+1.3G in `/var/cache/pacman/pkg/` hhhhhmm..
 
 https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache<br>
 deletes all cached versions of installed and uninstalled packages,<br>
 except for the most recent three, by default:
+
 ```console
 $ sudo  paccache -r
 ```
 
 #### [System backup](#systembackup)
+
 https://wiki.archlinux.org/title/System_backup<br>
 
 Using `rsync`
 See rsync#As a backup utility.<br>
 https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
+
 ```console
 $ sudo pacman -S rsync
 ```
 
 ### [ooh.. install the F..ing manual..](#installman)
+
 ```console
 $ sudo pacman -S man
 ```
 
 <br>
 
-### [setup i3 with xfce-Desktop](#i3xfcedsk)
+## [setup i3 with xfce-Desktop](#i3xfcedsk)
 https://wiki.archlinux.org/title/I3
 ```console
 $ sudo pacman -S i3-gaps i3status i3blocks i3lock
@@ -1126,30 +1166,43 @@ https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
 
 
 #### Background - wallpaper manager for i3
+
 ```console
 $ sudo pacman -S feh
 ```
+
 #### picom - Compositor Manager
+
 ```console
 $ sudo pacman -S picom
 ```
+
 The default configuration is available in `/etc/xdg/picom.conf`..
+
 ```console
 $ cp /etc/xdg/picom.conf ~/.config/i3/
 ```
+
 ensure you have.. in `~/.config/i3/config`..
+
 ```console
 picom --config ~/.config/i3/picom.conf
 ```
+
 if you have problems with `vsync`.. not supported.. then..
+
 ```console
 picom --no-vsync --config ~/.config/i3/picom.conf
 ```
+
 #### dmenu - Application launcher
+
 ```console
 $ sudo pacman -S dmenu
 ```
+
 ### [chDE2_i3](dotfiles/bin/chDE2_i3) & [chDE2_xfce4](dotfiles/bin/chDE2_xfce4)
+
 change desktop environment to i3 & change desktop environment to xfce-Desktop..<br>
 <b>caution:</b> shell scripts will overwrite `.xinitrc` file in users home folder..<br>
 & they require [xinitrc_i3](dotfiles/bin/xinitFiles/xinitrc_i3) & [xinitrc_xfce4](dotfiles/bin/xinitFiles/xinitrc_xfce4) be in `~/bin/xinitFiles`..<br>
@@ -1158,6 +1211,7 @@ soooo, you can use.. ssh or terminal in VM to set desktop environment with chDE2
 then.. logout & login.. to change session.. ;-]..
 
 <b>dotfiles</b> folder.. contains `i3` configuration files in `.config` folder & shell scripts in `bin` folder..
+
 ```
 [k247@archlinux ~]
 $ tree -L 2 -aph bin/ .config/i3*
@@ -1191,21 +1245,26 @@ Home Folder dotfiles:
 <br>
 
 ## [logs - hunting Errors](#logs)
+
 https://wiki.archlinux.org/title/Systemd/Journal
+
 ```console
 $ journalctl -b -0 | lnav
 ```
+
 shows messages from the current boot,
 
 <br>
 
 ## [Kernel module](#kernelmod)
+
 https://wiki.archlinux.org/title/Kernel_module
 
 
 <br>
 
 ## [General recommendations](#genrec)
+
 https://wiki.archlinux.org/title/General_recommendations
 
 ---
