@@ -1201,6 +1201,13 @@ picom --no-vsync --config ~/.config/i3/picom.conf
 $ sudo pacman -S dmenu
 ```
 
+Note.. `LC_ALL` has to be set for dmenu to start..
+
+```console
+bindsym $mod+d exec --no-startup-id env LC_ALL=en_GB.UTF-8 dmenu_run -b
+```
+use `env LC_ALL=`.. in `~/.config/i3/config` file..<br><br>
+
 ### [chDE2_i3](dotfiles/bin/chDE2_i3) & [chDE2_xfce4](dotfiles/bin/chDE2_xfce4)
 
 change desktop environment to i3 & change desktop environment to xfce-Desktop..<br>
