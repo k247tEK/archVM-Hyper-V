@@ -803,7 +803,8 @@ https://help.ubuntu.com/community/Samba/SambaClientGuide<br><br>
 by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to manually add it to the desktop panel.
 
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
-https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
+
+###### https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
 
 <p align="center"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
 
