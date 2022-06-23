@@ -14,7 +14,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 - ### Setup Host
 
-    - ### Hyper-V Settings
+    - ### Hyper-V Settings..
 
         - #### Disabling Server NUMA Spanning
 
@@ -22,7 +22,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### Setting User Enhanced Session Mode
 
-    - ### Virtual Switch Manager
+    - ### Virtual Switch Manager..
 
         - #### Creating the Internal / External Network Switch
 
@@ -54,7 +54,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 #### <p align="center"> _Note: check all setings before powering on virtual machine and connecting to it.._</p>
 
-##### <p align="center"> [Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
+##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
 
@@ -113,7 +113,7 @@ Now if you wish, you can connect to the installation image using the `root` acco
 
 <br>
 
-### [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
+## [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
 
 _Note: to manually install arch, follow steps detailed in the wiki's [installation
 guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
@@ -133,6 +133,24 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
 <p align="center"><a href="https://youtu.be/KA16fFaSFv4" target="_blank">
  <img src="images/archinstall_ytb.png" alt="archinstall" width="600" height="auto" border="3" />
 </a></p>
+
+Note: after archinstall - chroot into installed system & copy `/insCONF` to root home folder.
+
+~~~
+# cp -r /insCONFIG /mnt/archinstall/root/
+~~~
+
+then.. shutdown VM..
+
+~~~
+# shutdown -h now
+~~~
+
+before restarting VM, remove ISO image file from DvD.. in Virtual Machines Settings..
+
+<br>
+
+## post Installation configuration
 
 archinstall - has setup user k247 with sudo administrator authority & has diabled root account..<br>
 Also sshd service has to be re-enabled & started:<br>
