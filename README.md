@@ -599,9 +599,11 @@ $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
 
 ### [thunar Root File Manager](#thunarroot)
+
 <p align="center"><img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /></p>
 
 #### create Custom Action..
+
 from edit menu..<br>
 
 <img src="images/configCustAction.png" alt="xfce xrdp logout" width="480" /><br>
@@ -609,43 +611,57 @@ from edit menu..<br>
 ```
 pkexec thunar %f --display :10.0
 ```
+
 the display variable, is hard coded here.. `:10.0` not good.. as this will fail in xorg session, as display there, is set to :`0.0`, I can not figure out how to pass --display the env DISPLAY variable.. have tried..
+
 ```
 export DISPLAY; pkexec thunar %f --display=DISPLAY
 ```
+
 ~~but failed.. tbc...~~ strike that..
+
 ```
 pkexec thunar %f --display $DISPLAY
 ```
-works.. ;-]... sometimes the `$`implest things are the most profound..<br>
 
-<br>
+works.. ;-]... sometimes the `$`implest things are the most profound..<br><br>
 
-### [File managers & Network scanning](#filemanscan)
+## [File managers & Network scanning](#filemanscan)
+
 thunar and caja, both will fail to find any network shares until the required packages `gvfs-smb`, `cifs-utils` are installed.. first, optionally.. enable.. avahi-daemon.. https://www.avahi.org
+
 ```console
 $ sudo systemctl enable --now avahi-daemon
 ```
+
 and install Avahi's required packages, pygtk and python-dbus..
+
 ```console
 $ sudo pacman -S avahi python-dbus --needed
 $ yay -S pygtk
 ```
+
 then install samba server with `gvfs` & `cifs` packages..
+
 > For better performance (and to avoid other issues with abstraction layers), it’s recommended to use the cifs module method (via fstab or systemd), rather than GVFS/KIO (activated from within your GUI file manager).<br>
 https://forum.manjaro.org/t/access-windows-11-shared-folder-from-manjaro-kde-linux/113213/7<br>
+
 ```console
 $ sudo pacman -S samba smbclient gvfs gvfs-smb cifs-utils nmap --needed
 ```
+
 _Note: samba is not required, if all you want is to use the client to connect to other network shares..<br>
 just make sure there is an empty `smb.conf` file.._
+
 ```console
 $ sudo mkdir /etc/samba
 $ sudo touch /etc/samba/smb.conf
 ```
+
 Reboot virtual machine..
 
 ### [Configure Samba server](#confsamba)
+
 ref: https://wiki.archlinux.org/title/Samba,<br>
 https://wiki.manjaro.org/index.php/Using_Samba_in_your_File_Manager,<br>
 https://forum.manjaro.org/t/root-tip-basic-samba-setup-and-troubleshooting/100420/1<br>
@@ -657,11 +673,15 @@ $ sudo groupadd -r sambashare
 $ sudo usermod -a -G sambashare k247
 $ sudo smbpasswd -a k247
 ```
+
 then check SAM database with 
+
 ```console
 $ sudo pdbedit -L -v
 ```
+
 logout & login again, then check with `id`, if user `k247` is in sambashare group..
+
 <pre><code>[k247@archlinux ~]
 $ id
 uid=1000(k247) gid=1000(k247) groups=1000(k247),970(sambashare),998(wheel)
@@ -669,16 +689,20 @@ uid=1000(k247) gid=1000(k247) groups=1000(k247),970(sambashare),998(wheel)
 $
 </code></pre>
 
-A documented example, `smb.conf.default` can be found at the Samba git repository..<br>
- https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD<br>
+A documented example, `smb.conf.default` can be found at the Samba git repository..
+###### https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD<br>
  download a copy to `/etc/samba/smb.conf.default` then..
+
 ```console
 $ sudo cp /etc/samba/smb.conf.default /etc/samba/smb.conf
 ```
+
 and edit `smb.conf`,
+
 ```console
 $ sudo nano /etc/samba/smb.conf
 ```
+
 <pre><code>...
 ...
 [global]
@@ -722,32 +746,44 @@ $ sudo nano /etc/samba/smb.conf
 </code></pre>
 
 create samba server public folder.. & allow samba group ownership..
+
 ```console
 $ sudo mkdir -p /srv/samba/public
 $ sudo chown root:sambashare /srv/samba/public/
 $ sudo chmod -R ugo+rwx /srv/samba/public/
 ```
+
 for [ k247Public ] folder.. 
+
 ```console
 $ sudo chown k247:sambashare /home/k247/Public/
 $ sudo chmod -R 0770 /home/k247/Public/
 ```
+
 check with `testparm` for syntactic errors in `smb.conf` file..
+
 ```console
 $ sudo testparm
 ```
+
 Now, enable and start `smb.service` and `nmb.service`
+
 ```console
 $ sudo systemctl enable --now smb nmb
 ```
+
 to access samba shares through `caja` & `thunar`, Press Ctrl+l and enter:<br>
+
 ```
 smb://servername/share
 ```
+
 in the location bar to access network share. For command line terminal use..
+
 ```console
 $ smbclient -L //192.168.0.100 -U k247
 ```
+
 <pre><code>k247@yoga700-11isk:~
 $ smbclient -L //192.168.0.100 -U k247
 Enter WORKGROUP\k247's password:
@@ -759,74 +795,95 @@ Enter WORKGROUP\k247's password:
         IPC$            IPC       IPC Service (Samba Server)
 SMB1 disabled -- no workgroup available
 k247@yoga700-11isk:</code></pre>
-https://help.ubuntu.com/community/Samba/SambaClientGuide<br>
-<br>
 
-### [Whisker Menu & xfce-Desktop Panel](#whiskermenu)
-by default, arch linux 2022-06 does not use Whisker menu & you will have to manually add it to the desktop panel.<br>
-https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start<br>
-https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/<br>
+https://help.ubuntu.com/community/Samba/SambaClientGuide<br><br>
+
+## [Whisker Menu & xfce-Desktop Panel](#whiskermenu)
+
+by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to manually add it to the desktop panel.
+
+https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
+https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
 
 <p align="center"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
 ### [Mugshot & xfce-Desktop](#mugshotid)
+
  > is a lightweight user configuration utility for Linux designed for simplicity and ease of use. Quickly update your personal profile and sync your updates across applications.<br>
  https://github.com/bluesabre/mugshot
 
 ```console
 $ yay -S mugshot
 ```
+
 _Note: the user icon image file is `~/.face`_
 
 ### [xfce4 Places plugin](#xfceplaces)
+
 https://docs.xfce.org/panel-plugins/xfce4-places-plugin/start
 
 install xfce places plugin from `AUR`..
+
 ```console
 $ yay -S xfce4-places-plugin
 ```
+
 <img src="images/xfceplaces.PNG" alt="xfce places menu" width="420" /><br>
 
 then add to panel..
 
 ### [xfce-Desktop panel Action Buttons](#actionbuttons)
+
 <img src="images/xfcepanelActionBut.PNG" alt="xfce panel action buttons" width="320" /><br>
 select Restart & de-select Suspend..
 
 ### [xfce-Desktop Wallpapers](#wallpapers)
+
 <img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" /><br>
 
 ### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)<br>
+
 ```
 org.xfce.ScreenSaver[452]: Xlib:  extension "DPMS" missing on display ":10.0"
 ```
+
 sooo just remove it & enable Ramdom Order wallpapers every 10 mins.. ;-]...
+
 ```console
 $ sudo pacman -R xfce4-screensaver
 ```
+
 thats one less thing to start.. assigned only 2GB of RAM to this VM..<br>
 
 ### [Clipman - clipboard Manager](#clipman)<br>
+
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a pitcure there..<br>
+
 <p align="center"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
 
 ### [xfce4-notes-plugin - Notes](#xfcenotes)
+
 can't seem to find setting to change background colour..<br>
 online search, suggests to use style sheets..<br>
- temp fix.. is to hard code it.. find in `gtk-main.css` 
+ temp fix.. is to hard code it.. find in `gtk-main.css`
+
 ```
 @define-color theme_base_color @notes_bg_color
 ```
+
 & set color to `#828179` / break gtk-main.css ????
+
 ```console
 $ sudo nano /usr/share/xfce4-notes-plugin/gtk-3.0/gtk-main.css
 ```
+
 ```
 @define-color theme_base_color @notes_bg_color #828179;
 ```
+
 save & exit.. right click on notes icon on panel, & click remove.. then run notes again from application menu..<br>
 
 [<p align="center"><img src="images/xfceNotesBKfix.PNG" alt="clpman setting" width="600" />](https://youtu.be/0hiUuL5uTKc?t=11)</p>
@@ -836,9 +893,7 @@ now.. I don't know if this is setting the background colour, or braking the
 and it is the good coding.. that is.. defaulting to the user's set preference, ie.. Dark mode..<br>
 well.. for now.. this works for notes 1.9.0.<br>
 
-<br>
-
-### [Eye candy](#eyecndy)
+## [Eye candy](#eyecndy)
 https://wiki.archlinux.org/title/Category:Eye_candy
 ```console
 $ sudo pacman -S archey3 fortune-mod cmatrix --needed
