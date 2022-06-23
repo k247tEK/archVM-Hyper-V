@@ -1,4 +1,4 @@
-## Arch Linux 2022-06 virtual machine on Windows10 <br>Hyper-V with Enhanced Session Mode
+# Arch Linux 2022-06 virtual machine on Windows10<br>Hyper-V with Enhanced Session Mode
 
 ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [archWiki - Hyper-V](https://wiki.archlinux.org/title/Hyper-V).
 
