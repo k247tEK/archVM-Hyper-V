@@ -804,9 +804,9 @@ by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to 
 
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
-###### https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
+<p align="left"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
 
-<p align="center"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
+###### https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
