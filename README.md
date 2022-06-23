@@ -505,11 +505,15 @@ ref: https://wiki.archlinux.org/title/Polkit
 these three don't play nice with each other.. sooo will have to add some rules for polkit..<br>
 but please be adviced..<br>
 #### <b>THIS SHOULD NOT BE DONE ON PRODUCTIONS SYSTEMS...</b>
-### Bypass password prompt - Globally
-> Create the following file as root: 
+
+### [Bypass password prompt - Globally](#bypassprompt)
+
+> Create the following file as root:
+
 ```console
 $ sudo nano /etc/polkit-1/rules.d/49-nopasswd_global.rules
 ```
+
 ```
 /* Allow members of the wheel group to execute any actions
  * without password authentication, similar to "sudo NOPASSWD:"
@@ -520,6 +524,7 @@ polkit.addRule(function(action, subject) {
     }
 });
 ```
+
 > Replace wheel by any group of your preference.<br>
 This will result in automatic authentication for any action requiring admin rights via Polkit. As such, be careful with the group you choose to give such rights to.<br><br>
  There is also AUTH_ADMIN_KEEP which allows to keep the authorization for 5 minutes. However, the authorization is per process, hence if a new process asks for an authorization within 5 minutes the new process will ask for the password again anyway.<br>
@@ -531,10 +536,13 @@ for more info, have a read of blog post below..
 <br>
 
 ### [Disable suspend and hibernate](#suspendhibernate)
+
 > The following rule disables suspend and hibernate for all users.
+
 ```console
 $ sudo nano /etc/polkit-1/rules.d/10-disable-suspend.rules
 ```
+
 ```
 polkit.addRule(function(action, subject) {
     if (action.id == "org.freedesktop.login1.suspend" ||
@@ -546,36 +554,48 @@ polkit.addRule(function(action, subject) {
     }
 });
 ```
+
 and then.. mask.. `sleep.target`, `suspend.target`, `hibernate.target` &  `hybrid-sleep.target`
+
 ```console
 $ sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
+
 check status..
+
 ```console
 $ sudo systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
+
 Reboot virtual machine..
 
 <img src="images/xfce_xrdpLogoutCapture.PNG" alt="xfce xrdp logout" width="auto" /><br>no more suspend / hibernate or Hybrid-sleep..
 
 #### [xorg packages..](#xorgpkgs)
+
 ```console
 $ sudo pacman -S xorg-xhost xorg-xdpyinfo xorg-xdriinfo xorg-xlsclients \
 xorg-xvinfo xorg-xvinfo xorg-font-util --needed
 ```
+
 have to also edit `~/.bashrc`, and add at EOF..
+
 ```
 xhost +local:root > /dev/null 2>&1
 ```
-save and exit, then source the `.bashrc` file or logout / login again..<br><br>
+
+save and exit, then source the `.bashrc` file or logout / login again..
 
 #### [dbus packages..](#dbuspkgs)
+
 ```console
 $ sudo pacman -S accountsservice
 ```
+
 not sure if this is needed, but found related `dbus` error in logs..<br><br>
 
-### [caja File Manger](#cajafileman)
+## [caja File Manger](#cajafileman)
+
 ```console
 $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
