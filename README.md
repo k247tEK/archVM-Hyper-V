@@ -704,7 +704,7 @@ thats one less thing to start.. assigned only 2GB of RAM to this VM..<br>
 ### [Clipman - clipboard Manager](#clipman)<br>
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a pitcure there..<br>
 <p align="center"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
-<img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p><br>
+<img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
 
 ### [xfce4-notes-plugin - Notes](#xfcenotes)
 can't seem to find setting to change background colour..<br>
