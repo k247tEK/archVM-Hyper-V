@@ -334,19 +334,25 @@ ref: https://itsfoss.com/best-aur-helpers/
 >is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
 
 make sure you have <b>git</b> & Required Packages to build yay..
+
 ```console
 $ sudo pacman -S --needed git base-devel arch-repro-status
 ```
+
 Download yay using git.. & make package..
+
 ```console
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
 $ makepkg -si
 ```
+
 ### [Update yay..](#updateyay)
+
 ```console
 $ yay -Syu
 ```
+
 <pre><code>:: Synchronising package databases...
  core is up to date
  extra is up to date
@@ -361,112 +367,139 @@ $ yay -Syu
 [k247@archlinux yay]
 $
 </code></pre>
-now, getting ready to enable Enchanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh` 
+now, getting ready to enable Enchanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
+
 ### Setup ssh Keys..
+
 ```console
 $ cd ~/.ssh
 $ ssh-keygen -b 4096
 $ cd
 ```
+
 ### [Install packages required for Enchanced Session Mode](#pkgsforenhsession)
+
 from https://wiki.archlinux.org/title/Hyper-V
+
 > In order to use Hyper-V integration services, install hyperv and start/enable the services hv_fcopy_daemon.service, hv_kvp_daemon.service and hv_vss_daemon.service
+
 ```console
 $ sudo pacman -S hyperv
 $ sudo systemctl enable --now hv_fcopy_daemon
 $ sudo systemctl enable --now hv_kvp_daemon
 $ sudo systemctl enable --now hv_vss_daemon
 ```
+
 from the windows Host, with an admin powershell, check..
+
 ```powershell
 Get-VM
 Get-VMIntegrationService -VMName "Arch"
 ```
+
 <p align="center"><img src="images/powerShell_01Capture.PNG" alt="powerShell Get-VM" width="600" /></p>
 
-### [Install, `xrdp`](#instxrdp) 
+### [Install, `xrdp`](#instxrdp)
+
 > provides a graphical login to remote machines using RDP (Microsoft Remote Desktop Protocol).
 http://xrdp.org
 
 ```console
 $ yay -S xrdp
 ```
+
 ### [Install, `xorgxrdp`](#instxorgxrdp)
+
 > is a collection of modules to be used with a pre-existing X.Org install to make the X server act like X11rdp. Unlike X11rdp, you don't have to recompile the whole X Window System. Instead, additional modules are installed to a location where the existing Xorg installation would pick them.
 https://github.com/neutrinolabs/xorgxrdp
+
 ```console
 $ yay -S xorgxrdp
 ```
+
 ### [Install, `pulseaudio-module-xrdp`](#instpulsexrdp)
+
 > xrdp implements Audio Output redirection using PulseAudio, which is a sound system used on POSIX operating systems.
 https://github.com/neutrinolabs/pulseaudio-module-xrdp
+
 ```console
 $ yay -S sbc
 $ yay -S pulseaudio-module-xrdp
 ```
+
 _Note: sbc is required in order to successfully build pulseaudio-module-xrdp.._
 
 ### [Configure the XRDP server..](#confxrdp)
-> By default, you may suffer from poor mouse and desktop experience. 
+
+> By default, you may suffer from poor mouse and desktop experience.
 Enhanced session mode features better mouse and video experience and integrated clipboard.
+
 ```console
 $ cd Downloads
 $ git clone https://github.com/Microsoft/linux-vm-tools
 $ cd linux-vm-tools/arch
 $ sudo ./install-config.sh
 ```
+
 _Note: only need to configure the xrdp server, no need for makepkg.sh..._
+
 ### [Edit ~/.xinitrc to start Desktop Environment](#editxinitrc)
+
 copy the system default xinitrc file, to home folder..
+
 ```console
 $ cp /etc/X11/xinit/xinitrc ~/.xinitrc
 ```
+
 comment out the last five lines, from twm.. to the, exec.. & add..at EOF..
+
 ```
 exec startxfce4
 ```
+
 to start xfce4-Desktop without `dbus_lanuch`, <b>dbus-x11</b> has to be installed & <b>dbus</b> removed..
+
 ```console
 $ yay -S dbus-x11
 ```
-##### https://trendoceans.com/solved-failed-to-execute-child-process-dbus-launch-no-such-file-or-directory-while-x-forwarding/
-<br>
+
+###### https://trendoceans.com/solved-failed-to-execute-child-process-dbus-launch-no-such-file-or-directory-while-x-forwarding/
 
 > Shutdown Arch virtual machine, and then using PowerShell (run as Administrator),<br>
 you need to enable `hv_sock` on your VM:
+
 ```powershell
 Set-VM -VMName __Your_Arch_Machine__ -EnhancedSessionTransportType HvSocket
 ```
+
 replace __Your_Arch_Machine__ with your virtual machine name.. ie.. Arch..
+
 ```powershell
 Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 ```
 
-### [Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)
-<!-- 
-<img src="images/enhSessionMode.png" alt="enchanced Session Mode" width="600" /><br>
--->
+### <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)</p>
+
 <p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
  <img src="images/enhSessionMode.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
 
 _note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually, with `pulseaudio --start` command.._
 
-<!--
-enhSessionMode.png
-video here...
-https://youtu.be/8R3ZZj5bMX4 
--->
-
 ### [PulseAudio Sound Server](#pulseaudiosrv)
+
 even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable PulseAudio Sound System(start-pulseaudio-x11) from Session and Startup & create a new entry..
+
 ```
 pulseaudio --start
 ```
+
 <img src="images/sessionStartupPA.png" alt="session startup pulseaudio" width="480" /><br>
 logout & back in again.. and that should fix the sound.. ;-]..<br>
+
 <br>
 
-### [polkit & xfce-Desktop with xrdp](#polkitxfcexrdp)
+## [polkit & xfce-Desktop with xrdp](#polkitxfcexrdp)
+
 ref: https://wiki.archlinux.org/title/Polkit
 
 these three don't play nice with each other.. sooo will have to add some rules for polkit..<br>
