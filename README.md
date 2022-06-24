@@ -460,7 +460,7 @@ $ sudo ./install-config.sh
 
 _Note: only need to configure the xrdp server, no need for makepkg.sh..._
 
-### [Edit ~/.xinitrc to start Desktop Environment](#editxinitrc)
+### [Edit `~/.xinitrc` to start Desktop Environment](#editxinitrc)
 
 copy the system default xinitrc file, to home folder..
 
@@ -474,7 +474,7 @@ comment out the last five lines, from twm.. to the, exec.. & add..at EOF..
 exec startxfce4
 ```
 
-to start xfce4-Desktop without `dbus_lanuch`, <b>dbus-x11</b> has to be installed & <b>dbus</b> removed..
+to start xfce4-Desktop without `dbus_lanuch`, <b>`dbus-x11`</b> has to be installed & <b>`dbus`</b> removed..
 
 ```console
 $ yay -S dbus-x11
