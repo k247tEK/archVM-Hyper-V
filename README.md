@@ -542,7 +542,7 @@ $ sudo downgrade libpulse pulseaudio
 
 logout & back in again.. and that should fix the sound.. again..
 
-or you can just keep on updating until `pulseaudio-module-xrdp` gets updated.. ;-]..
+or.. you can just live without sound on xrdp & keep on updating until `pulseaudio-module-xrdp` gets updated.. ;-].. welcome to arch..
 
 <br>
 
