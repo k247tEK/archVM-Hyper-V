@@ -529,13 +529,13 @@ IgnorePkg = libpulse pulseaudio
 
 ### downgrade Pacman package
 
-install downgrade from AUR,
+install `downgrade` from `AUR`,
 
 ~~~
 $ yay -S downgrade
 ~~~
 
-now you can downgrade both libpulse and pulseaudio.. to `16.0-1`
+now you can downgrade both `libpulse` and `pulseaudio`.. to `16.0-1`
 ~~~
 $ sudo downgrade libpulse pulseaudio
 ~~~
