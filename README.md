@@ -513,7 +513,7 @@ pulseaudio --start
 <img src="images/sessionStartupPA.png" alt="session startup pulseaudio" width="480" /><br>
 logout & back in again.. and that should fix the sound.. ;-]..<br><br>
 
-As of 24th June 20222 `pluseauodio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseauido` to `16.0-1`, and add both to pacman ignore package..
+As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
  
  ~~~
  $ sudo nano /etc/pacman.conf
