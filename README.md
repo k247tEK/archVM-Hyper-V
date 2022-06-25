@@ -1210,6 +1210,34 @@ $ sudo pacman -S man
 
 <br>
 
+### [AisleRiot Solitaire & `LC_ALL`](#solandlcall)
+
+installed AisleRiot Solitaire (aisleriot) 3.22.23-2 from Pamac, with no Optional Dependencies.. system locale is setup for UK, `en_GB.UTF-8`.. but `aisleriot` or `sol`, requires `en_US.UTF-8`..
+
+```cosole
+$ env LC_ALL=en_GB.UTF-8 sol
+Non UTF-8 locale (ANSI_X3.4-1968) is not supported!
+```
+
+from https://wiki.archlinux.org/title/locale
+
+### LC_ALL: troubleshooting
+
+>The locale set for this variable will always override LANG and all the other LC_* variables, whether they are set or not.<br><br>
+LC_ALL is the only LC_* variable which cannot be set in locale.conf files: it is meant to be used only for testing or troubleshooting purposes,
+
+```console
+$ env LC_ALL=en_US.UTF-8 sol
+```
+
+works, so you will have to edit the application menu.. `aisleriot`
+
+<p align="center"><img src="images/sol_LC_ALL.PNG" alt="tmux session" width="600" /></p>
+
+
+
+<br>
+
 ## [setup i3 with xfce-Desktop](#i3xfcedsk)
 
 https://wiki.archlinux.org/title/I3
