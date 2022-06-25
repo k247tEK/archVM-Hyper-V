@@ -136,15 +136,15 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
 
 Note: after archinstall - chroot into installed system & copy `/insCONF` to root home folder.
 
-~~~
+```console
 # cp -r /insCONFIG /mnt/archinstall/root/
-~~~
+```
 
 then.. shutdown VM..
 
-~~~
+```console
 # shutdown -h now
-~~~
+```
 
 before restarting VM, remove ISO image file from DvD.. in Virtual Machines Settings..
 
@@ -209,9 +209,9 @@ $ sudo pacman -Syu
 
 add aliases, edit `~/.bashrc` file..
 
-~~~
+```console
 $ nano ~/.bashrc
-~~~
+```
 
 <pre><code>#
 # ~/.bashrc
@@ -270,7 +270,7 @@ $
 </code></pre>
 _Note: $ prompt is in new line.._
 
-### [Check root account access with sudo..](#chkrootacc)
+### [check Root account access with sudo..](#chkrootacc)
 
 ```console
 $ sudo su -
@@ -302,7 +302,7 @@ copy `.bashrc` & `.bash_profile` files from k247 home folder to root home folder
 ```
 use exit, to return to k247 bash shell..
 
-### [Creating default directories](#createdefdir)
+### [creating Default directories](#createdefdir)
 
 ```console
 $ sudo pacman -S xdg-user-dirs
@@ -391,7 +391,7 @@ $
 </code></pre>
 now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
-### Setup ssh Keys..
+### [setup SSH Keys](#setupsshkeys)
 
 ```console
 $ cd ~/.ssh
@@ -451,7 +451,7 @@ $ yay -S pulseaudio-module-xrdp
 
 _Note: sbc is required in order to successfully build pulseaudio-module-xrdp.._
 
-### [Configure the XRDP server..](#confxrdp)
+### [configure the XRDP server..](#confxrdp)
 
 > By default, you may suffer from poor mouse and desktop experience.
 Enhanced session mode features better mouse and video experience and integrated clipboard.
@@ -502,7 +502,7 @@ replace __Your_Arch_Machine__ with your virtual machine name.. ie.. Arch..
 Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 ```
 
-start & Connect to virtual machine..
+Start & Connect to virtual machine..
 
 ## <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)</p>
 
@@ -511,9 +511,9 @@ start & Connect to virtual machine..
 
 _note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually, with `pulseaudio --start` command.._
 
-### [PulseAudio Sound Server](#pulseaudiosrv)
+### [pulseAudio Sound Server](#pulseaudiosrv)
 
-even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable PulseAudio Sound System(`start-pulseaudio-x11`) from Session and Startup & create a new entry..
+even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable pulseAudio Sound System(`start-pulseaudio-x11`) from Session and Startup & create a new entry..
 
 ```
 pulseaudio --start
@@ -524,29 +524,30 @@ logout & back in again.. and that should fix the sound.. ;-]..<br><br>
 
 As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
 
-~~~console
+```console
 $ sudo nano /etc/pacman.conf
-~~~
+```
 
-~~~
+```
 ...
 [options]
 IgnorePkg = libpulse pulseaudio
 ...
-~~~
+```
 
 ### [downgrade Pacman package](#downgradepacman)
 
 install `downgrade` from `AUR`,
 
-~~~console
+```console
 $ yay -S downgrade
-~~~
+```
 
 now you can downgrade both `libpulse` and `pulseaudio`.. to `16.0-1`
-~~~console
+
+```console
 $ sudo downgrade libpulse pulseaudio
-~~~
+```
 
 logout & back in again.. and that should fix the sound.. again..
 
@@ -1069,6 +1070,7 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ### [install Tmux plugins](#tmuxplugins)
 
 create or download [~/.tmux.conf](dotfiles/.tmux.conf) & run tmux session..
+
 ```console
 $ tmux
 ```
@@ -1209,19 +1211,20 @@ $ sudo pacman -S man
 <br>
 
 ## [setup i3 with xfce-Desktop](#i3xfcedsk)
+
 https://wiki.archlinux.org/title/I3
+
 ```console
 $ sudo pacman -S i3-gaps i3status i3blocks i3lock
 ```
+
 https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
 
-<!-- <img src="images/tmuxSession.png" alt="tmux session" width="600" /><br> -->
 <a href="https://youtu.be/pDKqgbNQKqA " target="_blank">
  <img src="images/i3xfce.png" alt="i3" width="600" height="auto" border="3" />
 </a><br>
 
-
-#### Background - wallpaper manager for i3
+#### background - Wallpaper manager for i3
 
 ```console
 $ sudo pacman -S feh
@@ -1257,11 +1260,12 @@ picom --no-vsync --config ~/.config/i3/picom.conf
 $ sudo pacman -S dmenu
 ```
 
-Note.. `LC_ALL` has to be set for dmenu to start..
+Note.. `LC_ALL` has to be set for `dmenu` to start..
 
 ```console
 bindsym $mod+d exec --no-startup-id env LC_ALL=en_GB.UTF-8 dmenu_run -b
 ```
+
 use `env LC_ALL=`.. in `~/.config/i3/config` file..<br><br>
 
 ### [chDE2_i3](dotfiles/bin/chDE2_i3) & [chDE2_xfce4](dotfiles/bin/chDE2_xfce4)
@@ -1307,7 +1311,7 @@ Home Folder dotfiles:
 
 <br>
 
-## [logs - hunting Errors](#logs)
+## [logs - Hunting Errors](#logs)
 
 https://wiki.archlinux.org/title/Systemd/Journal
 
