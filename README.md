@@ -54,11 +54,11 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 #### <p align="center"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
 
-##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
+##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p><br>
 
 ---
 
-### <p align="center">[First Boot of virtual machine & installing OS](#firstboot)</p>
+## <p align="center">[First Boot of virtual machine & installing OS](#firstboot)</p>
 
 <p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
 
@@ -150,7 +150,7 @@ before restarting VM, remove ISO image file from DvD.. in Virtual Machines Setti
 
 <br>
 
-## post Installation configuration
+## [post Installation configuration](#postinstall)
 
 archinstall - has setup user k247 with sudo administrator authority & has disabled root account..<br>
 Also sshd service has to be re-enabled & started:<br>
@@ -207,7 +207,12 @@ $ sudo pacman -Syu
  there is nothing to do
 [k247@archlinux ~]$</code></pre>
 
-add aliases, nano `~/.bashrc`
+add aliases, edit `~/.bashrc` file..
+
+~~~
+$ nano ~/.bashrc
+~~~
+
 <pre><code>#
 # ~/.bashrc
 #
@@ -482,6 +487,8 @@ $ yay -S dbus-x11
 
 ###### https://trendoceans.com/solved-failed-to-execute-child-process-dbus-launch-no-such-file-or-directory-while-x-forwarding/
 
+Shutdown virtual machine..
+
 > Shutdown Arch virtual machine, and then using PowerShell (run as Administrator),<br>
 you need to enable `hv_sock` on your VM:
 
@@ -495,7 +502,9 @@ replace __Your_Arch_Machine__ with your virtual machine name.. ie.. Arch..
 Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 ```
 
-### <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)</p>
+start & Connect to virtual machine..
+
+## <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)</p>
 
 <p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
  <img src="images/enhSessionMode.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
@@ -504,7 +513,7 @@ _note: clipboard and file sharing will work, but sound server will fail to start
 
 ### [PulseAudio Sound Server](#pulseaudiosrv)
 
-even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable PulseAudio Sound System(start-pulseaudio-x11) from Session and Startup & create a new entry..
+even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable PulseAudio Sound System(`start-pulseaudio-x11`) from Session and Startup & create a new entry..
 
 ```
 pulseaudio --start
@@ -514,9 +523,9 @@ pulseaudio --start
 logout & back in again.. and that should fix the sound.. ;-]..<br><br>
 
 As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
- 
- ~~~
- $ sudo nano /etc/pacman.conf
+
+~~~console
+$ sudo nano /etc/pacman.conf
 ~~~
 
 ~~~
@@ -524,25 +533,24 @@ As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sou
 [options]
 IgnorePkg = libpulse pulseaudio
 ...
- ~~~
+~~~
 
-
-### downgrade Pacman package
+### [downgrade Pacman package](#downgradepacman)
 
 install `downgrade` from `AUR`,
 
-~~~
+~~~console
 $ yay -S downgrade
 ~~~
 
 now you can downgrade both `libpulse` and `pulseaudio`.. to `16.0-1`
-~~~
+~~~console
 $ sudo downgrade libpulse pulseaudio
 ~~~
 
 logout & back in again.. and that should fix the sound.. again..
 
-or.. you can just live without sound on xrdp & keep on updating until `pulseaudio-module-xrdp` gets updated.. ;-].. welcome to arch..
+or.. you can just live without sound on xrdp & keep on updating VM until `pulseaudio-module-xrdp` or `pulseaudio` gets updated.. again.. ;-].. welcome to arch..
 
 <br>
 
@@ -820,7 +828,7 @@ Now, enable and start `smb.service` and `nmb.service`
 $ sudo systemctl enable --now smb nmb
 ```
 
-to access samba shares through `caja` & `thunar`, Press Ctrl+l and enter:<br>
+to access samba shares through `caja` & `thunar`, Press [Ctrl+l] and enter:<br>
 
 ```
 smb://servername/share
