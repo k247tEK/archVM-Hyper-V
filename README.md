@@ -179,6 +179,7 @@ Check EFI setup..
 
 ```console
 $ sudo efivar -l
+$ ls -la /sys/firmware/efi
 ```
 
 Check hard drive / Block storage..
