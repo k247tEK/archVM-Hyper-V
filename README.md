@@ -77,7 +77,7 @@ This guided installer will perform (query) the following steps:
 
 ### [Setting up SSH on the installation image](#setupsshinstall)
 
-To setup OS using SSH session, set keybord language, find IP address of virtual machine & set the root password.
+To setup OS using SSH session, set keyboard language, find IP address of virtual machine & set the root password.
 
 - set your keyboard layout using `loadkeys`.
 
@@ -1235,8 +1235,6 @@ works, so you will have to edit the application menu.. `aisleriot`
 
 <p align="center"><img src="images/sol_LC_ALL.PNG" alt="tmux session" width="600" /></p>
 
-
-
 <br>
 
 ## [setup i3 with xfce-Desktop](#i3xfcedsk)
@@ -1308,7 +1306,7 @@ then.. logout & login.. to change session.. ;-]..
 
 [<b>dotfiles</b>](dotfiles) folder.. contains `i3` configuration files in `.config` folder & shell scripts in `bin` folder..
 
-```
+```console
 [k247@archlinux ~]
 $ tree -L 2 -aph bin/ .config/i3*
 [drwxr-xr-x 4.0K]  bin/
