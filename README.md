@@ -692,7 +692,7 @@ thunar and caja, both will fail to find any network shares until the required pa
 $ sudo systemctl enable --now avahi-daemon
 ```
 
-and install Avahi's required packages, pygtk and python-dbus..
+and install Avahi's required packages, `pygtk` and `python-dbus`..
 
 ```console
 $ sudo pacman -S avahi python-dbus --needed
@@ -916,9 +916,9 @@ $ sudo pacman -R xfce4-screensaver
 
 thats one less thing to start.. assigned only 2GB of RAM to this VM..
 
-### [Clipman - clipboard Manager](#clipman)<br>
+### [clipman - Clipboard Manager](#clipman)<br>
 
- set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a pitcure there..<br>
+ set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a picture there..<br>
 
 <p align="center"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
