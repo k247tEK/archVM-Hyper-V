@@ -1256,6 +1256,13 @@ https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
 ```console
 $ sudo pacman -S feh
 ```
+_Note: [`chbkg`](dotfiles/bin/chbkg) shell script in `~/bin` folder.. uses `feh` and requires wallpapers be in `~/Pictures/backgrounds/`_
+
+copy backgrounds from system folder `/usr/share/backgrounds/xfce/` to user home folder `~/Pictures/backgrounds/`
+
+```console
+$ cp /usr/share/backgrounds/xfce/* ~/Pictures/backgrounds/
+```
 
 #### picom - Compositor Manager
 
