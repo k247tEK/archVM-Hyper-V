@@ -130,10 +130,14 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
 # archinstall
 ```
 
+<p align='center'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KA16fFaSFv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+<!--
 <p align="center"><a href="https://youtu.be/KA16fFaSFv4" target="_blank">
  <img src="images/archinstall_ytb.png" alt="archinstall" width="600" height="auto" border="3" />
 </a></p>
-
+-->
 Note: after archinstall - chroot into installed system & copy `/insCONF` to root home folder.
 
 ```console
