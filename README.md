@@ -568,6 +568,7 @@ ref: https://wiki.archlinux.org/title/Polkit
 
 these three don't play nice with each other.. sooo will have to add some rules for polkit..<br>
 but please be adviced..<br>
+
 #### <b>THIS SHOULD NOT BE DONE ON PRODUCTIONS SYSTEMS...</b>
 
 ### [Bypass password prompt - Globally](#bypassprompt)
