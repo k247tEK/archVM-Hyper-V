@@ -1,0 +1,3 @@
+#include /usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+include /usr/share/themes/Raleigh/gtk-2.0/gtkrc
+#include "/usr/share/themes/Xfce-dawn/gtk-2.0/gtkrc"
