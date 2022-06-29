@@ -1,16 +1,18 @@
 ## Acknowledgments & Thanks
 
-Special thanks to [The Arch Linux](https://archlinux.org) & [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/),
+Special thanks to [The Arch Linux](https://archlinux.org) & [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/)..
 
 [manjaro linux](https://manjaro.org), inspired xfce-Desktop setup..
 
+## youtube:
+
 Chris Titus Tech [How to Setup Hyper V on Windows](https://www.youtube.com/watch?v=FCIA4YQHx9U)
 
-internet Search:
+## google Search:
 
 [Install Arch Linux on Windows 10 Hyper-V](https://dzone.com/articles/install-arch-linux-on-windows-10-hyper-v)
 
-[Enhanced Hyper-V session on Manjaro VM}(https://blog.jsobczak.com/2019/12/08/enhanced-hyper-v-session-on-manjaro-vm/)
+[Enhanced Hyper-V session on Manjaro VM](https://blog.jsobczak.com/2019/12/08/enhanced-hyper-v-session-on-manjaro-vm/)
 
 [Detailed Walkthrough: Install Ubuntu 20.04 on Hyper-V with Enhanced Session](https://www.nakivo.com/blog/install-ubuntu-20-04-on-hyper-v-with-enhanced-session/)
 
