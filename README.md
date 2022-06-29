@@ -4,15 +4,15 @@ ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/vi
 
 ### Enabling Windows Hyper-V and OpenSSH Client features
 
-_Note that Hyper-V is not available on the Windows 10 Home edition, and requires Windows 10 Pro or equivalent._ 
+_Note that Hyper-V is not available on the Windows 10 Home edition, and requires Windows 10 Pro or equivalent._
 
 - ### [Enabling Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
 
-- ### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
+- ### [Enabling the built-in SSH client in Windows 10](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) or [Setup WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)
 
 _Note: ssh client is only required if you wish to install guest OS using ssh session.._
 
-- ### Setup Host
+- ### [Setup Host](setupHost/README.md)
 
     - ### Hyper-V Settings..
 
@@ -26,7 +26,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### Creating the Internal / External Network Switch
 
-- ### Setup Client
+- ### [Setup Client](setupClient/README.md)
 
     - #### Creating the virtual machine in Hyper-V Manager
 
