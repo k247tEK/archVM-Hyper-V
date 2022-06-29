@@ -1360,7 +1360,7 @@ https://wiki.archlinux.org/title/Systemd/Journal
 $ journalctl -b -0 | lnav
 ```
 
-shows messages from the current boot,
+shows messages from the current boot, using [lnav](https://lnav.org).
 
 <br>
 
