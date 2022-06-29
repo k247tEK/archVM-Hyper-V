@@ -1088,10 +1088,10 @@ soooo [Ctrl] + [b] then [Shift] + [i], esc & exit after install of plugins..<br>
 now both plugins should be installed.. run tmux.. set layout.. and save it with..<br>
 
 <a href="https://youtu.be/BVmGL96zq1g " target="_blank">
- <img src="images/tmuxSession.png" alt="tmux session" width="600" height="auto" border="3" />
+ <img src="images/tmuxSession_ytb_logo.png" alt="tmux session" width="600" height="auto" border="3" />
 </a><br>
-[Ctrl] + [b] then [s] & to restore session layout [Ctrl] + [b] then [r]..<br>
-<br>
+
+[Ctrl] + [b] then [s] & to restore session layout [Ctrl] + [b] then [r]..<br><br>
 
 ## [install snap & Flatpak](#snapflatpak)
 
@@ -1255,7 +1255,7 @@ $ sudo pacman -S i3-gaps i3status i3blocks i3lock
 https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
 
 <a href="https://youtu.be/pDKqgbNQKqA " target="_blank">
- <img src="images/i3xfce.png" alt="i3" width="600" height="auto" border="3" />
+ <img src="images/i3xfce_ytb_logo.png" alt="i3" width="600" height="auto" border="3" />
 </a><br>
 
 #### background - Wallpaper manager for i3
