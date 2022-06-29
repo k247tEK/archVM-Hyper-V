@@ -12,7 +12,7 @@ _Note that Hyper-V is not available on the Windows 10 Home edition, and requires
 
 _Note: ssh client is only required if you wish to install guest OS using ssh session.._
 
-- ### [Setup Host](setupHost/README.md)
+- ### [Setup Host](setupHost/)
 
     - ### Hyper-V Settings..
 
@@ -26,7 +26,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### Creating the Internal / External Network Switch
 
-- ### [Setup Client](setupClient/README.md)
+- ### [Setup Client](setupClient/)
 
     - #### Creating the virtual machine in Hyper-V Manager
 
