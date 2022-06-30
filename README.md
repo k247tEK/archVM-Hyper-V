@@ -529,6 +529,23 @@ pulseaudio --start
 <img src="images/sessionStartupPA.png" alt="session startup pulseaudio" width="480" /><br>
 logout & back in again.. and that should fix the sound.. ;-]..<br><br>
 
+alternatively.. from https://wiki.archlinux.org/title/xrdp.. Troubleshooting.. No sound..<br>
+
+> This is the result of systemd improperly starting PulseAudio. One workaround is to disable the user unit files pulseaudio.service and pulseaudio.socket either for your own user or for all users, and make PulseAudio start when needed by setting `autospawn` to `yes` in `/etc/pulse/client.conf`
+
+```console
+$ sudo nano /etc/pulse/client.conf
+```
+
+```console
+...
+#autospawn = no
+ autospawn = yes
+...
+```
+
+restart Virtual machine..<br><br>
+
 As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
 
 ```console
