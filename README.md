@@ -875,7 +875,7 @@ https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
-### [Mugshot & xfce-Desktop](#mugshotid)
+### [Mugshot / users & Groups in xfce-Desktop](#mugshotid)
 
  > is a lightweight user configuration utility for Linux designed for simplicity and ease of use. Quickly update your personal profile and sync your updates across applications.<br>
  https://github.com/bluesabre/mugshot
@@ -885,6 +885,14 @@ $ yay -S mugshot
 ```
 
 _Note: the user icon image file is `~/.face`_
+
+to configure users and Groups in xfce-Desktop, install `gnome-system-tools` from `AUR`.
+
+```console
+$ yay -S gnome-system-tools
+```
+
+<p align="center"><img src="images/usersGroups.PNG" alt="xfce xrdp logout" width="600" /></p>
 
 ### [xfce4 Places plugin](#xfceplaces)
 
