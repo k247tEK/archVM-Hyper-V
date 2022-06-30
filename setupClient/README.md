@@ -1,4 +1,4 @@
-- ### [Setup Client](../setupClient/README.md)
+- ### [Setup Client](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine)
 
     - #### Creating the virtual machine in Hyper-V Manager
 
