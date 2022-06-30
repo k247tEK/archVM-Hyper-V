@@ -30,7 +30,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - #### [Creating the virtual machine in Hyper-V Manager](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#creating-the-virtual-machine-in-hyper-v-manager)
 
-    - #### [Setting Hyper-V Generation 2 for a UEFI virtual machine](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-hyper-v-generation-2-for-a-uefi-virtual-machine)
+    - #### [Specifying Hyper-V Generation 2 for a UEFI virtual machine](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#Specifying-hyper-v-generation-2-for-a-uefi-virtual-machine)
 
     - #### [Setting Hardware Firmware Boot order, ensure Network Adapter is last](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-hardware-firmware-boot-order-ensure-network-adapter-is-last)
 

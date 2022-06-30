@@ -2,7 +2,7 @@
 
     - #### Creating the virtual machine in Hyper-V Manager<br><br><p align="left"><img src="images/VirtWiz01.PNG" alt="New Virtual Machine Wizard" width="480" /></p>
 
-    - #### Setting Hyper-V Generation 2 for a UEFI virtual machine<br><br><p align="left"><img src="images/VirtWiz03.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz08.PNG" alt="New Virtual Machine Wizard" width="480" /></p>
+    - #### Specifying Hyper-V Generation 2 for a UEFI virtual machine<br><br><p align="left"><img src="images/VirtWiz03.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz04.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz05.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz06.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz07.PNG" alt="New Virtual Machine Wizard" width="480" /></p><br><p align="left"><img src="images/VirtWiz08.PNG" alt="New Virtual Machine Wizard" width="480" /></p>
 
     - #### Setting Hardware Firmware Boot order, ensure Network Adapter is last<br><br><p align="left"><img src="images/VirtSetting01.PNG" alt="Setting Hardware Firmware Boot order" width="480" /></p>
 
