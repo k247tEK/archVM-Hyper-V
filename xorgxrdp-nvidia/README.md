@@ -92,7 +92,7 @@ Check to see if Direct rendering is enabled and working
 $ sudo glxinfo | grep direct
 ```
 
-```console
+```
 direct rendering: Yes
     GL_AMD_multi_draw_indirect, GL_AMD_pinned_memory, 
     GL_ARB_derivative_control, GL_ARB_direct_state_access, 
