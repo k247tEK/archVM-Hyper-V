@@ -133,6 +133,44 @@ OpenGL ES profile shading language version string: OpenGL ES GLSL ES 3.20
 OpenGL ES profile extensions:
 ```
 
+list.. `glxinfo` `-B`: brief output, print only the basics.
+
+```console
+$ glxinfo -B
+```
+
+```
+name of display: :10.0
+display: :10  screen: 0
+direct rendering: Yes
+Extended renderer info (GLX_MESA_query_renderer):
+    Vendor: Mesa/X.org (0xffffffff)
+    Device: llvmpipe (LLVM 13.0.1, 128 bits) (0xffffffff)
+    Version: 22.1.2
+    Accelerated: no
+    Video memory: 1910MB
+    Unified memory: no
+    Preferred profile: core (0x1)
+    Max core profile version: 4.5
+    Max compat profile version: 4.5
+    Max GLES1 profile version: 1.1
+    Max GLES[23] profile version: 3.2
+OpenGL vendor string: Mesa/X.org
+OpenGL renderer string: llvmpipe (LLVM 13.0.1, 128 bits)
+OpenGL core profile version string: 4.5 (Core Profile) Mesa 22.1.2
+OpenGL core profile shading language version string: 4.50
+OpenGL core profile context flags: (none)
+OpenGL core profile profile mask: core profile
+
+OpenGL version string: 4.5 (Compatibility Profile) Mesa 22.1.2
+OpenGL shading language version string: 4.50
+OpenGL context flags: (none)
+OpenGL profile mask: compatibility profile
+
+OpenGL ES profile version string: OpenGL ES 3.2 Mesa 22.1.2
+OpenGL ES profile shading language version string: OpenGL ES GLSL ES 3.20
+```
+
 save full listing of `glxinfo`to users home `temp` folder & test `glxgears`..
 
 ```console
