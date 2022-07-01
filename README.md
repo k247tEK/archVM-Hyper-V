@@ -1185,6 +1185,39 @@ which can be reinstalled with --asdeps.<br>
 Use pacman -Qqem > foreignpkglist.txt<br>
 to create the list of AUR and other foreign packages that have been explicitly installed.<br>
 
+```console
+$ pacman -Qei > ~/temp/pkglist_Qei.txt
+```
+
+```console
+$ nano ~/temp/pkglist_Qei.txt
+...
+Name            : htop
+Version         : 3.2.1-1
+Description     : Interactive process viewer
+Architecture    : x86_64
+URL             : https://htop.dev/
+Licenses        : GPL
+Groups          : None
+Provides        : None
+Depends On      : libcap  libcap.so=2-64  libnl  ncurses  libncursesw.so=6-64
+Optional Deps   : lm_sensors: show cpu temperatures [installed]
+                  lsof: show files opened by a process [installed]
+                  strace: attach to a running process [installed]
+Required By     : None
+Optional For    : None
+Conflicts With  : None
+Replaces        : None
+Installed Size  : 362.45 KiB
+Packager        : Christian Hesse <eworm@archlinux.org>
+Build Date      : Fri 03 Jun 2022 07:35:51 BST
+Install Date    : Fri 10 Jun 2022 00:40:27 BST
+Install Reason  : Explicitly installed
+Install Script  : No
+Validated By    : Signature
+...
+```
+
 #### [Pacman database](#pacmandb)
 
 See pacman/Tips and tricks#Back up the pacman database.
