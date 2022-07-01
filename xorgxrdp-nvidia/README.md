@@ -20,7 +20,7 @@ Shutdown virtual machine..
 
 ## NVIDIA GeForce 310M
 
-<pre><code>
+```
 NVIDIA System Information report created on: 06/13/2022 16:33:15
 System name: KG560
 
@@ -70,7 +70,7 @@ PhysX                   09.13.1220          NVIDIA PhysX
 NVCUDA.DLL              8.17.13.4201        NVIDIA CUDA 6.5.51 driver
 nvGameSR.dll            6.14.13.4201        NVIDIA 3D Settings Server
 nvGameS.dll             6.14.13.4201        NVIDIA 3D Settings Server
-</code></pre>
+```
 
 <br>
 
@@ -78,5 +78,4 @@ on Host.. from Nvidia Control Panel.. Manage 3D Settings.. Program Settings.. ad
 
 <p align="center"><img src="images/manage3DSetting.PNG" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
 
-Restart windows Host..
-
+Restart windows Host.. before restarting virtual machine and connecting to it..
