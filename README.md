@@ -1005,7 +1005,7 @@ $ yay -S ttf-ms-fonts
 ### [GTK and Qt themes](#gtkqt)
 
 https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
-tbc..
+also see.. [XFCE Customization](https://www.youtube.com/watch?v=29ARF14InaU)
 
 ### [Multimedia apps](#multimedia)
 
