@@ -1191,6 +1191,9 @@ $ pacman -Qei > ~/temp/pkglist_Qei.txt
 
 ```console
 $ nano ~/temp/pkglist_Qei.txt
+```
+
+```
 ...
 Name            : htop
 Version         : 3.2.1-1
