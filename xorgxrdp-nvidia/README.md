@@ -16,7 +16,7 @@ Shutdown virtual machine..
 
 ##### [ Host s/w : Windows 10 Pro 21H2 OS Build 19044.1706. ]
 
-<p align="center"><img src="images/deviceManager.PNG" alt="xfce About" width="360" /> <img src="images/systemDevices.PNG" alt="xfce About" width="360" /></p>
+<p align="left"><img src="images/deviceManager.PNG" alt="xfce About" width="360" /> <img src="images/systemDevices.PNG" alt="xfce About" width="360" /></p>
 
 ##### [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
