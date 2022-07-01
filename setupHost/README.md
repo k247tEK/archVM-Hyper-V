@@ -13,3 +13,8 @@
         - #### Creating the Internal / External Network Switch<br><br><p align="left"><img src="images/virtualSwitches.PNG" alt="External Network Switch" width="480" /></p>
 
         ensure Internal / External Network Switch has access to internet, before assigning it to a virtual machine..
+
+<br>
+
+---
+#EOF

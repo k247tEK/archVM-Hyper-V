@@ -23,3 +23,8 @@
     - #### Setting Automatic Start Action to Nothing<br><br><p align="left"><img src="images/VirtSetting12.PNG" alt="Setting Automatic Start Action to Nothing" width="480" /></p>
 
     - #### Setting Automatic Stop Action to Power Off<br><br><p align="left"><img src="images/VirtSetting13.PNG" alt="Setting Automatic Stop Action to Power Off" width="480" /></p>
+
+<br>
+
+---
+#EOF

@@ -79,3 +79,68 @@ on Host.. from Nvidia Control Panel.. Manage 3D Settings.. Program Settings.. ad
 <p align="center"><img src="images/manage3DSetting.PNG" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
 
 Restart windows Host.. before restarting virtual machine and connecting to it..
+
+from about XFCE application,
+
+<p align="left"><img src="images/xfceAbout.png" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
+
+GPU is listed as.. llvmpipe (LLVM 13.0.1, 128 bits) (1.9 GiB)
+
+Check to see if Direct rendering is enabled and working
+
+```console
+$ sudo glxinfo | grep direct
+```
+
+```console
+direct rendering: Yes
+    GL_AMD_multi_draw_indirect, GL_AMD_pinned_memory, 
+    GL_ARB_derivative_control, GL_ARB_direct_state_access, 
+    GL_ARB_draw_elements_base_vertex, GL_ARB_draw_indirect, 
+    GL_ARB_indirect_parameters, GL_ARB_instanced_arrays, 
+    GL_ARB_map_buffer_range, GL_ARB_multi_bind, GL_ARB_multi_draw_indirect, 
+    GL_AMD_draw_buffers_blend, GL_AMD_multi_draw_indirect, 
+    GL_ARB_direct_state_access, GL_ARB_draw_buffers, 
+    GL_ARB_draw_indirect, GL_ARB_draw_instanced, GL_ARB_enhanced_layouts, 
+    GL_ARB_indirect_parameters, GL_ARB_instanced_arrays, 
+    GL_ARB_map_buffer_range, GL_ARB_multi_bind, GL_ARB_multi_draw_indirect, 
+    GL_EXT_direct_state_access, GL_EXT_draw_buffers2, GL_EXT_draw_instanced,
+```
+
+Check OpenGL Version,
+
+```console
+$ sudo glxinfo | grep OpenGL
+```
+
+```
+OpenGL vendor string: Mesa/X.org
+OpenGL renderer string: llvmpipe (LLVM 13.0.1, 128 bits)
+OpenGL core profile version string: 4.5 (Core Profile) Mesa 22.1.2
+OpenGL core profile shading language version string: 4.50
+OpenGL core profile context flags: (none)
+OpenGL core profile profile mask: core profile
+OpenGL core profile extensions:
+OpenGL version string: 4.5 (Compatibility Profile) Mesa 22.1.2
+OpenGL shading language version string: 4.50
+OpenGL context flags: (none)
+OpenGL profile mask: compatibility profile
+OpenGL extensions:
+OpenGL ES profile version string: OpenGL ES 3.2 Mesa 22.1.2
+OpenGL ES profile shading language version string: OpenGL ES GLSL ES 3.20
+OpenGL ES profile extensions:
+```
+
+save full listing of `glxinfo`to users home `temp` folder & test `glxgears`..
+
+```console
+$ glxinfo > ~/temp/glxinfo
+$ glxgears -info
+```
+
+<p align="left"><img src="images/glxgears.png" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
+
+I don't know why or how, but installing `xorgxrdp-nvidia` does improve xfce-Desktop performance in xrdp.. ;-]...<br><br>
+
+---
+#EOF

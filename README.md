@@ -588,7 +588,7 @@ ref: https://wiki.archlinux.org/title/Polkit
 these three don't play nice with each other.. sooo will have to add some rules for polkit..<br>
 but please be adviced..<br>
 
-#### <b>THIS SHOULD NOT BE DONE ON PRODUCTIONS SYSTEMS...</b>
+#### <b>THIS SHOULD NOT BE DONE ON PRODUCTION SYSTEMS...</b>
 
 ### [Bypass password prompt - Globally](#bypassprompt)
 
@@ -1170,7 +1170,7 @@ _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use s
 https://wiki.archlinux.org/title/Pacman_tips#List_of_installed_packages
 
 ```console
-$ pacman -Qqe > temp/pkglist.txt
+$ pacman -Qqe > ~/temp/pkglist.txt
 ```
 
 > Note:<br>
