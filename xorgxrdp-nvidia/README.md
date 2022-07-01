@@ -148,7 +148,7 @@ I don't know why or how, but installing `xorgxrdp-nvidia` does improve xfce-Desk
 $ uname -a && lsmod | grep hv
 ```
 
-```console
+```
 Linux archlinuxVM 5.18.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Sat, 25 Jun 2022 20:22:01 +0000 x86_64 GNU/Linux
 hv_netvsc             102400  0
 hv_balloon             45056  0
