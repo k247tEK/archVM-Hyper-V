@@ -16,6 +16,8 @@ Shutdown virtual machine..
 
 ##### [ Host s/w : Windows 10 Pro 21H2 OS Build 19044.1706. ]
 
+<p align="center"><img src="images/deviceManager.PNG" alt="xfce About" width="360" /> <img src="images/systemDevices.PNG" alt="xfce About" width="360" /></p>
+
 ##### [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ## NVIDIA GeForce 310M
@@ -82,7 +84,7 @@ Restart windows Host.. before restarting virtual machine and connecting to it..
 
 from about XFCE application,
 
-<p align="left"><img src="images/xfceAbout.png" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
+<p align="left"><img src="images/xfceAbout.png" alt="xfce About" width="auto" /></p>
 
 GPU is listed as.. llvmpipe (LLVM 13.0.1, 128 bits) (1.9 GiB)
 
@@ -138,7 +140,7 @@ $ glxinfo > ~/temp/glxinfo
 $ glxgears -info
 ```
 
-<p align="left"><img src="images/glxgears.png" alt="manage NVIDIA GeForce 310M 3D Setting" width="auto" /></p>
+<p align="left"><img src="images/glxgears.png" alt="glxgears info" width="auto" /></p>
 
 I don't know why or how, but installing `xorgxrdp-nvidia` does improve xfce-Desktop performance in xrdp.. ;-]...<br><br>
 
