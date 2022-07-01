@@ -25,24 +25,24 @@ NVIDIA System Information report created on: 06/13/2022 16:33:15
 System name: KG560
 
 [Display]
-Operating System:	    Windows 10 Pro, 64-bit
-DirectX version:	    11.0 
-GPU processor:		    GeForce 310M
-Driver version:		    342.01
-Direct3D API version:	10.1
-CUDA Cores:		        16 
-Core clock:		        625 MHz 
-Shader clock:		    1530 MHz
-Memory data rate:	    1580 MHz
-Memory interface:	    64-bit 
-Total available graphics memory:	4095 MB
-Dedicated video memory:	512 MB DDR3
-System video memory:	0 MB
-Shared system memory:	3583 MB
-Video BIOS version:	    70.18.4B.00.06
-IRQ:			        16
-Bus:			        PCI Express x16
-Device ID:		        10DE 0A75 392D17AA
+Operating System:       Windows 10 Pro, 64-bit
+DirectX version:        11.0 
+GPU processor:          GeForce 310M
+Driver version:         342.01
+Direct3D API version:   10.1
+CUDA Cores:             16 
+Core clock:             625 MHz 
+Shader clock:           1530 MHz
+Memory data rate:       1580 MHz
+Memory interface:       64-bit 
+Total available graphics memory: 4095 MB
+Dedicated video memory: 512 MB DDR3
+System video memory:    0 MB
+Shared system memory:   3583 MB
+Video BIOS version:     70.18.4B.00.06
+IRQ:                    16
+Bus:                    PCI Express x16
+Device ID:              10DE 0A75 392D17AA
 
 [Components]
 
