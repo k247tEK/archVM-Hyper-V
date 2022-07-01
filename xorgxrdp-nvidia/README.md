@@ -142,5 +142,25 @@ $ glxgears -info
 
 I don't know why or how, but installing `xorgxrdp-nvidia` does improve xfce-Desktop performance in xrdp.. ;-]...<br><br>
 
+#### [Linux 5.14 will support Hyper-V DRM display driver](https://meterpreter.org/linux-5-14-will-support-hyper-v-drm-display-driver/)
+
+```console
+$ uname -a && lsmod | grep hv
+```
+
+```console
+Linux archlinuxVM 5.18.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Sat, 25 Jun 2022 20:22:01 +0000 x86_64 GNU/Linux
+hv_netvsc             102400  0
+hv_balloon             45056  0
+hv_utils               57344  3
+hv_sock                20480  1
+vsock                  53248  5 hv_sock
+hv_storvsc             28672  2
+scsi_transport_fc      90112  1 hv_storvsc
+hv_vmbus              155648  8 hv_balloon,hv_utils,hv_netvsc,hid_hyperv,hv_storvsc,hyperv_keyboard,hyperv_drm,hv_sock
+```
+
+<br>
+
 ---
 #EOF
