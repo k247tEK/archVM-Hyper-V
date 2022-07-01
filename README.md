@@ -54,6 +54,8 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 #### <p align="center"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
 
+##### <p align="center"> [ Host s/w : Windows 10 Pro 21H2 OS Build 19044.1706. ]</p>
+
 ##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p><br>
 
 ---
@@ -437,7 +439,7 @@ http://xrdp.org
 $ yay -S xrdp
 ```
 
-### [Install, `xorgxrdp`](#instxorgxrdp)
+### [Install, `xorgxrdp`](#instxorgxrdp) or [`xorgxrdp-nvidia`](xorgxrdp-nvidia)
 
 > is a collection of modules to be used with a pre-existing X.Org install to make the X server act like X11rdp. Unlike X11rdp, you don't have to recompile the whole X Window System. Instead, additional modules are installed to a location where the existing Xorg installation would pick them.
 https://github.com/neutrinolabs/xorgxrdp
