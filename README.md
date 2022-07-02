@@ -546,7 +546,8 @@ $ sudo nano /etc/pulse/client.conf
 ...
 ```
 
-restart Virtual machine..<br><br>
+Restart virtual machine.. & test Sound,<br>
+if sound is still not working,
 
 As of 24th June 20222 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
 
