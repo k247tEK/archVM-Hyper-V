@@ -1271,7 +1271,7 @@ See rsync#As a backup utility.<br>
 https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
 
 ```console
-$ sudo pacman -S rsync
+$ sudo pacman -S rsync p7zip zip unzip
 ```
 
 ### [ooh.. install the F..ing manual..](#installman)
