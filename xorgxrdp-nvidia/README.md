@@ -20,7 +20,7 @@ Shutdown virtual machine..
 
 ##### [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
-## NVIDIA GeForce 310M
+## [NVIDIA GeForce 310M](https://www.notebookcheck.net/NVIDIA-GeForce-310M.22439.0.html#:~:text=The%20Nvidia%20GeForce%20310M%20is,MHz%20and%20therefore%20slightly%20slower.)
 
 ```
 NVIDIA System Information report created on: 06/13/2022 16:33:15
@@ -198,6 +198,46 @@ vsock                  53248  5 hv_sock
 hv_storvsc             28672  2
 scsi_transport_fc      90112  1 hv_storvsc
 hv_vmbus              155648  8 hv_balloon,hv_utils,hv_netvsc,hid_hyperv,hv_storvsc,hyperv_keyboard,hyperv_drm,hv_sock
+```
+
+List all loaded `drm` Drivers in Kernel,
+
+```console
+$ sudo dmesg | grep drm
+```
+
+```
+[    0.277563] ACPI: bus type drm_connector registered
+[    2.928498] systemd[1]: Starting Load Kernel Module drm...
+[    2.982822] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[    2.983678] systemd[1]: Finished Load Kernel Module drm.
+[    3.751008] hv_vmbus: registering driver hyperv_drm
+[    3.751844] hyperv_drm 5620e0c7-8062-4dce-aeb7-520c7ef76171: [drm] Synthvid Version major 3, minor 5
+[    3.751942] fb0: switching to hyperv_drm from EFI VGA
+[    3.754706] [drm] Initialized hyperv_drm 1.0.0 2020 for 5620e0c7-8062-4dce-aeb7-520c7ef76171 on minor 0
+[    3.774471] hyperv_drm 5620e0c7-8062-4dce-aeb7-520c7ef76171: [drm] fb0: hyperv_drmdrmfb frame buffer device
+```
+
+List all installed `mesa` packages,
+
+```console
+$ pacman -Q | grep mesa
+```
+
+```
+libva-mesa-driver 22.1.2-1
+mesa 22.1.2-1
+mesa-utils 8.5.0-2
+```
+
+List all installed `nvidia` packages,
+
+```console
+$ pacman -Q | grep nvidia
+```
+
+```
+xorgxrdp-nvidia 0.2.18-2
 ```
 
 <br>
