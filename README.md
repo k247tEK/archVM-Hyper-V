@@ -697,7 +697,7 @@ from edit menu..<br>
 pkexec thunar %f --display :10.0
 ```
 
-the display variable, is hard coded here.. `:10.0` not good.. as this will fail in xorg session, as display there, is set to :`0.0`, I can not figure out how to pass --display the env DISPLAY variable.. have tried..
+the display variable, is hard coded here.. `:10.0` not good.. as this will fail in xorg session, as display there, is set to `:0.0`, I can not figure out how to pass --display the env DISPLAY variable.. have tried..
 
 ```
 export DISPLAY; pkexec thunar %f --display=DISPLAY
