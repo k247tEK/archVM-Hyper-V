@@ -1049,7 +1049,7 @@ https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 >You can enable numlock right after the kernel boots in the initramfs. This is the only way to ensure numlock is on even during full-disk encryption password entry. Install `mkinitcpio-numlock` AUR and add the `numlock` mkinitcpio hook before encrypt in the `/etc/mkinitcpio.conf` HOOKS array
 
 ```console
-$ sudo pacman -S mkinitcpio-numlock
+$ yay -S mkinitcpio-numlock
 $ sudo nano /etc/mkinitcpio.conf
 ```
 
