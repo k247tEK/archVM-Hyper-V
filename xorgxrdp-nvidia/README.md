@@ -189,7 +189,7 @@ $ uname -a && lsmod | grep hv
 ```
 
 ```
-Linux archlinuxVM 5.18.7-arch1-1 #1 SMP PREEMPT_DYNAMIC Sat, 25 Jun 2022 20:22:01 +0000 x86_64 GNU/Linux
+Linux archlinuxVM 5.18.9-arch1-1 #1 SMP PREEMPT_DYNAMIC Sat, 02 Jul 2022 21:03:06 +0000 x86_64 GNU/Linux
 hv_netvsc             102400  0
 hv_balloon             45056  0
 hv_utils               57344  3
