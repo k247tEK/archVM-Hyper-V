@@ -245,6 +245,9 @@ ENV{ID_PATH}=="?*", KERNEL=="renderD*", SYMLINK+="dri/by-path/$env{ID_PATH}-rend
 
 ```console
 $ ll /dev/dri/
+```
+
+```
 total 0
 drwxr-xr-x   2 root root      60 Jul  5 02:48 ./
 drwxr-xr-x  19 root root    3.7K Jul  5 02:48 ../
