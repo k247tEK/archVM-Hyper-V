@@ -364,6 +364,26 @@ and the attributes from one single parent device.
     ATTRS{power/runtime_suspended_time}=="0"
 ```
 
+```console
+$ ll /sys/class/drm/
+total 0
+drwxr-xr-x  2 root root    0 Jul  5 02:48 ./
+drwxr-xr-x 62 root root    0 Jul  5 02:48 ../
+lrwxrwxrwx  1 root root    0 Jul  5 02:48 card0 -> ../../devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171/drm/card0/
+lrwxrwxrwx  1 root root    0 Jul  5 02:48 card0-Virtual-1 -> ../../devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/5620e0c7-8062-4dce-aeb7-520c7ef76171/drm/card0/card0-Virtual-1/
+-r--r--r--  1 root root 4.0K Jul  5 05:37 version
+```
+
+How to Tell the Display Device Name
+
+```console
+$ for p in /sys/class/drm/*/status; do con=${p%/status}; echo -n "${con#*/card?-}: "; cat $p; done
+```
+
+```
+Virtual-1: connected
+```
+
 List all installed `mesa` packages,
 
 ```console
