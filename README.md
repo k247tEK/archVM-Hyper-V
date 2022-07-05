@@ -1038,6 +1038,55 @@ useful bash shell tools..
 $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 ```
 
+<br>
+
+### Activating numlock on bootup
+
+https://wiki.archlinux.org/title/Activating_numlock_on_bootup
+
+#### Console Early bootup (mkinitcpio)
+
+>You can enable numlock right after the kernel boots in the initramfs. This is the only way to ensure numlock is on even during full-disk encryption password entry. Install `mkinitcpio-numlock` AUR and add the `numlock` mkinitcpio hook before encrypt in the `/etc/mkinitcpio.conf` HOOKS array
+
+```console
+$ sudo pacman -S mkinitcpio-numlock
+$ sudo nano /etc/mkinitcpio.conf
+```
+
+```
+HOOKS=(base udev autodetect keyboard keymap consolefont numlock modconf block encrypt lvm2 filesystems fsck)
+```
+
+Then regenerate the initramfs for the change to take effect.
+
+```console
+$ sudo mkinitcpio -P
+```
+
+#### for X.org startx
+
+>Install the `numlockx` package and add it to the `~/.xinitrc` file before exec:
+
+```console
+$ sudo pacman -S numlockx
+$ nano ~/.xinitrc
+```
+
+```
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+#
+
+numlockx &
+
+exec window_manager
+```
+
+<br>
+
 ### [bash Shell & Tumx - Session management](#bashtmux)
 
 Home Folder dotfiles:
