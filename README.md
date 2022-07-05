@@ -935,7 +935,13 @@ select Restart & de-select Suspend..
 
 ### [xfce-Desktop Wallpapers](#wallpapers)
 
-<img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" />
+<img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" /><br>
+
+install arch linux wall papers..
+
+```console
+$ sudo pacman -S archlinux-wallpaper
+```
 
 ### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)
 
