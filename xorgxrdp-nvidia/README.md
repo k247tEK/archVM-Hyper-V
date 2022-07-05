@@ -369,6 +369,9 @@ and the attributes from one single parent device.
 
 ```console
 $ ll /sys/class/drm/
+```
+
+```
 total 0
 drwxr-xr-x  2 root root    0 Jul  5 02:48 ./
 drwxr-xr-x 62 root root    0 Jul  5 02:48 ../
