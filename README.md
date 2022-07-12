@@ -1040,7 +1040,7 @@ $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 
 <br>
 
-### Activating numlock on bootup
+## Activating numlock on bootup
 
 https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 
@@ -1087,7 +1087,7 @@ exec window_manager
 
 <br>
 
-### [bash Shell & Tumx - Session management](#bashtmux)
+## [bash Shell & Tumx - Session management](#bashtmux)
 
 Home Folder dotfiles:
 [.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
@@ -1337,7 +1337,7 @@ $ sudo pacman -S man-db
 
 <br>
 
-### [AisleRiot Solitaire & `LC_ALL`](#solandlcall)
+## [AisleRiot Solitaire & `LC_ALL`](#solandlcall)
 
 installed AisleRiot Solitaire (aisleriot) 3.22.23-2 from Pamac, with no Optional Dependencies.. system locale is setup for UK, `en_GB.UTF-8`.. but `aisleriot` or `sol`, requires `en_US.UTF-8`..
 
@@ -1460,14 +1460,14 @@ $ tree -L 2 -aph bin/ .config/i3*
 $ 
 ```
 
+Home Folder dotfiles:
+[.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
+
 <!--
 <p align="center">
     // Your content
 </p>
 -->
-
-Home Folder dotfiles:
-[.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
 
 <br>
 
@@ -1486,7 +1486,6 @@ shows messages from the current boot, using [`lnav`](https://lnav.org).
 ## [Kernel module](#kernelmod)
 
 https://wiki.archlinux.org/title/Kernel_module
-
 
 <br>
 
