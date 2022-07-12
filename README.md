@@ -1427,6 +1427,7 @@ _Note: [`chbkg`](dotfiles/bin/chbkg) shell script in `~/bin` folder.. uses `feh`
 copy backgrounds from system folder `/usr/share/backgrounds/xfce/` to user home folder `~/Pictures/backgrounds/`
 
 ```console
+$ mkdir -p ~/Pictures/backgrounds/
 $ cp /usr/share/backgrounds/xfce/* ~/Pictures/backgrounds/
 ```
 
