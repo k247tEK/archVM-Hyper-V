@@ -1513,7 +1513,7 @@ Home Folder dotfiles:
 </p>
 -->
 
-## [setup i3lock with xfce-Desktop](#i3xfcedsk)
+## [setup i3lock with xfce-Desktop](#i3lock)
 
 https://www.mankier.com/1/i3lock# & <br>
 https://andreafortuna.org/2020/04/09/i3-how-to-make-a-pretty-lock-screen-with-a-four-lines-of-bash-script/
