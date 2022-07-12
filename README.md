@@ -914,6 +914,46 @@ $ yay -S gnome-system-tools
 
 <p align="center"><img src="images/usersGroups.PNG" alt="xfce xrdp logout" width="600" /></p>
 
+`Users & Groups` can now be found in application menu & `Settings`.. other applications from gnome-system-tools, `Network` and [`Shared Folders`](sharedFolders) are not currently working and can be hidden from application menu.
+
+#### [Hide Applications from menu in xfce-Desktop](#hideapps)
+
+<p align="center"><img src="images/hideApps.PNG" alt="hide applications" width="600" /></p>
+<p align="center"><img src="images/hideApps2.PNG" alt="hide applications" width="600" /></p>
+
+#### [unHide Applications from menu in xfce-Desktop](#hideapps)
+
+```console
+[k247@archlinux applications]
+$ pwd
+/home/k247/.local/share/applications
+[k247@archlinux applications]
+$ ll
+total 44K
+drwx------  2 k247 k247 4.0K Jul 12 12:12 ./
+drwx------ 14 k247 k247 4.0K Jul 12 12:12 ../
+-rw-r--r--  1 k247 k247 8.2K Jul 12 12:12 network.desktop
+-rw-r--r--  1 k247 k247  265 Jul  2 14:57 picom.desktop
+-rw-r--r--  1 k247 k247  14K Jul  2 12:27 sol.desktop
+-rw-r--r--  1 k247 k247 3.9K Jul 12 11:32 xfce4-mail-reader.desktop
+[k247@archlinux applications]
+$ cat network.desktop | grep Hidden
+Hidden=true
+[k247@archlinux applications]
+```
+
+manually remove `~/.local/share/applications/network.desktop`
+
+```console
+$ rm ~/.local/share/applications/network.desktop
+```
+
+or edit `network.desktop` & remove `Hidden=true`.
+
+```console
+$ nano ~/.local/share/applications/network.desktop
+```
+
 ### [xfce4 Places plugin](#xfceplaces)
 
 https://docs.xfce.org/panel-plugins/xfce4-places-plugin/start
