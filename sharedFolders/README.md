@@ -2,7 +2,7 @@
 
 `Shared Folders` from `gnome-system-tools`, is currently not working..
 
-<p align="center"><img src="images/sharedFolders.png" alt="hide applications" width="600" /></p>
+<p align="center"><img src="images/sharedFolders.png" alt="Shared Folders" width="600" /></p>
 
 even though `samba` has been installed, `Usershares` has to be enabled..
 
