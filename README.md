@@ -1485,17 +1485,19 @@ then.. logout & login.. to change session.. ;-]..
 [k247@archlinux ~]
 $ tree -L 2 -aph bin/ .config/i3*
 [drwxr-xr-x 4.0K]  bin/
-├── [-rwx------   74]  chbkg
-├── [-rwx------  114]  chDE2_i3
-├── [-rwx------  120]  chDE2_xfce4
-└── [drwx------ 4.0K]  xinitFiles
-    ├── [-rw-------  885]  xinitrc_i3
-    └── [-rw-------  883]  xinitrc_xfce4
-[drwx------ 4.0K]  .config/i3
-├── [-rw-------  11K]  config
-└── [-rw-r--r--  13K]  picom.conf
-[drwx------ 4.0K]  .config/i3status
-└── [-rw------- 1004]  config
+├── [-rwxr-xr-x   74]  chbkg
+├── [-rwxr-xr-x  114]  chDE2_i3
+├── [-rwxr-xr-x  120]  chDE2_xfce4
+├── [-rwxr-xr-x  556]  klock
+└── [drwxr-xr-x 4.0K]  xinitFiles
+    ├── [-rwxr-xr-x  896]  xinitrc_i3
+    └── [-rwxr-xr-x  894]  xinitrc_xfce4
+[drwxr-xr-x 4.0K]  .config/i3
+├── [-rwxr-xr-x  11K]  config
+├── [-rw-------  33K]  lock.png
+└── [-rwxr-xr-x  13K]  picom.conf
+[drwxr-xr-x 4.0K]  .config/i3status
+└── [-rwxr-xr-x 1004]  config
 
 0 directories, 1 file
 [k247@archlinux ~]
@@ -1510,6 +1512,23 @@ Home Folder dotfiles:
     // Your content
 </p>
 -->
+
+## [setup i3lock with xfce-Desktop](#i3xfcedsk)
+
+https://www.mankier.com/1/i3lock# & <br>
+https://andreafortuna.org/2020/04/09/i3-how-to-make-a-pretty-lock-screen-with-a-four-lines-of-bash-script/
+
+<p align="center"><img src="images/klock.PNG" alt="klock xfce session lock" width="600" /></p>
+
+`i3lock` was installed when setting up i3 with xfce_Desktop but to get it to work with xfce-Desktop [`klock`](dotfiles/bin/klock) shell script is required in users home `~/bin` folder.. with [`lock.png`](dotfiles/.config/i3/lock.png) image in `~/.config/i3/` folder & `imagemagick` package installed.
+
+```console
+$ sudo pacman -S imagemagick
+```
+
+<p align="center"><img src="images/klock2.png" alt="klock xfce session lock" width="600" /></p>
+
+finally.. open 
 
 <br>
 
