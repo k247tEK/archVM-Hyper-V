@@ -1528,7 +1528,7 @@ $ sudo pacman -S imagemagick
 
 <p align="center"><img src="images/klock2.png" alt="klock xfce session lock" width="600" /></p>
 
-finally.. open 
+finally.. open `Settings Editor` from application menu, sellect `xfce-session` from channel & in the `LockCommand` string value.. enter `klock`.. now.. [Ctrl] + [Alt] + [L] will lock xfce-Desktop session as Keyboard Application Shortcuts for xflock4 is already set.. ;-]...
 
 <br>
 
