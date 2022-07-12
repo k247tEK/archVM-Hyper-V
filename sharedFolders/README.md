@@ -6,7 +6,11 @@
 
 even though `samba` has been installed, `Usershares` has to be enabled..
 
-https://wiki.archlinux.org/title/Samba#Enable_Usershares
+https://wiki.archlinux.org/title/Samba#Enable_Usershares & then..
+
+### install Thunar - thunar-shares-plugin
+
+https://docs.xfce.org/xfce/thunar/thunar-shares-plugin
 
 tbc..
 
