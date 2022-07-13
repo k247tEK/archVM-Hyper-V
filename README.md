@@ -1417,11 +1417,12 @@ https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
  <img src="images/i3xfce_ytb_logo.png" alt="i3" width="600" height="auto" border="3" />
 </a><br>
 
-#### background - Wallpaper manager for i3
+#### [background - Wallpaper manager for i3](#bkwallpapers)
 
 ```console
 $ sudo pacman -S feh
 ```
+
 _Note: [`chbkg`](dotfiles/bin/chbkg) shell script in `~/bin` folder.. uses `feh` and requires wallpapers be in `~/Pictures/backgrounds/`_
 
 copy backgrounds from system folder `/usr/share/backgrounds/xfce/` &  `/usr/share/backgrounds/archlinux/` to user home folder `~/Pictures/backgrounds/`
@@ -1432,7 +1433,7 @@ $ cp /usr/share/backgrounds/xfce/* ~/Pictures/backgrounds/
 $ cp /usr/share/backgrounds/archlinux/* ~/Pictures/backgrounds/
 ```
 
-#### picom - Compositor Manager
+#### [picom - Compositor Manager](#picom)
 
 ```console
 $ sudo pacman -S picom
@@ -1446,17 +1447,34 @@ $ cp /etc/xdg/picom.conf ~/.config/i3/
 
 ensure you have.. in `~/.config/i3/config`..
 
-```console
+```
+...
 picom --config ~/.config/i3/picom.conf
+...
 ```
 
 if you have problems with `vsync`.. not supported.. then..
 
-```console
+```
+...
 picom --no-vsync --config ~/.config/i3/picom.conf
+...
 ```
 
-#### dmenu - Application launcher
+#### [i3lock configure](#i3lockconfig)
+
+ensure you have.. in `~/.config/i3/config`..
+
+```
+...
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/k247/bin/klock
+bindsym $mod+Ctrl+l exec --no-startup-id ~/bin/klock
+...
+```
+
+[Super Key] / Winkey + [Ctrl] + [L] will lock i3 session.. ;-]...
+
+#### [dmenu - Application launcher](#dmenuapps)
 
 ```console
 $ sudo pacman -S dmenu
