@@ -1530,6 +1530,29 @@ $ sudo pacman -S imagemagick
 
 finally.. open `Settings Editor` from application menu, sellect `xfce-session` from channel & in the `LockCommand` string value.. enter `/home/k247/bin/klock`.. now.. [Ctrl] + [Alt] + [L] will lock xfce-Desktop session as Keyboard Application Shortcuts for xflock4 is already set.. ;-]...
 
+### [Lock out user after three failed login attempts](#lockouituser)
+
+https://wiki.archlinux.org/title/security
+
+>As of pambase 20200721.1-2, pam_faillock.so is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
+
+#### [To unlock a user,](#unlockuser) from a SSH login session..
+
+```console
+$ faillock --reset --user username
+```
+
+>By default, the lock mechanism is a file per-user located at `/run/faillock/`. Deleting or emptying the file unlocks that user—the directory is owned by root, but the file is owned by the user, so the `faillock` command only empties the file, therefore does not require root.
+
+>The module `pam_faillock.so` can be configured with the file `/etc/security/faillock.conf`. The lockout parameters:
+>- `unlock_time` — the lockout time (in seconds, default 10 minutes).
+>- `fail_interval` — the time in which failed logins can cause a lockout (in seconds, default 15 minutes).
+>- `deny` — the number of failed logins before lockout (default 3).
+
+>Note: `deny = 0` will disable the lockout mechanism entirely.
+
+>By default, all user locks are lost after reboot. If your attacker can reboot the machine, it is more secure if locks persist. To make locks persist, change the `dir` parameter in `/etc/security/faillock.conf` to `/var/lib/faillock`
+
 <br>
 
 ## [logs - Hunting Errors](#logs)
