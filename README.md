@@ -1494,7 +1494,7 @@ $ tree -L 2 -aph bin/ .config/i3*
     └── [-rwxr-xr-x  894]  xinitrc_xfce4
 [drwxr-xr-x 4.0K]  .config/i3
 ├── [-rwxr-xr-x  11K]  config
-├── [-rw-------  33K]  lock.png
+├── [-rwxr-xr-x  33K]  lock.png
 └── [-rwxr-xr-x  13K]  picom.conf
 [drwxr-xr-x 4.0K]  .config/i3status
 └── [-rwxr-xr-x 1004]  config
