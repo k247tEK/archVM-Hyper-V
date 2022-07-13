@@ -1086,7 +1086,7 @@ https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 
 #### Console Early bootup (mkinitcpio)
 
->You can enable numlock right after the kernel boots in the initramfs. This is the only way to ensure numlock is on even during full-disk encryption password entry. Install `mkinitcpio-numlock` AUR and add the `numlock` mkinitcpio hook before encrypt in the `/etc/mkinitcpio.conf` HOOKS array
+> You can enable numlock right after the kernel boots in the initramfs. This is the only way to ensure numlock is on even during full-disk encryption password entry. Install `mkinitcpio-numlock` AUR and add the `numlock` mkinitcpio hook before encrypt in the `/etc/mkinitcpio.conf` HOOKS array
 
 ```console
 $ yay -S mkinitcpio-numlock
@@ -1390,7 +1390,7 @@ from https://wiki.archlinux.org/title/locale
 
 ### LC_ALL: troubleshooting
 
->The locale set for this variable will always override LANG and all the other LC_* variables, whether they are set or not.<br><br>
+> The locale set for this variable will always override LANG and all the other LC_* variables, whether they are set or not.<br><br>
 LC_ALL is the only LC_* variable which cannot be set in locale.conf files: it is meant to be used only for testing or troubleshooting purposes,
 
 ```console
@@ -1552,7 +1552,7 @@ finally.. open `Settings Editor` from application menu, sellect `xfce-session` f
 
 https://wiki.archlinux.org/title/security#Lock_out_user_after_three_failed_login_attempts
 
->As of pambase 20200721.1-2, `pam_faillock.so` is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
+> As of pambase 20200721.1-2, `pam_faillock.so` is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
 
 #### [To unlock a user,](#unlockuser) from a SSH login session..
 
@@ -1560,16 +1560,17 @@ https://wiki.archlinux.org/title/security#Lock_out_user_after_three_failed_login
 $ faillock --reset --user username
 ```
 
->By default, the lock mechanism is a file per-user located at `/run/faillock/`. Deleting or emptying the file unlocks that user—the directory is owned by root, but the file is owned by the user, so the `faillock` command only empties the file, therefore does not require root.
+> By default, the lock mechanism is a file per-user located at `/run/faillock/`. Deleting or emptying the file unlocks that user—the directory is owned by root, but the file is owned by the user, so the `faillock` command only empties the file, therefore does not require root.
 
->The module `pam_faillock.so` can be configured with the file `/etc/security/faillock.conf`. The lockout parameters:
->- `unlock_time` — the lockout time (in seconds, default 10 minutes).
->- `fail_interval` — the time in which failed logins can cause a lockout (in seconds, default 15 minutes).
->- `deny` — the number of failed logins before lockout (default 3).
+> The module `pam_faillock.so` can be configured with the file `/etc/security/faillock.conf`. The lockout parameters:
 
->Note: `deny = 0` will disable the lockout mechanism entirely.
+> - `unlock_time` — the lockout time (in seconds, default 10 minutes).
+> - `fail_interval` — the time in which failed logins can cause a lockout (in seconds, default 15 minutes).
+> - `deny` — the number of failed logins before lockout (default 3).
 
->By default, all user locks are lost after reboot. If your attacker can reboot the machine, it is more secure if locks persist. To make locks persist, change the `dir` parameter in `/etc/security/faillock.conf` to `/var/lib/faillock`
+> Note: `deny = 0` will disable the lockout mechanism entirely.
+
+> By default, all user locks are lost after reboot. If your attacker can reboot the machine, it is more secure if locks persist. To make locks persist, change the `dir` parameter in `/etc/security/faillock.conf` to `/var/lib/faillock`
 
 <br>
 
