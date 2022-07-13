@@ -1534,7 +1534,7 @@ finally.. open `Settings Editor` from application menu, sellect `xfce-session` f
 
 https://wiki.archlinux.org/title/security
 
->As of pambase 20200721.1-2, pam_faillock.so is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
+>As of pambase 20200721.1-2, `pam_faillock.so` is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
 
 #### [To unlock a user,](#unlockuser) from a SSH login session..
 
