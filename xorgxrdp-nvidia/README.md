@@ -487,6 +487,19 @@ $ pacman -Q | grep nvidia
 xorgxrdp-nvidia 0.2.18-2
 ```
 
+List all installed `intel` packages,
+
+```console
+$ pacman -Q | grep intel
+```
+
+```
+intel-gmmlib 22.1.4-1
+intel-media-driver 22.4.4-1
+libva-intel-driver 2.4.1-2
+vulkan-intel 22.1.3-1
+```
+
 <br>
 
 ---
