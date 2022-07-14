@@ -1,8 +1,9 @@
 # Shared Folders
 
-`Shared Folders` from `gnome-system-tools`, is currently not working in xfce-Desktop and sooo.. can be hidden from application menu.. see.. [Hide Applications from menu in xfce-Desktop](https://github.com/k247tEK/arch22-06VM-Hyper-V#hide-applications-from-menu-in-xfce-desktop)
+`Shared Folders` from `gnome-system-tools`, is currently not working in xfce-Desktop and sooo.. can be hidden from application menu.. <br>
+see.. [Hide Applications from menu in xfce-Desktop](https://github.com/k247tEK/arch22-06VM-Hyper-V#hide-applications-from-menu-in-xfce-desktop)
 
-<p align="center"><img src="images/sharedFolders.png" alt="Shared Folders" width="600" /></p>
+<p align="left"><img src="images/sharedFolders.png" alt="Shared Folders" width="600" /></p>
 
 even though `samba` has been installed, `Usershares` has to be enabled..
 
@@ -10,19 +11,20 @@ ref: https://wiki.archlinux.org/title/Samba#Enable_Usershares
 
 > Usershares is a feature that gives non-root users the capability to add, modify, and delete their own share definitions.
 
-Create a directory for usershares
+Create a folder for usershares
 
 ```console
 $ sudo mkdir /var/lib/samba/usershares
 ```
 
-Change the owner of the directory to `root` and the group to `sambashare`
+Change the owner of the folder to `root` and the group to `sambashare`
 
 ```console
 $ sudo chown root:sambashare /var/lib/samba/usershares
 ```
 
-Change the permissions of the `usershares` directory so that users in the group `sambashare` can create files. This command also sets [sticky bit](https://en.wikipedia.org/wiki/Sticky_bit), which is important to prevent users from deleting usershares of other users
+Change the permissions of the `usershares` folder so that users in the group `sambashare` can create files. <br>
+This command also sets [sticky bit](https://en.wikipedia.org/wiki/Sticky_bit), which is important to prevent users from deleting usershares of other users
 
 ```console
 $ sudo chmod 1770 /var/lib/samba/usershares
@@ -88,7 +90,7 @@ from Thunar (the XFCE file manager) without requiring root access.
 $ yay -S thunar-shares-plugin
 ```
 
-<p align="center"><img src="images/thunarsharefolder.png" alt="Shared Folders" width="600" /></p>
+<p align="left"><img src="images/thunarsharefolder.png" alt="Shared Folders" width="600" /></p>
 
 ---
 #EOF
