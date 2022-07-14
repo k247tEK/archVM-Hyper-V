@@ -753,7 +753,7 @@ $ sudo touch /etc/samba/smb.conf
 
 Reboot virtual machine..
 
-### [Configure Samba server](#confsamba)
+## [Configure Samba server](#confsamba)
 
 ref: https://wiki.archlinux.org/title/Samba,<br>
 https://wiki.manjaro.org/index.php/Using_Samba_in_your_File_Manager,<br>
