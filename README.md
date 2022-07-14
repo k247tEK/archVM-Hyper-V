@@ -675,6 +675,8 @@ xhost +local:root > /dev/null 2>&1
 
 save and exit, then source the `.bashrc` file or logout / login again..
 
+_Note: see https://wiki.archlinux.org/title/Xhost._
+
 #### [dbus packages..](#dbuspkgs)
 
 ```console
