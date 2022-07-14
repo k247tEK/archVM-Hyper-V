@@ -1,8 +1,8 @@
 # Arch Linux 2022-06 virtual machine on Windows10<br>Hyper-V with Enhanced Session Mode
 
-ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [archWiki - Hyper-V](https://wiki.archlinux.org/title/Hyper-V).
+ref: [Introduction to Hyper-V on Windows 10](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/) & [archWiki - Hyper-V](https://wiki.archlinux.org/title/Hyper-V).
 
-### Enabling Windows Hyper-V and OpenSSH Client features
+## Enabling Windows Hyper-V and OpenSSH Client features
 
 _Note that Hyper-V is not available on the Windows 10 Home edition, and requires Windows 10 Pro or equivalent._
 
@@ -56,7 +56,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 ##### <p align="center"> [ Host s/w : Windows 10 Pro 21H2 OS Build 19044.1706. ]</p>
 
-##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p><br>
+##### <p align="center"> [ Host h/w : Lenovo Ideapad G560-M274YGE - Intel Core i5-450M (2.40GHz, 2 cores - 4 threads),<br>8GB (DDR3 1066MHz), NVIDIA GeForce 310M ]</p>
 
 ---
 
@@ -161,7 +161,7 @@ before restarting VM, remove ISO image file from DvD.. in Virtual Machines Setti
 ## [post Installation configuration](#postinstall)
 
 archinstall - has setup user k247 with sudo administrator authority & has disabled root account..<br>
-Also sshd service has to be re-enabled & started:<br>
+Also sshd service has to be re-enabled & started:
 
 ```console
 $ sudo systemctl enable --now sshd
@@ -248,13 +248,14 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\n\$ '
 </code></pre>
 
-save and exit with [Ctrl+x], then source `.bashrc` for changes to take effect..
+save and exit with [Ctrl]+[x], then source `.bashrc` for changes to take effect..
 
 ```console
 $ source .bashrc
 ```
 
 test `ll` alias..
+
 <pre><code>[k247@archlinux ~]
 $ ll
 total 64K
@@ -277,6 +278,7 @@ drwxr-xr-x 3 k247 k247 4.0K Jun 18 18:59 .local/
 [k247@archlinux ~]
 $ 
 </code></pre>
+
 _Note: $ prompt is in new line.._
 
 ### [check Root account access with sudo..](#chkrootacc)
@@ -351,6 +353,7 @@ drwxr-xr-x  2 k247 k247 4.0K Jun 19 00:59 Videos/
 [k247@archlinux ~]
 $
 </code></pre>
+
 now that user folders are setup, change to Downloads folder and setup yay..
 
 ```console
@@ -362,7 +365,7 @@ ref: https://itsfoss.com/best-aur-helpers/
 
 ## [yay..](#yay)
 
->is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
+> is the next best AUR helper written in Go with the objective of providing an interface of pacman with minimal user input, yaourt like search and with almost no dependencies.
 
 make sure you have <b>git</b> & Required Packages to build yay..
 
@@ -398,17 +401,20 @@ $ yay -Syu
 [k247@archlinux yay]
 $
 </code></pre>
+
 now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
-### [setup SSH Keys](#setupsshkeys)
+### [setup new SSH Keys](#setupsshkeys)
 
 ```console
 $ cd ~/.ssh
-$ ssh-keygen -b 4096
+$ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
 $ cd
 ```
 
-### [Install packages required for Enhanced Session Mode](#pkgsforenhsession)
+###### _Note: see https://www.cyberciti.biz/faq/how-to-set-up-ssh-keys-on-linux-unix/_
+
+## [Install packages required for Enhanced Session Mode](#pkgsforenhsession)
 
 from https://wiki.archlinux.org/title/Hyper-V
 
@@ -547,7 +553,7 @@ $ sudo nano /etc/pulse/client.conf
 ```
 
 Restart virtual machine.. & test Sound,<br>
-if sound is still not working,
+if sound is still not working, then..
 
 As of 24th June 2022 `pulseaudio` was updated to `16.1-1`, this breaks xrdp sound, you will have to downgrade `libpulse` & `pulseaudio` to `16.0-1`, and add both to pacman ignore package..
 
