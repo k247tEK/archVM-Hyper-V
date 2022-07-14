@@ -699,6 +699,8 @@ from edit menu..<br>
 
 <img src="images/configCustAction.png" alt="xfce xrdp logout" width="480" /><br>
 
+_Note: make sure to also tick on `Directories` from `Appearance Condtions` tab.._
+
 ```
 pkexec thunar %f --display :10.0
 ```
