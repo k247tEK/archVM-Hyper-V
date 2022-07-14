@@ -691,9 +691,9 @@ $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 
 ### [thunar Root File Manager](#thunarroot)
 
-<p align="center"><img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /></p>
+<p align="left"><img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /></p>
 
-#### create Custom Action..
+#### [create Custom Action](#customaction)
 
 from edit menu..<br>
 
@@ -781,7 +781,9 @@ $
 </code></pre>
 
 A documented example, `smb.conf.default` can be found at the Samba git repository..
+
 ###### https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD<br>
+
  download a copy to `/etc/samba/smb.conf.default` then..
 
 ```console
@@ -863,7 +865,7 @@ Now, enable and start `smb.service` and `nmb.service`
 $ sudo systemctl enable --now smb nmb
 ```
 
-to access samba shares through `caja` & `thunar`, Press [Ctrl+l] and enter:<br>
+to access samba shares through `caja` & `thunar`, Press [Ctrl]+[l] and enter:<br>
 
 ```
 smb://servername/share
@@ -918,14 +920,14 @@ to configure users and Groups in xfce-Desktop, install `gnome-system-tools` from
 $ yay -S gnome-system-tools
 ```
 
-<p align="center"><img src="images/usersGroups.PNG" alt="xfce xrdp logout" width="600" /></p>
+<p align="left"><img src="images/usersGroups.PNG" alt="xfce xrdp logout" width="600" /></p>
 
-`Users & Groups` can now be found in application menu & `Settings`.. other applications from gnome-system-tools, `Network` and [`Shared Folders`](sharedFolders) are not currently working and can be hidden from application menu.
+`Users & Groups` can now be found in application menu & `Settings`.. other applications from gnome-system-tools, `Network` and <b>[`Shared Folders`](sharedFolders)</b> are not currently working and can be hidden from application menu.
 
 #### [Hide Applications from menu in xfce-Desktop](#hideapps)
 
-<p align="center"><img src="images/hideApps.PNG" alt="hide applications" width="600" /></p>
-<p align="center"><img src="images/hideApps2.PNG" alt="hide applications" width="600" /></p>
+<p align="left"><img src="images/hideApps.PNG" alt="hide applications" width="600" /></p>
+<p align="left"><img src="images/hideApps2.PNG" alt="hide applications" width="600" /></p>
 
 #### [unHide Applications from menu in xfce-Desktop](#hideapps)
 
@@ -1041,7 +1043,7 @@ well.. for now.. this works for notes 1.9.0.
 
 ## [Eye candy](#eyecndy)
 
-https://wiki.archlinux.org/title/Category:Eye_candy
+ref: https://wiki.archlinux.org/title/Category:Eye_candy
 
 ```console
 $ sudo pacman -S archey3 fortune-mod cmatrix --needed
@@ -1086,9 +1088,9 @@ $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 
 <br>
 
-## Activating numlock on bootup
+## [Activating numlock on bootup](#numlockonboot)
 
-https://wiki.archlinux.org/title/Activating_numlock_on_bootup
+ref: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 
 #### Console Early bootup (mkinitcpio)
 
@@ -1195,9 +1197,9 @@ _Note: `.insCONFIG` folder contains the saved installation files used by archins
 
 ## [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
 
-https://github.com/tmux-plugins/tpm, https://github.com/tmux-plugins/tmux-resurrect
+ref: https://github.com/tmux-plugins/tpm & https://github.com/tmux-plugins/tmux-resurrect
 
-Clone TPM:
+clone TPM to uses home folder..
 
 ```console
 $ cd
@@ -1224,7 +1226,7 @@ now both plugins should be installed.. run tmux.. set layout.. and save it with.
 
 ## [install snap & Flatpak](#snapflatpak)
 
-https://snapcraft.io/docs/installing-snap-on-arch-linux, https://flatpak.org/setup/Arch
+ref: https://snapcraft.io/docs/installing-snap-on-arch-linux & https://flatpak.org/setup/Arch
 
 ```console
 $ sudo pacman -S flatpak
@@ -1411,13 +1413,13 @@ works, so you will have to edit the application menu.. `aisleriot`
 
 ## [setup i3 with xfce-Desktop](#i3xfcedsk)
 
-https://wiki.archlinux.org/title/I3
+ref: https://wiki.archlinux.org/title/I3
 
 ```console
 $ sudo pacman -S i3-gaps i3status i3blocks i3lock
 ```
 
-https://i3wm.org/docs/userguide.html, https://i3wm.org/docs
+https://i3wm.org/docs/userguide.html & https://i3wm.org/docs
 
 <a href="https://youtu.be/pDKqgbNQKqA " target="_blank">
  <img src="images/i3xfce_ytb_logo.png" alt="i3" width="600" height="auto" border="3" />
@@ -1478,7 +1480,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/bin/klock
 ...
 ```
 
-[Super Key] / Winkey + [Ctrl] + [L] will lock i3 session.. ;-]...
+[Super] / Winkey + [Ctrl] + [L] will lock i3 session.. ;-]...
 
 #### [dmenu - Application launcher](#dmenuapps)
 
@@ -1539,12 +1541,12 @@ Home Folder dotfiles:
 
 ## [setup i3lock with xfce-Desktop](#i3lockxfcedsk)
 
-https://www.mankier.com/1/i3lock# & <br>
+ref: https://www.mankier.com/1/i3lock# & <br>
 https://andreafortuna.org/2020/04/09/i3-how-to-make-a-pretty-lock-screen-with-a-four-lines-of-bash-script/
 
 <p align="center"><img src="images/klock.PNG" alt="klock xfce session lock" width="600" /></p>
 
-`i3lock` was installed when setting up i3 with xfce_Desktop but to get it to work with xfce-Desktop [`klock`](dotfiles/bin/klock) shell script is required in users home `~/bin` folder.. with [`lock.png`](dotfiles/.config/i3/lock.png) image in `~/.config/i3/` folder & `imagemagick` package installed.
+`i3lock` was installed when setting up i3 with xfce-Desktop but to get it to work with xfce-Desktop [`klock`](dotfiles/bin/klock) shell script is required in users home `~/bin` folder.. with [`lock.png`](dotfiles/.config/i3/lock.png) image in `~/.config/i3/` folder & `imagemagick` package installed.
 
 ```console
 $ sudo pacman -S imagemagick
@@ -1552,11 +1554,11 @@ $ sudo pacman -S imagemagick
 
 <p align="center"><img src="images/klock2.png" alt="klock xfce session lock" width="600" /></p>
 
-finally.. open `Settings Editor` from application menu, sellect `xfce-session` from channel & in the `LockCommand` string value.. enter `/home/k247/bin/klock`.. now.. [Ctrl] + [Alt] + [L] will lock xfce-Desktop session as Keyboard Application Shortcuts for xflock4 is already set.. ;-]...
+finally.. open `Settings Editor` from application menu, sellect `xfce-session` from channel & in the `LockCommand` string value.. enter `/home/k247/bin/klock`.. now.. [Ctrl] + [Alt] + [L] will lock xfce-Desktop session as Keyboard Application Shortcuts for `xflock4` is already set.. ;-]...
 
 ### [Lock out user after three failed login attempts](#lockouituser)
 
-https://wiki.archlinux.org/title/security#Lock_out_user_after_three_failed_login_attempts
+ref: https://wiki.archlinux.org/title/security#Lock_out_user_after_three_failed_login_attempts
 
 > As of pambase 20200721.1-2, `pam_faillock.so` is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
 
@@ -1582,7 +1584,7 @@ $ faillock --reset --user username
 
 ## [logs - Hunting Errors](#logs)
 
-https://wiki.archlinux.org/title/Systemd/Journal
+ref: https://wiki.archlinux.org/title/Systemd/Journal
 
 ```console
 $ journalctl -b -0 | lnav
@@ -1594,13 +1596,13 @@ shows messages from the current boot, using [`lnav`](https://lnav.org).
 
 ## [Kernel module](#kernelmod)
 
-https://wiki.archlinux.org/title/Kernel_module
+ref: https://wiki.archlinux.org/title/Kernel_module
 
 <br>
 
 ## [General recommendations](#genrec)
 
-https://wiki.archlinux.org/title/General_recommendations
+ref: https://wiki.archlinux.org/title/General_recommendations
 
 ###### <p align="right">[Acknowledgments & Thanks](Acknowledgments.md) | [License](LICENSE.txt)</p>
 
