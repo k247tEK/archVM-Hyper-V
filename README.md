@@ -256,28 +256,27 @@ $ source .bashrc
 
 test `ll` alias..
 
-<pre><code>[k247@archlinux ~]
-$ ll
-total 64K
-drwx------ 7 k247 k247 4.0K Jun 18 22:56 ./
-drwxr-xr-x 3 root root 4.0K Jun 18 18:56 ../
--rw------- 1 k247 k247  476 Jun 19 00:11 .bash_history
--rw-r--r-- 1 k247 k247   21 Jan  8 18:31 .bash_logout
--rw-r--r-- 1 k247 k247   57 Jan  8 18:31 .bash_profile
--rw-r--r-- 1 k247 k247  407 Jun 19 00:20 .bashrc
-drwxr-xr-x 5 k247 k247 4.0K Jun 18 23:41 .cache/
-drwxr-xr-x 9 k247 k247 4.0K Jun 18 23:42 .config/
-drwxr-xr-x 2 k247 k247 4.0K Jun 18 18:59 Desktop/
--rw-r--r-- 1 k247 k247   23 Jun 18 18:59 .dmrc
-drwx------ 3 k247 k247 4.0K Jun 18 18:59 .gnupg/
--rw------- 1 k247 k247    0 Jun 18 18:59 .ICEauthority
-drwxr-xr-x 3 k247 k247 4.0K Jun 18 18:59 .local/
--rw------- 1 k247 k247   54 Jun 18 22:56 .Xauthority
--rw------- 1 k247 k247 3.1K Jun 18 22:58 .xsession-errors
--rw------- 1 k247 k247 4.7K Jun 18 19:03 .xsession-errors.old
+```
 [k247@archlinux ~]
-$ 
-</code></pre>
+$ ll
+total 56K
+drwx------ 7 k247 k247 4.0K Jul 14 21:26 ./
+drwxr-xr-x 3 root root 4.0K Jul 14 21:21 ../
+-rw------- 1 k247 k247  106 Jul 14 21:26 .bash_history
+-rw-r--r-- 1 k247 k247   21 Jan  8  2022 .bash_logout
+-rw-r--r-- 1 k247 k247   57 Jan  8  2022 .bash_profile
+-rw-r--r-- 1 k247 k247  407 Jul 14 21:28 .bashrc
+drwxr-xr-x 3 k247 k247 4.0K Jul 14 21:24 .cache/
+drwxr-xr-x 5 k247 k247 4.0K Jul 14 21:24 .config/
+drwxr-xr-x 2 k247 k247 4.0K Jul 14 21:24 Desktop/
+-rw-r--r-- 1 k247 k247   23 Jul 14 21:24 .dmrc
+drwx------ 3 k247 k247 4.0K Jul 14 21:24 .gnupg/
+-rw------- 1 k247 k247    0 Jul 14 21:24 .ICEauthority
+drwxr-xr-x 3 k247 k247 4.0K Jul 14 21:24 .local/
+-rw------- 1 k247 k247   54 Jul 14 21:24 .Xauthority
+-rw------- 1 k247 k247 4.0K Jul 14 21:24 .xsession-errors
+[k247@archlinux ~]
+```
 
 _Note: $ prompt is in new line.._
 
