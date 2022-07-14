@@ -779,7 +779,6 @@ logout & login again, then check with `id`, if user `k247` is in sambashare grou
 $ id
 uid=1000(k247) gid=1000(k247) groups=1000(k247),970(sambashare),998(wheel)
 [k247@archlinux ~]
-$
 </code></pre>
 
 A documented example, `smb.conf.default` can be found at the Samba git repository..
