@@ -584,7 +584,7 @@ $ sudo downgrade libpulse pulseaudio
 
 Restart virtual machine.. and that should fix the sound.. again..
 
-or.. you can just live without sound on xrdp & keep on updating VM until `pulseaudio-module-xrdp` or `pulseaudio` gets updated.. again.. ;-]... welcome to arch.. July 2022 update fixes sound on xrdp..
+or.. you can just live without sound on xrdp & keep on updating VM until `pulseaudio-module-xrdp` or `pulseaudio` gets updated.. again.. ;-]... welcome to arch..
 
 <br>
 
