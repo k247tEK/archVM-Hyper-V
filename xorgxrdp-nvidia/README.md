@@ -593,7 +593,7 @@ rdp0 connected 1920x1080+0+0 0mm x 0mm
 [k247@archlinux ~]
 ```
 
-does not seem like its working... hmmmmm.. tbc..
+does not seem like it's working... hmmmmm.. tbc..
 
 <br>
 
