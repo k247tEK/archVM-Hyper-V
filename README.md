@@ -1205,7 +1205,7 @@ _Note: `.insCONFIG` folder contains the saved installation files used by archins
 
 ref: https://github.com/tmux-plugins/tpm & https://github.com/tmux-plugins/tmux-resurrect
 
-clone TPM to uses home folder..
+clone TPM to user home folder..
 
 ```console
 $ cd
