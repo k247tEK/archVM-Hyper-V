@@ -180,7 +180,7 @@ $ glxgears -info
 
 <p align="left"><img src="images/glxgears.png" alt="glxgears info" width="auto" /></p>
 
-I don't know why or how, but installing `xorgxrdp-nvidia` does improve xfce-Desktop performance in xrdp.. ;-]...<br><br>
+I don't know why or how, but installing `xorgxrdp-nvidia` does seem to reduce the mouse pointer lag.. resulting in a snappy-er xfce-Desktop experience.. ;-]...<br><br>
 
 ### [Linux 5.14 will support Hyper-V DRM display driver](https://meterpreter.org/linux-5-14-will-support-hyper-v-drm-display-driver/), `hyperv_drm`
 
