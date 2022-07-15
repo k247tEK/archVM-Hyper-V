@@ -88,10 +88,10 @@ from about XFCE application,
 
 GPU is listed as.. llvmpipe (LLVM 14.0.6, 128 bits) (1.9 GiB)
 
-install `glxinfo` from `mesa-utils` & `mesa-demos`..
+install `glxinfo` from `mesa-utils` & other mesa packages.. `mesa-demos` / `mesa-vdpau`
 
 ```console
-$ sudo pacman -S mesa-demos mesa-utils
+$ sudo pacman -S mesa-demos mesa-utils mesa-vdpau
 ```
 
 Check to see if Direct rendering is enabled and working
