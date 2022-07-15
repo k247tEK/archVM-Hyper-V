@@ -482,6 +482,7 @@ libva-mesa-driver 22.1.3-1
 mesa 22.1.3-1
 mesa-demos 8.5.0-2
 mesa-utils 8.5.0-2
+mesa-vdpau 22.1.3-1
 ```
 
 List all installed `nvidia` packages,
