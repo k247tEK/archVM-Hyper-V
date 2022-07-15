@@ -535,7 +535,7 @@ Adding undetected resolutions
 > First we run gtf or cvt to get the Modeline for the resolution we want:
 
 ```console
-$ cvt 1920 1080
+$ cvt 1920 1080 60
 ```
 
 ```
