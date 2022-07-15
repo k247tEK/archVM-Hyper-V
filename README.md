@@ -993,19 +993,22 @@ install arch linux wall papers..
 $ sudo pacman -S archlinux-wallpaper
 ```
 
-### [xfce4-screensaver is spanning log with DPMS errors..](#xfcescreensave)
+### [xfce4-screensaver is spanning log with DPMS WARNING..](#xfcescreensave)
 
 ```
-org.xfce.ScreenSaver[452]: Xlib:  extension "DPMS" missing on display ":10.0"
+xrdp-sesman.service org.xfce.ScreenSaver[467] WARNING Xlib:  extension "DPMS" missing on display ":10.0"
 ```
 
-sooo just remove it & enable Ramdom Order wallpapers every 10 mins.. ;-]...
+if it gets too annoying.. just remove it..
 
 ```console
 $ sudo pacman -R xfce4-screensaver
 ```
 
-thats one less thing to start.. assigned only 2GB of RAM to this VM..
+& enable Ramdom Order wallpapers every 10 mins.. 
+
+_Note: use [`klock`](https://github.com/k247tEK/arch22-06VM-Hyper-V/blob/master/dotfiles/bin/klock) shell script which calles [`i3lock`](https://github.com/k247tEK/arch22-06VM-Hyper-V#setup-i3lock-with-xfce-desktop).. to lock xfce-Desktop session.. ;-]...<br>
+thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 
 ### [clipman - Clipboard Manager](#clipman)<br>
 
