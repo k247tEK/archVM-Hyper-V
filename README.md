@@ -678,7 +678,7 @@ _Note: see https://wiki.archlinux.org/title/Xhost._
 #### [dbus packages..](#dbuspkgs)
 
 ```console
-$ sudo pacman -S accountsservice
+$ sudo pacman -S accountsservice --needed
 ```
 
 not sure if this is needed, but found related `dbus` error in logs..<br><br>
@@ -691,14 +691,13 @@ $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 
 ### [thunar Root File Manager](#thunarroot)
 
-<p align="left"><img src="images/thunarRoot.png" alt="xfce xrdp logout" width="600" /></p>
+<p align="left"><img src="images/thunarRoot.png" alt="thunar Root" width="600" /></p>
 
 #### [create Custom Action](#customaction)
 
 from edit menu..<br>
 
-<img src="images/configCustAction.png" alt="xfce xrdp logout" width="480" /><br>
-
+<img src="images/configCustAction.png" alt="Appearance Condtions" width="440" /> <img src="images/appearancecondtions.png" alt="Appearance Condtions" width="290" /><br>
 _Note: make sure to also tick on `Directories` from `Appearance Condtions` tab.._
 
 ```
@@ -899,7 +898,7 @@ by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to 
 
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
-<p align="left"><img src="images/whiskerMugshot.png" alt="xfce xrdp logout" width="600" /></p>
+<p align="left"><img src="images/whiskerMugshot.png" alt="whisker Mugshot" width="600" /></p>
 
 ###### https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
 
@@ -922,7 +921,7 @@ to configure users and Groups in xfce-Desktop, install `gnome-system-tools` from
 $ yay -S gnome-system-tools
 ```
 
-<p align="left"><img src="images/usersGroups.PNG" alt="xfce xrdp logout" width="600" /></p>
+<p align="left"><img src="images/usersGroups.PNG" alt="usersGroups" width="600" /></p>
 
 `Users & Groups` can now be found in application menu & `Settings`.. other applications from gnome-system-tools, `Network` and <b>[`Shared Folders`](sharedFolders)</b> are not currently working and can be hidden from application menu.
 
@@ -1040,7 +1039,7 @@ $ sudo nano /usr/share/xfce4-notes-plugin/gtk-3.0/gtk-main.css
 save & exit.. right click on notes icon on panel, & click remove..<br>
 then run notes again from application menu..<br>
 
-[<p align="left"><img src="images/xfceNotesBKfix.PNG" alt="clpman setting" width="600" />](https://youtu.be/0hiUuL5uTKc?t=11)</p>
+[<p align="left"><img src="images/xfceNotesBKfix.PNG" alt="xfce Notes dark theme fix" width="600" />](https://youtu.be/0hiUuL5uTKc?t=11)</p>
 
 now.. I don't know if this is setting the background colour, or braking the 
 `@notes_bg_color` variable,<br>
@@ -1108,7 +1107,7 @@ $ sudo nano /etc/mkinitcpio.conf
 ```
 
 ```
-HOOKS=(base udev autodetect keyboard keymap consolefont numlock modconf block encrypt lvm2 filesystems fsck)
+HOOKS=(base udev autodetect keyboard keymap numlock modconf block encrypt lvm2 filesystems fsck)
 ```
 
 Then regenerate the initramfs for the change to take effect.
@@ -1598,13 +1597,13 @@ $ journalctl -b -0 | lnav
 
 shows messages from the current boot, using [`lnav`](https://lnav.org).
 
-<br>
+## [htop in action..]() ;-]...
+<p align="center"><img src="images/htop.png" alt="klock xfce session lock" width="800" /></p>
 
 ## [Kernel module](#kernelmod)
 
 ref: https://wiki.archlinux.org/title/Kernel_module
 
-<br>
 
 ## [General recommendations](#genrec)
 
