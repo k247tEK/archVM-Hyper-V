@@ -579,7 +579,7 @@ $ cvt 1920 1080 60
 Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 ```
 
-create a new xrandr mode. Note that the Modeline keyword needs to be omitted.
+> create a new xrandr mode. Note that the Modeline keyword needs to be omitted.
 
 ```console
 $ xrandr --newmode "1920x1080_60"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
@@ -613,7 +613,7 @@ rdp0 connected 1920x1080+0+0 0mm x 0mm
 [k247@archlinux ~]
 ```
 
-Now we change the resolution of the screen to the one we just added:
+> Now we change the resolution of the screen to the one we just added:
 
 ```console
 $ xrandr --output rdp0 --mode 1920x1080_60
