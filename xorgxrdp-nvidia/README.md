@@ -582,7 +582,7 @@ Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hs
 create a new xrandr mode. Note that the Modeline keyword needs to be omitted.
 
 ```console
-$ xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+$ xrandr --newmode "1920x1080_60"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 ```
 
 ```
@@ -591,7 +591,7 @@ $ xrandr
 Screen 0: minimum 256 x 256, current 1920 x 1080, maximum 16384 x 16384
 rdp0 connected 1920x1080+0+0 0mm x 0mm
    1920x1080     50.00* 
-  1920x1080_60.00 (0x590) 173.000MHz -HSync +VSync
+  1920x1080_60 (0x590) 173.000MHz -HSync +VSync
         h: width  1920 start 2048 end 2248 total 2576 skew    0 clock  67.16KHz
         v: height 1080 start 1083 end 1088 total 1120           clock  59.96Hz
 [k247@archlinux ~]
@@ -600,7 +600,7 @@ rdp0 connected 1920x1080+0+0 0mm x 0mm
 > After creating it we need an extra step to add this new mode to our current output (VGA1). We use just the name of the mode, since the parameters have been set previously
 
 ```console
-$ xrandr --addmode rdp0 1920x1080_60.00
+$ xrandr --addmode rdp0 1920x1080_60
 ```
 
 ```
@@ -609,14 +609,14 @@ $ xrandr
 Screen 0: minimum 256 x 256, current 1920 x 1080, maximum 16384 x 16384
 rdp0 connected 1920x1080+0+0 0mm x 0mm
    1920x1080     50.00* 
-   1920x1080_60.00  59.96  
+   1920x1080_60  59.96  
 [k247@archlinux ~]
 ```
 
 Now we change the resolution of the screen to the one we just added:
 
 ```console
-$ xrandr --output rdp0 --mode 1920x1080_60.00
+$ xrandr --output rdp0 --mode 1920x1080_60
 ```
 
 ```
@@ -625,7 +625,7 @@ $ xrandr
 Screen 0: minimum 256 x 256, current 1920 x 1080, maximum 16384 x 16384
 rdp0 connected 1920x1080+0+0 0mm x 0mm
    1920x1080     50.00* 
-   1920x1080_60.00  59.96  
+   1920x1080_60  59.96  
 [k247@archlinux ~]
 ```
 
