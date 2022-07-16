@@ -512,7 +512,7 @@ libva-intel-driver 2.4.1-2
 vulkan-intel 22.1.3-1
 ```
 
-### xrandr
+## [xrandr](#xrandr)
 https://wiki.archlinux.org/title/xrandr
 
 > is an official configuration utility to the RandR (Resize and Rotate) X Window System extension. It can be used to set the size, orientation or reflection of the outputs for a screen.
@@ -532,6 +532,37 @@ rdp0 connected 1920x1080+0+0 0mm x 0mm
 ```
 
 Note: refresh rates for `1920x1080`..  `50.00*` but should be 60Hz..
+
+from Xorg session..
+
+```
+[k247@archlinux ~]
+$ xrandr
+Screen 0: minimum 320 x 200, current 1920 x 1080, maximum 1920 x 1200
+Virtual-1 connected 1920x1080+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1024x768      60.00 +
+   1920x1080     60.00* 
+   1600x1200     60.00  
+   1680x1050     59.95    59.88  
+   1400x1050     59.98    59.95  
+   1600x900      60.00  
+   1280x1024     60.02  
+   1440x900      59.89    59.90  
+   1280x960      60.00  
+   1366x768      59.79    60.00  
+   1360x768      60.02  
+   1280x800      59.81    59.91  
+   1280x768      59.87    59.99  
+   1280x720      60.00  
+   800x600       60.32    56.25  
+   848x480       60.00  
+   640x480       59.94  
+[k247@archlinux ~]
+```
+
+why is it 50hz in xrdp session ???? tbc..
+
+back to Xrdp...
 
 Adding undetected resolutions
 
