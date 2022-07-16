@@ -780,7 +780,7 @@ uid=1000(k247) gid=1000(k247) groups=1000(k247),970(sambashare),998(wheel)
 [k247@archlinux ~]
 </code></pre>
 
-A documented example, `smb.conf.default` can be found at the Samba git repository..
+A documented `example_smb.conf.default` can be found at the Samba git repository..
 
 ###### https://git.samba.org/samba.git/?p=samba.git;a=blob_plain;f=examples/smb.conf.default;hb=HEAD<br>
 
