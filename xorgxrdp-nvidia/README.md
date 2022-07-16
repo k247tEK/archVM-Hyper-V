@@ -629,7 +629,17 @@ rdp0 connected 1920x1080+0+0 0mm x 0mm
 [k247@archlinux ~]
 ```
 
-does not seem like it's working... hmmmmm.. tbc..
+does not seem like it's working... hmmmmm.. 
+
+found on gentoo forum.. https://forums.gentoo.org/viewtopic-t-699388.html
+
+> Hmmmmmm, according to [this post on Arch's forum,](http://bbs.archlinux.org/viewtopic.php?pid=239990#p239990) sometimes the display properties in KDE will show the wrong refresh rate. I'm going to see if this is the case for me; will post back.
+
+sooo.. you should use.. `OSD` for on monitor to check current refresh rate,
+
+but.. on Hyper-V.. VM.. https://devicetests.com/refresh-rate-test
+
+<p align="left"><img src="images/refreshrate.png" alt="refresh rate" width="auto" /></p>
 
 <br>
 
