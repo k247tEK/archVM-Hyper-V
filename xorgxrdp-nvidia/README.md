@@ -560,7 +560,7 @@ Virtual-1 connected 1920x1080+0+0 (normal left inverted right x axis y axis) 0mm
 [k247@archlinux ~]
 ```
 
-why is it 50hz in xrdp session ???? tbc..
+why is it 50hz in xrdp session ????
 
 back to Xrdp...
 
