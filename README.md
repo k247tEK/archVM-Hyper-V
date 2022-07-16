@@ -1271,7 +1271,7 @@ $ yay -S pamac-aur
 
 <p align="center"><img src="images/pamac-aur.PNG" alt="tmux session" width="600" /></p>
 
-_Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for major updates.._
+_Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for Major Updates.._
 
 #### [List of installed packages](#lstinstalledpkgs)
 
