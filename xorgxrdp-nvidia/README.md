@@ -88,6 +88,10 @@ from about XFCE application,
 
 GPU is listed as.. llvmpipe (LLVM 14.0.6, 128 bits) (1.9 GiB)
 
+> LLVMpipe is a Gallium3D graphics driver in Mesa that does all rendering on the CPU for providing a software-accelerated fallback on Linux and can also be used in OpenGL / graphics driver debugging. LLVMpipe uses LLVM for providing better performance than the Softpipe driver.
+https://www.theburningofrome.com/trending/what-is-llvmpipe-graphics/<br>
+> The Gallium3D LLVMpipe driver does not touch the GPU, so it can be run with any graphics card. However, for efficient performance, you will want to be running a 64-bit operating system and a CPU that supports SSE2.0 or better. LLVM can take advantage of SSE3 and SSE4 extensions too, which will result in even greater performance.
+
 install `glxinfo` from `mesa-utils` & other mesa packages.. `mesa-demos` / `mesa-vdpau`
 
 ```console
