@@ -1330,9 +1330,9 @@ Validated By    : Signature
 ...
 ```
 
-#### [Pacman database](#pacman-database)
+### [Pacman database](#pacman-database)
 
-See pacman/Tips and tricks#Back up the pacman database.
+See pacman/Tips and tricks#Back up the pacman database.<br>
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Back_up_the_pacman_database
 
 install extra packages..
@@ -1370,12 +1370,11 @@ except for the most recent three, by default:
 $ sudo  paccache -r
 ```
 
-#### [System backup](#system-backup)
+### [System backup](#system-backup)
 
 https://wiki.archlinux.org/title/System_backup<br>
 
-Using `rsync`
-See rsync#As a backup utility.<br>
+Using `rsync` See rsync#As a backup utility.<br>
 https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
 
 ```console
