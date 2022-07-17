@@ -39,7 +39,7 @@ found.. [arch Linux](https://archlinux.org) 2022-06, xfce-Desktop install via ar
 
 ref: https://www.xfce.org
 
-###### <p align="right">[Acknowledgments & Thanks](Acknowledgments.md) | [License](../LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
+###### <p align="right">[Acknowledgments & Thanks](2022-06/Acknowledgments.md) | [License](LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
 
 ---
 
