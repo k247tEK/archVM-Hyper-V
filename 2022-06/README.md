@@ -26,31 +26,31 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### [Creating the Internal / External Network Switch](setupHost#creating-the-internal--external-network-switch)
 
-- ### [Setup Client](setupClient/)
+- ### [Setup Client](setupClient#)
 
-    - #### [Creating the virtual machine in Hyper-V Manager](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#creating-the-virtual-machine-in-hyper-v-manager)
+    - #### [Creating the virtual machine in Hyper-V Manager](setupClient#creating-the-virtual-machine-in-hyper-v-manager)
 
-    - #### [Specifying Hyper-V Generation 2 for a UEFI virtual machine](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#Specifying-hyper-v-generation-2-for-a-uefi-virtual-machine)
+    - #### [Specifying Hyper-V Generation 2 for a UEFI virtual machine](setupClient#specifying-hyper-v-generation-2-for-a-uefi-virtual-machine)
 
-    - #### [Setting Hardware Firmware Boot order, ensure Network Adapter is last](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-hardware-firmware-boot-order-ensure-network-adapter-is-last)
+    - #### [Setting Hardware Firmware Boot order, ensure Network Adapter is last](setupClient#setting-hardware-firmware-boot-order-ensure-network-adapter-is-last)
 
-    - #### [Disabling Secure Boot](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#disabling-secure-boot)
+    - #### [Disabling Secure Boot](setupClient#disabling-secure-boot)
 
-    - #### [Disabling Dynamic Memory & Specifying RAM size 2048 MB](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#disabling-dynamic-memory--specifying-ram-size-2048-mb)
+    - #### [Disabling Dynamic Memory & Specifying RAM size 2048 MB](setupClient#disabling-dynamic-memory--specifying-ram-size-2048-mb)
 
-    - #### [Setting Number of virtual processors 2 cores](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-number-of-virtual-processors-2-cores)
+    - #### [Setting Number of virtual processors 2 cores](setupClient#setting-number-of-virtual-processors-2-cores)
 
-    - #### [Setting Hard Drive 32GB / DvD Drive & Network Adapter](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-hard-drive-32gb--dvd-drive--network-adapter)
+    - #### [Setting Hard Drive 32GB / DvD Drive & Network Adapter](setupClient#setting-hard-drive-32gb--dvd-drive--network-adapter)
 
-    - #### [Setting Name 'Arch' & Description for virtual machine](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-name-arch--description-for-virtual-machine)
+    - #### [Setting Name 'Arch' & Description for virtual machine](setupClient#setting-name-arch--description-for-virtual-machine)
 
-    - #### [Enabling all Integrations Services](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#enabling-all-integrations-services)
+    - #### [Enabling all Integrations Services](setupClient#enabling-all-integrations-services)
 
-    - #### [Disabling Checkpoints](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#disabling-checkpoints)
+    - #### [Disabling Checkpoints](setupClient#disabling-checkpoints)
 
-    - #### [Setting Automatic Start Action to Nothing](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-automatic-start-action-to-nothing)
+    - #### [Setting Automatic Start Action to Nothing](setupClient#setting-automatic-start-action-to-nothing)
 
-    - #### [Setting Automatic Stop Action to Power Off](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupClient#setting-automatic-stop-action-to-power-off)
+    - #### [Setting Automatic Stop Action to Power Off](setupClient#setting-automatic-stop-action-to-power-off)
 
 #### <p align="center"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
 
