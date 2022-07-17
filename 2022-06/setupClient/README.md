@@ -24,7 +24,7 @@
 
     - #### [Setting Automatic Stop Action to Power Off](#setting-automatic-stop-action-to-power-off)<br><br><p align="left"><img src="images/VirtSetting13.PNG" alt="Setting Automatic Stop Action to Power Off" width="480" /></p>
 
-###### <p align="right">[Acknowledgments & Thanks](../Acknowledgments.md) | [License](../LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
+###### <p align="right">[Acknowledgments & Thanks](../Acknowledgments.md) | [License](../../LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
 
 ---
 #EOF
