@@ -92,7 +92,7 @@ $ yay -S thunar-shares-plugin
 
 <p align="left"><img src="images/thunarsharefolder.png" alt="Shared Folders" width="600" /></p>
 
-###### <p align="right">[Acknowledgments & Thanks](../Acknowledgments.md) | [License](../LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
+###### <p align="right">[Acknowledgments & Thanks](../Acknowledgments.md) | [License](../../LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
 
 ---
 #EOF
