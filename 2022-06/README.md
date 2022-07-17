@@ -1006,7 +1006,7 @@ $ sudo pacman -R xfce4-screensaver
 
 & enable Ramdom Order wallpapers every 10 mins.. 
 
-_Note: use [`klock`](https://github.com/k247tEK/archVM-Hyper-V/blob/master/dotfiles/bin/klock) shell script which calls [`i3lock`](https://github.com/k247tEK/archVM-Hyper-V#setup-i3lock-with-xfce-desktop).. to lock xfce-Desktop session.. ;-]...<br>
+_Note: use [`klock`](https://github.com/k247tEK/archVM-Hyper-V/blob/master/2022-06/dotfiles/bin/klock) shell script which calls [`i3lock`](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06#setup-i3lock-with-xfce-desktop).. to lock xfce-Desktop session.. ;-]...<br>
 thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 
 ### [clipman - Clipboard Manager](#clipman---clipboard-manager)
