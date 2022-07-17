@@ -1597,7 +1597,8 @@ $ journalctl -b -0 | lnav
 
 shows messages from the current boot, using [`lnav`](https://lnav.org).
 
-## [htop in action..]() ;-]...
+## [htop in action..](#htop-in-action) ;-]...
+
 <p align="center"><img src="images/htop.png" alt="klock xfce session lock" width="800" /></p>
 
 ## [Kernel module](#kernel-module)
