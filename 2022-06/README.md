@@ -847,6 +847,22 @@ $ sudo chown root:sambashare /srv/samba/public/
 $ sudo chmod -R ugo+rwx /srv/samba/public/
 ```
 
+`stat`.. samba server public folder.. to check..
+```console
+$ stat /srv/samba/public/
+```
+
+```
+  File: /srv/samba/public/
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 8,2	Inode: 131078      Links: 2
+Access: (0777/drwxrwxrwx)  Uid: (    0/    root)   Gid: (  970/sambashare)
+Access: 2022-07-15 00:03:53.988518834 +0100
+Modify: 2022-07-15 00:03:42.221919286 +0100
+Change: 2022-07-15 00:03:53.988518834 +0100
+ Birth: 2022-07-15 00:03:42.221919286 +0100
+```
+
 for [ k247Public ] folder..
 
 ```console
