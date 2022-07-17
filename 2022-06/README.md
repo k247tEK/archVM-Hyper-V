@@ -28,7 +28,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 - ### [Setup Client](setupClient#)
 
-    - #### [Creating the virtual machine in Hyper-V Manager](setupClient#creating-the-virtual-machine-in-hyper-v-manager)
+    - #### [Creating the virtual machine in Hyper-V Manager](setupClient/#creating-the-virtual-machine-in-hyper-v-manager)
 
     - #### [Specifying Hyper-V Generation 2 for a UEFI virtual machine](setupClient#specifying-hyper-v-generation-2-for-a-uefi-virtual-machine)
 
