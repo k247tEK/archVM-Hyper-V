@@ -940,7 +940,8 @@ $ yay -S gnome-system-tools
 <p align="left"><img src="images/usersGroups.PNG" alt="usersGroups" width="600" /></p>
 
 `Users & Groups` can now be found in application menu & `Settings`..<br>
-other applications from gnome-system-tools, `Network` and <b>[`Shared Folders`](sharedFolders)</b> are not currently working and can be hidden from application menu.
+other applications from gnome-system-tools, `Network` and <b>[`Shared Folders`](sharedFolders)</b><br>
+are not currently working and can be hidden from application menu.
 
 #### [Hide Applications from menu in xfce-Desktop](#hide-applications-from-menu-in-xfce-desktop)
 
