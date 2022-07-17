@@ -1,4 +1,4 @@
-# Shared Folders
+# [Shared Folders](#shared-folders)
 
 `Shared Folders` from `gnome-system-tools`, is currently not working in xfce-Desktop and sooo.. can be hidden from application menu.. <br>
 see.. [Hide Applications from menu in xfce-Desktop](https://github.com/k247tEK/arch22-06VM-Hyper-V#hide-applications-from-menu-in-xfce-desktop)
