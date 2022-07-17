@@ -1609,7 +1609,7 @@ ref: https://wiki.archlinux.org/title/Kernel_module
 
 ref: https://wiki.archlinux.org/title/General_recommendations
 
-###### <p align="right">[Acknowledgments & Thanks](Acknowledgments.md) | [License](LICENSE.txt)</p>
+###### <p align="right">[Acknowledgments & Thanks](Acknowledgments.md) | [License](../LICENSE.txt)</p>
 
 ---
 #EOF
