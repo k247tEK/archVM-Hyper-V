@@ -1009,7 +1009,7 @@ $ sudo pacman -R xfce4-screensaver
 _Note: use [`klock`](https://github.com/k247tEK/arch22-06VM-Hyper-V/blob/master/dotfiles/bin/klock) shell script which calls [`i3lock`](https://github.com/k247tEK/arch22-06VM-Hyper-V#setup-i3lock-with-xfce-desktop).. to lock xfce-Desktop session.. ;-]...<br>
 thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 
-### [clipman - Clipboard Manager](#clipman---clipboard-managerbr)<br>
+### [clipman - Clipboard Manager](#clipman---clipboard-manager)
 
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a picture there..<br>
 
