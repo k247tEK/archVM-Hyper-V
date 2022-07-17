@@ -1016,6 +1016,8 @@ thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 <p align="left"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
 
+###### _Note: when copying and pasting from terminal.. use [Ctrl] + [Shift] when selecting text.. <br>and [Ctrl] + [Shift] +[c] to copy & [Ctrl] + [Shift] + [v] to paste.._
+
 ### [xfce4-notes-plugin - Notes](#xfce4-notes-plugin---notes)
 
 can't seem to find setting to change background colour..<br>
