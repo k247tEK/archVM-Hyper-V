@@ -63,7 +63,7 @@ $ sudo nano /etc/samba/smb.conf
   usershare owner only = yes
   ...
 ```
-_Note: user was added to `sambashare` group when setting up samba server.._ see.. [Configure Samba server](https://github.com/k247tEK/arch22-06VM-Hyper-V#configure-samba-server)
+_Note: user was added to `sambashare` group when setting up samba server.._ see.. [Configure Samba server](../#configure-samba-server)
 
 
 Restart smb and nmb services
