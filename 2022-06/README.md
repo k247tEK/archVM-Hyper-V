@@ -1029,7 +1029,8 @@ thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 
 ### [clipman - Clipboard Manager](#clipman---clipboard-manager)
 
- set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a picture there..<br>
+ set max menu items to 10, disabled Remember last copied image before disabling Remember history..<br>
+ as it was causing the VM to hang for about 15secs every time there was a picture there..<br>
 
 <p align="left"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
