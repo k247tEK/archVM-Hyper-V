@@ -1353,7 +1353,7 @@ https://wiki.archlinux.org/title/Mirrors<br>
 use the Pacman Mirrorlist Generator page.<br>
 https://archlinux.org/mirrorlist/<br>
 
-Pacman stores its downloaded packages in `/var/cache/pacman/pkg/`
+Pacman stores its downloaded packages in `/var/cache/pacman/pkg/`<br>
 https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache
 
 ```console
