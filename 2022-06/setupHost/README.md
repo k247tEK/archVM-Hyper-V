@@ -1,6 +1,6 @@
 - ### [Setup Host](../setupHost/README.md)
 
-    - ### [Hyper-V Settings..](#hyper-v-setting)<br><br><p align="left"><img src="images/Hyper-VManager.PNG" alt="Hyper-V Manager Settings.." width="600" /></p>
+    - ### [Hyper-V Settings..](setupHost#hyper-v-setting)<br><br><p align="left"><img src="images/Hyper-VManager.PNG" alt="Hyper-V Manager Settings.." width="600" /></p>
 
         - #### [Disabling Server NUMA Spanning](#disabling-server-numa-spanning)<br><br><p align="left"><img src="images/numaSpanning.PNG" alt="NUMA Spanning" width="480" /></p>
 
