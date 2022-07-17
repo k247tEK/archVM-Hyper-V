@@ -35,7 +35,7 @@ sooo, Desperately Seeking OS.. ;-]...
 
 found.. [arch Linux](https://archlinux.org) 2022-06, xfce-Desktop install via archinstall...
 
-### [Xfce Desktop Environment](https://wiki.archlinux.org/title/xfce) | X11 [Xorg](https://wiki.archlinux.org/title/xorg) | [Xrdp](https://wiki.archlinux.org/title/xrdp) | [pulseaudio-module-xrdp](https://aur.archlinux.org/packages/pulseaudio-module-xrdp)
+### [Xfce Desktop Environment](https://wiki.archlinux.org/title/xfce) | [Xorg](https://wiki.archlinux.org/title/xorg) | [Xrdp](https://wiki.archlinux.org/title/xrdp) | [pulseaudio-module-xrdp](https://aur.archlinux.org/packages/pulseaudio-module-xrdp)
 
 ref: https://www.xfce.org
 
