@@ -115,7 +115,7 @@ Now if you wish, you can connect to the installation image using the `root` acco
 
 <br>
 
-## [Install Arch Linux 2022-06 on the virtual machine](#install-arch-linux-2022-06-on-the-virtual-machine)
+## [Install Arch Linux on the virtual machine](#install-arch-linux-on-the-virtual-machine)
 
 _Note: to manually install arch, follow steps detailed in the wiki's [installation
 guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
