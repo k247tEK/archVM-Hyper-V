@@ -16,15 +16,15 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - ### [Hyper-V Settings..](setupHost#hyper-v-setting)
 
-        - #### [Disabling Server NUMA Spanning](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#disabling-server-numa-spanning)
+        - #### [Disabling Server NUMA Spanning](setupHost#disabling-server-numa-spanning)
 
-        - #### [Setting Server Enhanced Session Mode Policy](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#setting-server-enhanced-session-mode-policy)
+        - #### [Setting Server Enhanced Session Mode Policy](setupHost#setting-server-enhanced-session-mode-policy)
 
-        - #### [Setting User Enhanced Session Mode](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#setting-user-enhanced-session-mode)
+        - #### [Setting User Enhanced Session Mode](setupHost#setting-user-enhanced-session-mode)
 
-    - ### [Virtual Switch Manager..](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#virtual-switch-manager)
+    - ### [Virtual Switch Manager..](setupHost#)
 
-        - #### [Creating the Internal / External Network Switch](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#creating-the-internal--external-network-switch)
+        - #### [Creating the Internal / External Network Switch](setupHost#creating-the-internal--external-network-switch)
 
 - ### [Setup Client](setupClient/)
 
