@@ -77,7 +77,7 @@ This guided installer will perform (query) the following steps:
 - create users with sudo administrator authority
 - install a boot loader.
 
-### [Setting up SSH on the installation image](#setupsshinstall)
+### [Setting up SSH on the installation image](#setting-up-ssh-on-the-installation-image)
 
 To setup OS using SSH session, set keyboard language, find IP address of virtual machine & set the root password.
 
@@ -115,7 +115,7 @@ Now if you wish, you can connect to the installation image using the `root` acco
 
 <br>
 
-## [Install Arch Linux 2022-06 on the virtual machine](#archinstall)
+## [Install Arch Linux 2022-06 on the virtual machine](#install-arch-linux-2022-06-on-the-virtual-machine)
 
 _Note: to manually install arch, follow steps detailed in the wiki's [installation
 guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
@@ -158,7 +158,7 @@ before restarting VM, remove ISO image file from DvD.. in Virtual Machines Setti
 
 <br>
 
-## [post Installation configuration](#postinstall)
+## [post Installation configuration](#post-installation-configuration)
 
 archinstall - has setup user k247 with sudo administrator authority & has disabled root account..<br>
 Also sshd service has to be re-enabled & started:
@@ -280,7 +280,7 @@ drwxr-xr-x 3 k247 k247 4.0K Jul 14 21:24 .local/
 
 _Note: $ prompt is in new line.._
 
-### [check Root account access with sudo..](#chkrootacc)
+### [check Root account access with sudo..](#check-root-account-access-with-sudo)
 
 ```console
 $ sudo su -
@@ -312,7 +312,7 @@ copy `.bashrc` & `.bash_profile` files from k247 home folder to root home folder
 ```
 use exit, to return to k247 bash shell..
 
-### [creating Default directories](#createdefdir)
+### [creating Default directories](#creating-default-directories)
 
 ```console
 $ sudo pacman -S xdg-user-dirs
@@ -379,7 +379,7 @@ $ cd yay
 $ makepkg -si
 ```
 
-### [Update yay..](#updateyay)
+### [Update yay..](#update-yay)
 
 ```console
 $ yay -Syu
@@ -402,7 +402,7 @@ $
 
 now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
-### [setup new SSH Keys](#setupsshkeys)
+### [setup new SSH Keys](#setup-new-ssh-keys)
 
 ```console
 $ cd ~/.ssh
@@ -412,7 +412,7 @@ $ cd
 
 ###### _Note: see https://www.cyberciti.biz/faq/how-to-set-up-ssh-keys-on-linux-unix/_
 
-## [Install packages required for Enhanced Session Mode](#pkgsforenhsession)
+## [Install packages required for Enhanced Session Mode](#install-packages-required-for-enhanced-session-mode)
 
 from https://wiki.archlinux.org/title/Hyper-V
 
@@ -434,7 +434,7 @@ Get-VMIntegrationService -VMName "Arch"
 
 <p align="center"><img src="images/powerShell_01Capture.PNG" alt="powerShell Get-VM" width="600" /></p>
 
-### [Install, `xrdp`](#instxrdp)
+### [Install, `xrdp`](#install-xrdp)
 
 > provides a graphical login to remote machines using RDP (Microsoft Remote Desktop Protocol).
 http://xrdp.org
@@ -443,7 +443,7 @@ http://xrdp.org
 $ yay -S xrdp
 ```
 
-### [Install, `xorgxrdp`](#instxorgxrdp) or [`xorgxrdp-nvidia`](xorgxrdp-nvidia)
+### [Install, `xorgxrdp`](#install-xorgxrdp-or-xorgxrdp-nvidiaxorgxrdp-nvidia) or [`xorgxrdp-nvidia`](xorgxrdp-nvidia)
 
 > is a collection of modules to be used with a pre-existing X.Org install to make the X server act like X11rdp. Unlike X11rdp, you don't have to recompile the whole X Window System. Instead, additional modules are installed to a location where the existing Xorg installation would pick them.
 https://github.com/neutrinolabs/xorgxrdp
@@ -452,7 +452,7 @@ https://github.com/neutrinolabs/xorgxrdp
 $ yay -S xorgxrdp
 ```
 
-### [Install, `pulseaudio-module-xrdp`](#instpulsexrdp)
+### [Install, `pulseaudio-module-xrdp`](#install-pulseaudio-module-xrdp)
 
 > xrdp implements Audio Output redirection using PulseAudio, which is a sound system used on POSIX operating systems.
 https://github.com/neutrinolabs/pulseaudio-module-xrdp
@@ -464,7 +464,7 @@ $ yay -S pulseaudio-module-xrdp
 
 _Note: sbc is required in order to successfully build pulseaudio-module-xrdp.._
 
-### [configure the XRDP server..](#confxrdp)
+### [configure the XRDP server..](#configure-the-xrdp-server)
 
 > By default, you may suffer from poor mouse and desktop experience.
 Enhanced session mode features better mouse and video experience and integrated clipboard.
@@ -478,7 +478,7 @@ $ sudo ./install-config.sh
 
 _Note: only need to configure the xrdp server, no need for makepkg.sh..._
 
-### [Edit `~/.xinitrc` to start Desktop Environment](#editxinitrc)
+### [Edit `~/.xinitrc` to start Desktop Environment](#edit-xinitrc-to-start-desktop-environment)
 
 copy the system default xinitrc file, to home folder..
 
@@ -517,14 +517,14 @@ Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 
 Start & Connect to virtual machine..
 
-## <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#enhsessionmode)</p>
+## <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#)</p>
 
 <p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
  <img src="images/enhSessionMode_ytb_logo.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
 
 _note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually, with `pulseaudio --start` command.._
 
-### [pulseAudio Sound Server](#pulseaudiosrv)
+### [pulseAudio Sound Server](#pulseaudio-sound-server)
 
 even though `pulseaudio-module-xrdp` has been installed, the pulseAudio Server on startup, is setup for Xorg on display:0, but xrdp is set on display:10.. so you have to disable pulseAudio Sound System(`start-pulseaudio-x11`) from Session and Startup & create a new entry..
 
@@ -566,7 +566,7 @@ IgnorePkg = libpulse pulseaudio
 ...
 ```
 
-### [downgrade Pacman package](#downgradepacman)
+### [downgrade Pacman package](#downgrade-pacman-package)
 
 install `downgrade` from `AUR`,
 
@@ -586,7 +586,7 @@ or.. you can just live without sound on xrdp & keep on updating VM until `pulsea
 
 <br>
 
-## [polkit & xfce-Desktop with xrdp](#polkitxfcexrdp)
+## [polkit & xfce-Desktop with xrdp](#polkit--xfce-desktop-with-xrdp)
 
 ref: https://wiki.archlinux.org/title/Polkit
 
@@ -595,7 +595,7 @@ but please be adviced..<br>
 
 #### <b>THIS SHOULD NOT BE DONE ON PRODUCTION SYSTEMS...</b>
 
-### [Bypass password prompt - Globally](#bypassprompt)
+### [Bypass password prompt - Globally](#bypass-password-prompt---globally)
 
 > Create the following file as root:
 
@@ -624,7 +624,7 @@ for more info, have a read of blog post below..
 
 <br>
 
-### [Disable suspend and hibernate](#suspendhibernate)
+### [Disable suspend and hibernate](#disable-suspend-and-hibernate)
 
 > The following rule disables suspend and hibernate for all users.
 
@@ -660,7 +660,7 @@ Reboot virtual machine..
 
 <img src="images/xfce_xrdpLogoutCapture.PNG" alt="xfce xrdp logout" width="auto" /><br>no more suspend / hibernate or Hybrid-sleep..
 
-#### [xorg packages..](#xorgpkgs)
+#### [xorg packages..](#xorg-packages)
 
 <pre><code>$ sudo pacman -S xorg-xhost xorg-xdpyinfo xorg-xdriinfo xorg-xlsclients \
 xorg-xvinfo xorg-xvinfo xorg-font-util --needed</code></pre>
@@ -675,7 +675,7 @@ save and exit, then source the `.bashrc` file or logout / login again..
 
 _Note: see https://wiki.archlinux.org/title/Xhost._
 
-#### [dbus packages..](#dbuspkgs)
+#### [dbus packages..](#dbus-packages)
 
 ```console
 $ sudo pacman -S accountsservice --needed
@@ -683,17 +683,17 @@ $ sudo pacman -S accountsservice --needed
 
 not sure if this is needed, but found related `dbus` error in logs..<br><br>
 
-## [caja File Manger](#cajafileman)
+## [caja File Manger](#caja-file-manger)
 
 ```console
 $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
 
-### [thunar Root File Manager](#thunarroot)
+### [thunar Root File Manager](#thunar-root-file-manager)
 
 <p align="left"><img src="images/thunarRoot.png" alt="thunar Root" width="600" /></p>
 
-#### [create Custom Action](#customaction)
+#### [create Custom Action](#create-custom-action)
 
 from edit menu..<br>
 
@@ -718,7 +718,7 @@ pkexec thunar %f --display $DISPLAY
 
 works.. ;-]... sometimes the `$`implest things are the most profound..<br><br>
 
-## [File managers & Network scanning](#filemanscan)
+## [File managers & Network scanning](#file-managers--network-scanning)
 
 thunar and caja, both will fail to find any network shares until the required packages `gvfs-smb`, `cifs-utils` are installed.. first, optionally.. enable.. avahi-daemon.. https://www.avahi.org
 
@@ -752,7 +752,7 @@ $ sudo touch /etc/samba/smb.conf
 
 Reboot virtual machine..
 
-## [Configure Samba server](#confsamba)
+## [Configure Samba server](#configure-samba-server)
 
 ref: https://wiki.archlinux.org/title/Samba,<br>
 https://wiki.manjaro.org/index.php/Using_Samba_in_your_File_Manager,<br>
@@ -892,7 +892,7 @@ k247@yoga700-11isk:</code></pre>
 
 https://help.ubuntu.com/community/Samba/SambaClientGuide<br><br>
 
-## [Whisker Menu & xfce-Desktop Panel](#whiskermenu)
+## [Whisker Menu & xfce-Desktop Panel](#whisker-menu--xfce-desktop-panel)
 
 by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to manually add it to the desktop panel.
 
@@ -904,7 +904,7 @@ https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
 the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
 
-### [Mugshot / users & Groups in xfce-Desktop](#mugshotid)
+### [Mugshot / users & Groups in xfce-Desktop](#mugshot--users--groups-in-xfce-desktop)
 
  > is a lightweight user configuration utility for Linux designed for simplicity and ease of use. Quickly update your personal profile and sync your updates across applications.<br>
  https://github.com/bluesabre/mugshot
@@ -963,7 +963,7 @@ or edit `network.desktop` & remove `Hidden=true`.
 $ nano ~/.local/share/applications/network.desktop
 ```
 
-### [xfce4 Places plugin](#xfceplaces)
+### [xfce4 Places plugin](#xfce4-places-plugin)
 
 https://docs.xfce.org/panel-plugins/xfce4-places-plugin/start
 
@@ -977,12 +977,12 @@ $ yay -S xfce4-places-plugin
 
 then add to panel..
 
-### [xfce-Desktop panel Action Buttons](#actionbuttons)
+### [xfce-Desktop panel Action Buttons](#xfce-desktop-panel-action-buttons)
 
 <img src="images/xfcepanelActionBut.PNG" alt="xfce panel action buttons" width="320" /><br>
 select Restart & de-select Suspend..
 
-### [xfce-Desktop Wallpapers](#wallpapers)
+### [xfce-Desktop Wallpapers](#xfce-desktop-wallpapers)
 
 <img src="images/xfceDestop.png" alt="xfce desktop wallpapers" width="480" /><br>
 
@@ -992,7 +992,7 @@ install arch linux wall papers..
 $ sudo pacman -S archlinux-wallpaper
 ```
 
-### [xfce4-screensaver is spanning log with DPMS WARNING..](#xfcescreensave)
+### [xfce4-screensaver is spanning log with DPMS WARNING..](#xfce4-screensaver-is-spanning-log-with-dpms-warning)
 
 ```
 xrdp-sesman.service org.xfce.ScreenSaver[467] WARNING Xlib:  extension "DPMS" missing on display ":10.0"
@@ -1009,14 +1009,14 @@ $ sudo pacman -R xfce4-screensaver
 _Note: use [`klock`](https://github.com/k247tEK/arch22-06VM-Hyper-V/blob/master/dotfiles/bin/klock) shell script which calls [`i3lock`](https://github.com/k247tEK/arch22-06VM-Hyper-V#setup-i3lock-with-xfce-desktop).. to lock xfce-Desktop session.. ;-]...<br>
 thats one less thing to start.. assigned only 2GB of RAM to this VM.._
 
-### [clipman - Clipboard Manager](#clipman)<br>
+### [clipman - Clipboard Manager](#clipman---clipboard-managerbr)<br>
 
  set max menu items to 10, disabled Remember last copied image before disabling Remember history.. as it was causing the VM to hang for about 15secs every time there was a picture there..<br>
 
 <p align="left"><img src="images/clipManSet_01.PNG" alt="clpman setting" width="240" />
 <img src="images/clipManSet_02.PNG" alt="clpman setting" width="240" /></p>
 
-### [xfce4-notes-plugin - Notes](#xfcenotes)
+### [xfce4-notes-plugin - Notes](#xfce4-notes-plugin---notes)
 
 can't seem to find setting to change background colour..<br>
 online search, suggests to use style sheets..<br>
@@ -1046,7 +1046,7 @@ now.. I don't know if this is setting the background colour, or braking the
 and it is the good coding.. that is.. defaulting to the user's set preference, ie.. Dark mode..<br>
 well.. for now.. this works for notes 1.9.0.
 
-## [Eye candy](#eyecndy)
+## [Eye candy](#eye-candy)
 
 ref: https://wiki.archlinux.org/title/Category:Eye_candy
 
@@ -1054,7 +1054,7 @@ ref: https://wiki.archlinux.org/title/Category:Eye_candy
 $ sudo pacman -S archey3 fortune-mod cmatrix --needed
 ```
 
-### [Microsoft fonts](#msfonts)
+### [Microsoft fonts](#microsoft-fonts)
 
 https://wiki.archlinux.org/title/Microsoft_fonts
 
@@ -1062,12 +1062,12 @@ https://wiki.archlinux.org/title/Microsoft_fonts
 $ yay -S ttf-ms-fonts
 ```
 
-### [GTK and Qt themes](#gtkqt)
+### [GTK and Qt themes](#gtk-and-qt-themes)
 
 https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
 also see.. [XFCE Customization](https://www.youtube.com/watch?v=29ARF14InaU)
 
-### [Multimedia apps](#multimedia)
+### [Multimedia apps](#multimedia-apps)
 
 https://wiki.archlinux.org/title/List_of_applications/Multimedia
 
@@ -1077,7 +1077,7 @@ $ sudo pacman -S vlc gst-libav
 
 _Note: snap vlc.. does not play nice with xrdp.._
 
-### [Web browsers](#webbrowsers)
+### [Web browsers](#web-browsers)
 
 https://wiki.archlinux.org/title/List_of_applications#Web_browsers
 
@@ -1093,7 +1093,7 @@ $ sudo pacman -S tree arp-scan nano-syntax-highlighting --needed
 
 <br>
 
-## [Activating numlock on bootup](#numlockonboot)
+## [Activating numlock on bootup](#activating-numlock-on-bootup)
 
 ref: https://wiki.archlinux.org/title/Activating_numlock_on_bootup
 
@@ -1140,7 +1140,7 @@ exec window_manager
 
 <br>
 
-## [bash Shell & Tumx - Session management](#bashtmux)
+## [bash Shell & Tumx - Session management](#bash-shell--tumx---session-management)
 
 Home Folder dotfiles:
 [.bashrc](dotfiles/.bashrc), [.bash_profile](dotfiles/.bash_profile), [.tmux.conf](dotfiles/.tmux.conf), [.nanorc](dotfiles/.nanorc), [.dir_colors](dotfiles/.dir_colors)
@@ -1200,7 +1200,7 @@ drwxr-xr-x  2 root root 4.0K Jun 21 06:35 Videos/
 
 _Note: `.insCONFIG` folder contains the saved installation files used by archinstall.._<br><br>
 
-## [Tmux Plugin Manager & Tmux Resurrect](#tmpresurrect)
+## [Tmux Plugin Manager & Tmux Resurrect](#tmux-plugin-manager--tmux-resurrect)
 
 ref: https://github.com/tmux-plugins/tpm & https://github.com/tmux-plugins/tmux-resurrect
 
@@ -1211,7 +1211,7 @@ $ cd
 $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### [install Tmux plugins](#tmuxplugins)
+### [install Tmux plugins](#install-tmux-plugins)
 
 create or download [~/.tmux.conf](dotfiles/.tmux.conf) & run tmux session..
 
@@ -1229,7 +1229,7 @@ now both plugins should be installed.. run tmux.. set layout.. and save it with.
 
 [Ctrl] + [b] then [s] & to restore session layout [Ctrl] + [b] then [r]..<br><br>
 
-## [install snap & Flatpak](#snapflatpak)
+## [install snap & Flatpak](#install-snap--flatpak)
 
 ref: https://snapcraft.io/docs/installing-snap-on-arch-linux & https://flatpak.org/setup/Arch
 
@@ -1263,7 +1263,7 @@ $ whereis hello-world
 _Note: some apps will not start in xrdp.. have to look into snap with xrpd.. tbc.._
 <br><br>
 
-## [install Pamac - package Manager, & setup with AUR](#pamacaur)
+## [install Pamac - package Manager, & setup with AUR](#install-pamac---package-manager--setup-with-aur)
 
 ```console
 $ yay -S pamac-aur
@@ -1273,7 +1273,7 @@ $ yay -S pamac-aur
 
 _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for Major Updates.._
 
-#### [List of installed packages](#lstinstalledpkgs)
+#### [List of installed packages](#list-of-installed-packages)
 
 > Maintain a list of all installed packages so that if a complete re-installation is inevitable, it is easier to re-create the original environment.<br>
 https://wiki.archlinux.org/title/Pacman_tips#List_of_installed_packages
@@ -1330,7 +1330,7 @@ Validated By    : Signature
 ...
 ```
 
-#### [Pacman database](#pacmandb)
+#### [Pacman database](#pacman-database)
 
 See pacman/Tips and tricks#Back up the pacman database.
 https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Back_up_the_pacman_database
@@ -1347,7 +1347,7 @@ FIX Pamac.. if pamac ever fails to update categories..
 $ sudo pacman -Syu archlinux-appstream-data
 ```
 
-### [Mirrors & pacman](#mirrorspacman)
+### [Mirrors & pacman](#mirrors--pacman)
 
 https://wiki.archlinux.org/title/Mirrors<br>
 use the Pacman Mirrorlist Generator page.<br>
@@ -1370,7 +1370,7 @@ except for the most recent three, by default:
 $ sudo  paccache -r
 ```
 
-#### [System backup](#systembackup)
+#### [System backup](#system-backup)
 
 https://wiki.archlinux.org/title/System_backup<br>
 
@@ -1382,7 +1382,7 @@ https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
 $ sudo pacman -S rsync p7zip zip unzip
 ```
 
-### [ooh.. install the F..ing manual..](#installman)
+### [ooh.. install the F..ing manual..](#ooh-install-the-fing-manual)
 
 ```console
 $ sudo pacman -S man-db
@@ -1390,7 +1390,7 @@ $ sudo pacman -S man-db
 
 <br>
 
-## [AisleRiot Solitaire & `LC_ALL`](#solandlcall)
+## [AisleRiot Solitaire & `LC_ALL`](#aisleriot-solitaire--lcall)
 
 installed AisleRiot Solitaire (aisleriot) 3.22.23-2 from Pamac, with no Optional Dependencies.. system locale is setup for UK, `en_GB.UTF-8`.. but `aisleriot` or `sol`, requires `en_US.UTF-8`..
 
@@ -1416,7 +1416,7 @@ works, so you will have to edit the application menu.. `aisleriot`
 
 <br>
 
-## [setup i3 with xfce-Desktop](#i3xfcedsk)
+## [setup i3 with xfce-Desktop](#setup-i3-with-xfce-desktop)
 
 ref: https://wiki.archlinux.org/title/I3
 
@@ -1430,7 +1430,7 @@ https://i3wm.org/docs/userguide.html & https://i3wm.org/docs
  <img src="images/i3xfce_ytb_logo.png" alt="i3" width="600" height="auto" border="3" />
 </a><br>
 
-#### [background - Wallpaper manager for i3](#bkwallpapers)
+#### [background - Wallpaper manager for i3](#background---wallpaper-manager-for-i3)
 
 ```console
 $ sudo pacman -S feh
@@ -1446,7 +1446,7 @@ $ cp /usr/share/backgrounds/xfce/* ~/Pictures/backgrounds/
 $ cp /usr/share/backgrounds/archlinux/* ~/Pictures/backgrounds/
 ```
 
-#### [picom - Compositor Manager](#picom)
+#### [picom - Compositor Manager](#picom---compositor-manager)
 
 ```console
 $ sudo pacman -S picom
@@ -1474,7 +1474,7 @@ picom --no-vsync --config ~/.config/i3/picom.conf
 ...
 ```
 
-#### [i3lock configure](#i3lockconfig)
+#### [i3lock configure](#i3lock-configure)
 
 ensure you have.. in `~/.config/i3/config`..
 
@@ -1487,7 +1487,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id ~/bin/klock
 
 [Super] / Winkey + [Ctrl] + [L] will lock i3 session.. ;-]...
 
-#### [dmenu - Application launcher](#dmenuapps)
+#### [dmenu - Application launcher](#dmenu---application-launcher)
 
 ```console
 $ sudo pacman -S dmenu
@@ -1544,7 +1544,7 @@ Home Folder dotfiles:
 </p>
 -->
 
-## [setup i3lock with xfce-Desktop](#i3lockxfcedsk)
+## [setup i3lock with xfce-Desktop](#setup-i3lock-with-xfce-desktop)
 
 ref: https://www.mankier.com/1/i3lock# & <br>
 https://andreafortuna.org/2020/04/09/i3-how-to-make-a-pretty-lock-screen-with-a-four-lines-of-bash-script/
@@ -1561,13 +1561,13 @@ $ sudo pacman -S imagemagick
 
 finally.. open `Settings Editor` from application menu, sellect `xfce-session` from channel & in the `LockCommand` string value.. enter `/home/k247/bin/klock`.. now.. [Ctrl] + [Alt] + [L] will lock xfce-Desktop session as Keyboard Application Shortcuts for `xflock4` is already set.. ;-]...
 
-### [Lock out user after three failed login attempts](#lockouituser)
+### [Lock out user after three failed login attempts](#lock-out-user-after-three-failed-login-attempts)
 
 ref: https://wiki.archlinux.org/title/security#Lock_out_user_after_three_failed_login_attempts
 
 > As of pambase 20200721.1-2, `pam_faillock.so` is enabled by default to lock out users for 10 minutes after 3 failed login attempts in a 15 minute period (see FS#67644). The lockout only applies to password authentication (e.g. login and sudo), public key authentication over SSH is still accepted. To prevent complete denial-of-service, this lockout is disabled for the root user.
 
-#### [To unlock a user,](#unlockuser) from a SSH login session..
+#### [To unlock a user,](#to-unlock-a-user-from-a-ssh-login-session) from a SSH login session..
 
 ```console
 $ faillock --reset --user username
@@ -1587,7 +1587,7 @@ $ faillock --reset --user username
 
 <br>
 
-## [logs - Hunting Errors](#logs)
+## [logs - Hunting Errors](#logs---hunting-errors)
 
 ref: https://wiki.archlinux.org/title/Systemd/Journal
 
@@ -1600,12 +1600,12 @@ shows messages from the current boot, using [`lnav`](https://lnav.org).
 ## [htop in action..]() ;-]...
 <p align="center"><img src="images/htop.png" alt="klock xfce session lock" width="800" /></p>
 
-## [Kernel module](#kernelmod)
+## [Kernel module](#kernel-module)
 
 ref: https://wiki.archlinux.org/title/Kernel_module
 
 
-## [General recommendations](#genrec)
+## [General recommendations](#general-recommendations)
 
 ref: https://wiki.archlinux.org/title/General_recommendations
 
