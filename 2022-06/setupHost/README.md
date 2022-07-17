@@ -1,4 +1,4 @@
-- ### [Setup Host](../setupHost/README.md)
+- ### [Setup Host](../setupHost/)
 
     - ### [Hyper-V Settings..](#hyper-v-setting)<br><br><p align="left"><img src="images/Hyper-VManager.PNG" alt="Hyper-V Manager Settings.." width="600" /></p>
 
