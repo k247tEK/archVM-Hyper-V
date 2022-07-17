@@ -14,7 +14,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 - ### [Setup Host](setupHost/)
 
-    - ### [Hyper-V Settings..](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#hyper-v-settings)
+    - ### [Hyper-V Settings..](#hyper-v-setting)
 
         - #### [Disabling Server NUMA Spanning](https://github.com/k247tEK/arch22-06VM-Hyper-V/tree/master/setupHost#disabling-server-numa-spanning)
 
