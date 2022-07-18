@@ -64,7 +64,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 <p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
 
-Arch linux 2022-06 now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
+### [Arch linux](https://archlinux.org) now includes [archinstall](https://wiki.archlinux.org/title/Archinstall).<br>
 This guided installer will perform (query) the following steps:
 
 - configure the locale;
