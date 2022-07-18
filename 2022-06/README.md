@@ -910,7 +910,7 @@ https://help.ubuntu.com/community/Samba/SambaClientGuide<br><br>
 
 ## [Whisker Menu & xfce-Desktop Panel](#whisker-menu--xfce-desktop-panel)
 
-by default, arch linux 2022-06 does not use Whisker menu &<br> you will have to manually add it to the desktop panel.
+by default, Arch Linux does not use Whisker menu &<br> you will have to manually add it to the desktop panel.
 
 https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
