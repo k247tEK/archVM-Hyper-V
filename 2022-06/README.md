@@ -1648,7 +1648,13 @@ $ faillock --reset --user username
 ref: https://wiki.archlinux.org/title/Systemd/Journal
 
 ```console
-$ journalctl -b -0 | lnav
+$ journalctl -b -0 | lnav -q
+```
+
+or to follow logs..
+
+```console
+$ journalctl -n 1500 -f | lnav -q
 ```
 
 shows messages from the current boot, using [`lnav`](https://lnav.org).
