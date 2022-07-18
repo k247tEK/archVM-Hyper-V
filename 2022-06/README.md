@@ -918,11 +918,13 @@ https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin/start
 
 ###### https://www.pragmaticlinux.com/2021/03/install-and-configure-the-whisker-menu-as-your-xfce-start-menu/
 
-the above links, have everything you need to know about customizing the Whisker menu, including adding super / winkey, as shortcut key to open menu.. the only fix needed is to install `mugshot` package from the `AUR`..
+the above links, have everything you need to know about customizing the Whisker menu,<br>
+ including adding super / winkey, as shortcut key to open menu..<br>
+ the only fix needed is to install `mugshot` package from the `AUR`..
 
 ### [Mugshot / users & Groups in xfce-Desktop](#mugshot--users--groups-in-xfce-desktop)
 
- > is a lightweight user configuration utility for Linux designed for simplicity and ease of use. Quickly update your personal profile and sync your updates across applications.<br>
+ > is a lightweight user configuration utility for Linux designed for simplicity and ease of use.<br>Quickly update your personal profile and sync your updates across applications.<br>
  https://github.com/bluesabre/mugshot
 
 ```console
