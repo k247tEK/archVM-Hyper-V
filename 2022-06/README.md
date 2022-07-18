@@ -1016,6 +1016,40 @@ $ sudo pacman -S archlinux-wallpaper
 xrdp-sesman.service org.xfce.ScreenSaver[467] WARNING Xlib:  extension "DPMS" missing on display ":10.0"
 ```
 
+check DPMS..
+
+```console
+$ xset -q
+```
+
+```
+Keyboard Control:
+  auto repeat:  off    key click percent:  0    LED mask:  00000002
+  XKB indicators:
+    00: Caps Lock:   off    01: Num Lock:    on     02: Scroll Lock: off
+    03: Shift Lock:  off    04: Group 2:     off    05: Mouse Keys:  off
+  auto repeat delay:  500    repeat rate:  20
+  auto repeating keys:  00feffffdffffbbf
+                        fadfffffffdfe5ef
+                        ffffffffffffffff
+                        ffffffffffffffff
+  bell percent:  50    bell pitch:  400    bell duration:  100
+Pointer Control:
+  acceleration:  2/1    threshold:  4
+Screen Saver:
+  prefer blanking:  no    allow exposures:  no
+  timeout:  0    cycle:  300
+Colors:
+  default colormap:  0x20    BlackPixel:  0x0    WhitePixel:  0xffffff
+Font Path:
+  built-ins
+DPMS (Energy Star):
+  Server does not have the DPMS Extension
+```
+
+_Note: DPMS Extension.. is not working in xrdp.. but its ok in Xorg..<br>
+might be a problem with xorgxrdp or xorgxrdp-nvidia.. tbc.._
+
 if it gets too annoying.. just remove it..
 
 ```console
