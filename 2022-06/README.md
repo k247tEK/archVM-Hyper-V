@@ -22,7 +22,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### [Setting User Enhanced Session Mode](setupHost#setting-user-enhanced-session-mode)
 
-    - ### [Virtual Switch Manager..](setupHost#)
+    - ### [Virtual Switch Manager..](setupHost#virtual-switch-manager)
 
         - #### [Creating the Internal / External Network Switch](setupHost#creating-the-internal--external-network-switch)
 
