@@ -928,7 +928,7 @@ the above links, have everything you need to know about customizing the Whisker 
  https://github.com/bluesabre/mugshot
 
 ```console
-$ yay -S mugshot
+$ yay -S mugshot menulibre
 ```
 
 _Note: the user icon image file is `~/.face`_
