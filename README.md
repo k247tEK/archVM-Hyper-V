@@ -2,7 +2,9 @@
 
 ## Arch Linux virtual machine on Windows10 Hyper-V <br>with Enhanced Session Mode
 
-[<p align="left"><img src="images/archVM-Hyper-V_k247tEK.png" alt="archVM-Hyper-V" width="800" /></p>](2022-06/README.md)
+<p align="center"><a href="https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06" target="_blank">
+ <img src="images/archVM-Hyper-V_k247tEK.png" alt="archinstall" width="800" height="auto" border="3" />
+</a></p>
 
 
 ### <p align="right ">[2022-07 - archlinux-2022.07.01-x86_64.iso](2022-06/)<br>[current install]</p>
