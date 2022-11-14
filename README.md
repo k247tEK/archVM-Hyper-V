@@ -6,8 +6,33 @@
  <img src="images/archVM-Hyper-V_k247tEK.png" alt="archinstall" width="800" height="auto" border="3" />
 </a></p>
 
+### <p align="right ">[2022-11 - archlinux-2022.11.01-x86_64.iso](2022-06/)<br>[current install]</p>
 
-### <p align="right ">[2022-07 - archlinux-2022.07.01-x86_64.iso](2022-06/)<br>[current install]</p>
+### 2022-11 - fix Xrdp starting again..
+
+```console
+$ sudo systemctl enable xrdp 
+$ sudo systemctl enable xrdp-sesman
+$ sudo pacman -S openssl-1.1
+$ yay -S paru
+$ sudo xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
+$ sudo reboot
+```
+
+---
+
+#### <p align="right ">[2022-10 - archlinux-2022.10.01-x86_64.iso](2022-06/)<br>[previous install]</p>
+
+### 2022-10 - remove python2 & ceph..
+
+```console
+$ sudo pacman -Rcns python2 
+$ yay -Rns ceph
+```
+
+---
+
+#### <p align="right ">[2022-07 - archlinux-2022.07.01-x86_64.iso](2022-06/)<br>[previous install]</p>
 
 ### 2022-07 - pulseAudio in Xrdp working again..
 
