@@ -452,6 +452,8 @@ https://github.com/neutrinolabs/xorgxrdp
 $ yay -S xorgxrdp
 ```
 
+_Note: Add `allowed_users=anybody` to `/etc/X11/Xwrapper.config` to allow anybody to start an X server..._
+
 ### [Install, `pulseaudio-module-xrdp`](#install-pulseaudio-module-xrdp)
 
 > xrdp implements Audio Output redirection using PulseAudio, which is a sound system used on POSIX operating systems.
