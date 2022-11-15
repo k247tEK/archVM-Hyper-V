@@ -1692,9 +1692,33 @@ $ journalctl -n 1500 -f | lnav -q
 
 shows messages from the current boot, using [`lnav`](https://lnav.org).
 
+<br>
+
+## [neofetch & duf - System info..](#neofetchduf)
+
+<p align="center"><img src="images/neofetch_duf.png" alt="klock xfce session lock" width="800" /></p>
+
+<br>
+
 ## [htop in action..](#htop-in-action) ;-]...
 
 <p align="center"><img src="images/htop.png" alt="klock xfce session lock" width="800" /></p>
+
+<br>
+
+## [Stacer - Linux System Optimizer & Monitoring..](#stacer)
+
+ref: https://oguzhaninan.github.io/Stacer-Web
+
+<p align="center"><img src="images/stacer.png" alt="Stacer - Linux System Optimizer & Monitoring" width="800" /></p>
+
+to install `stacer` from `AUR`..
+
+```console
+$ yay -S stacer
+```
+
+<br>
 
 ## [Kernel module](#kernel-module)
 
