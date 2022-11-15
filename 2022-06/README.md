@@ -181,7 +181,7 @@ $ ssh k247@192.168.0.100
 
 <p align="center"><img src="images/archinstall_xfce_ssh.PNG" alt="archinstall xfce-Desktop ssh session" width="600" /></p>
 
-#### Note: archinstall - optional user packages.. firefox htop lsof strace iftop net-tools lnav tmux neofetch mc
+#### Note: archinstall - optional user packages.. firefox htop lsof strace iftop net-tools lnav tmux neofetch duf mc
 
 Check EFI setup..
 
