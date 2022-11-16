@@ -486,6 +486,8 @@ to generate rsakeys keys for xrdp..
 
 ```console
 $ sudo xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
+or
+$ sudo xrdp-keygen xrdp auto 2048
 ```
 
 ### [Install, `pulseaudio-module-xrdp`](#install-pulseaudio-module-xrdp)
