@@ -410,6 +410,16 @@ $ yay -Syu
 $
 </code></pre>
 
+update.. 2022-11 - archlinux-2022.11.01-x86_64.iso, to fix xrdp startup.. `openssl-1.1` & `paru` had to be installed..
+
+> Paru - Feature packed AUR helper<br>
+is your standard pacman wrapping AUR helper with lots of features and minimal interaction.<br>https://github.com/Morganamilo/paru
+
+```console
+$ sudo pacman -S openssl-1.1
+$ yay -S paru
+```
+
 now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
 ### [setup new SSH Keys](#setup-new-ssh-keys)
@@ -463,6 +473,20 @@ $ yay -S xorgxrdp
 ```
 
 _Note: Add `allowed_users=anybody` to `/etc/X11/Xwrapper.config` to allow anybody to start an X server..._
+
+ensure xrdp & xrdp-sesman services are enabled..
+
+```console
+$ sudo systemctl enable xrdp
+$ sudo systemctl enable xrdp-sesman
+```
+
+& check for `/etc/xrdp/rsakeys.ini`, which is required for xrdp daemon..<br>
+to generate rsakeys keys for xrdp..
+
+```console
+$ sudo xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
+```
 
 ### [Install, `pulseaudio-module-xrdp`](#install-pulseaudio-module-xrdp)
 
