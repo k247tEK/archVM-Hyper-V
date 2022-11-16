@@ -52,7 +52,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
     - #### [Setting Automatic Stop Action to Power Off](setupClient#setting-automatic-stop-action-to-power-off)
 
-#### <p align="center"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
+#### <p align="left"> _Note: check all settings before powering on virtual machine and connecting to it.._</p>
 
 ### Host
 
