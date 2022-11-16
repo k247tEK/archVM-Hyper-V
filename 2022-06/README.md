@@ -534,7 +534,7 @@ Start & Connect to virtual machine..
 <p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
  <img src="images/enhSessionMode_ytb_logo.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
 
-_note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually, with `pulseaudio --start` command.._
+_note: clipboard and file sharing will work, but sound server will fail to start on xrdp and will have to be started manually,<br>with `pulseaudio --start` command.._
 
 ### [pulseAudio Sound Server](#pulseaudio-sound-server)
 
