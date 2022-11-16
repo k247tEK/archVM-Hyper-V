@@ -152,7 +152,7 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
  <img src="images/archinstall_ytb_wlogo.png" alt="archinstall" width="600" height="auto" border="3" />
 </a></p>
 
-Note: after archinstall - chroot into installed system & copy `/insCONF` to root home folder.
+Note: after archinstall - chroot into installed system & copy `/insCONFIG` to root home folder.
 
 ```console
 # cp -r /insCONFIG /mnt/archinstall/root/
