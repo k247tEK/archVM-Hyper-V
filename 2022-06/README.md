@@ -504,7 +504,7 @@ comment out the last five lines, from twm.. to the, exec.. & add..at EOF..
 exec startxfce4
 ```
 
-to start xfce4-Desktop without `dbus_lanuch`, <b>`dbus-x11`</b> has to be installed & <b>`dbus`</b> removed..
+to start xfce4-Desktop without `dbus-lanuch`, <b>`dbus-x11`</b> has to be installed & <b>`dbus`</b> removed..
 
 ```console
 $ yay -S dbus-x11
