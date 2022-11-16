@@ -70,7 +70,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 ---
 
-## <p align="center">[First Boot of virtual machine & installing OS](#firstboot)</p>
+## <p align="left">[First Boot of virtual machine & installing OS](#firstboot)</p>
 
 <p align="center"><img src="images/virtManINST_1stBoot.PNG" alt="archinstall first boot installation image" width="480" /></p>
 
@@ -529,7 +529,7 @@ Set-VM -VMName Arch -EnhancedSessionTransportType HvSocket
 
 Start & Connect to virtual machine..
 
-## <p align="center">[Start virtual machine & Enable Enhanced Session Mode](#)</p>
+## <p align="left">[Start virtual machine & Enable Enhanced Session Mode](#)</p>
 
 <p align="center"><a href="https://youtu.be/8R3ZZj5bMX4" target="_blank">
  <img src="images/enhSessionMode_ytb_logo.png" alt="required services for hyper-V enchaned session mode" width="600" height="auto" border="3" /></a></p>
