@@ -1700,7 +1700,7 @@ or to follow logs..
 $ journalctl -n 1500 -f | lnav -q
 ```
 
-shows messages from the current boot, using [`lnav`](https://lnav.org).
+shows messages from the current boot, using [`lnav`](https://lnav.org). The Logfile Navigator<br>An advanced log file viewer for the small-scale
 
 <br>
 
