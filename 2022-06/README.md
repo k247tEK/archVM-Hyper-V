@@ -150,13 +150,13 @@ guide](https://wiki.archlinux.org/index.php/Installation_guide)._<br>
 </p>
 -->
 
-use the guided installer to setup system.. X11, XFCE, pulseAudio with systemd-bootctl or GRUB boot loader..
+use the guided installer to setup VM.. X11, XFCE, pulseAudio with systemd-bootctl or GRUB boot loader..
 
 <p align="center"><a href="https://youtu.be/KA16fFaSFv4" target="_blank">
  <img src="images/archinstall_ytb_wlogo.png" alt="archinstall" width="600" height="auto" border="3" />
 </a></p>
 
-Note: after archinstall - chroot into installed system to check, then exit & copy `/insCONFIG` to root home folder.
+Note: after archinstall - chroot into installed VM to check, then exit & copy `/insCONFIG` to root home folder.
 
 ```console
 # cp -r /insCONFIG /mnt/archinstall/root/
