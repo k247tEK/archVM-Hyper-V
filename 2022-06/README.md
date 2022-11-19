@@ -26,7 +26,7 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
         - #### [Creating the Internal / External Network Switch](setupHost#creating-the-internal--external-network-switch)
           
-      ### [Configuring the hypervisor scheduler type](setupHost#Configuring-the-hypervisor-scheduler-type)<br><br>
+    - ### [Configuring the hypervisor scheduler type](setupHost#Configuring-the-hypervisor-scheduler-type)<br><br>
 
 - ### [Setup Client](setupClient#)
 
