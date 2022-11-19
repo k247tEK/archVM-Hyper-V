@@ -60,8 +60,8 @@ _Note: ssh client is only required if you wish to install guest OS using ssh ses
 
 - #### [s/w](https://www.microsoft.com/en-gb/windows/compare-windows-10-home-vs-pro)
 
-            Windows 10 Pro 22H2 OS Build 19045.2251
-            Windows Feature Experience Pack 120.2212.4180.0
+            Windows 10 Pro 22H2 OS Build 19045.2311
+            Windows Feature Experience Pack 120.2212.4190.0
             WSL2 / Hypervisor Platform & Hyper-V enabled
 - #### [h/w](https://support.lenovo.com/gb/en/solutions/pd022767-overview-lenovo-g560)<br>
 
