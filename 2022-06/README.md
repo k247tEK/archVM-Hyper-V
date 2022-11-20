@@ -757,6 +757,28 @@ not sure if this is needed, but found related `dbus` error in logs..<br><br>
 $ sudo pacman -S caja caja-open-terminal caja-sendto caja-xattr-tags
 ```
 
+To manually create a desktop shortcut, create a .desktop file, and place it in either `/usr/share/applications` or `~/.local/share/applications`.
+
+```console
+$ mkdir -p ~/.local/share/applications/
+$ nano .local/share/applications/Caja.desktop
+```
+
+```console
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Caja
+Comment=Browse the file system with the file manager
+Categories=System;Utility;Core;GTK;FileTools;FileManager;
+Exec=/usr/bin/caja --no-desktop --browser %U
+Icon=org.xfce.filemanager
+Path=
+Terminal=false
+StartupNotify=false
+```
+more info.. https://wiki.archlinux.org/title/desktop_entries
+
 ### [thunar Root File Manager](#thunar-root-file-manager)
 
 <p align="left"><img src="images/thunarRoot.png" alt="thunar Root" width="600" /></p>
@@ -1354,7 +1376,7 @@ drwxr-xr-x  2 root root 4.0K Jun 21 06:35 Videos/
 # exit
 </code></pre>
 
-_Note: `.insCONFIG` folder contains the saved installation files used by archinstall.._<br><br>
+_Note: `insCONFIG/` folder contains the saved installation files used by archinstall.._<br><br>
 
 ## [Tmux Plugin Manager & Tmux Resurrect](#tmux-plugin-manager--tmux-resurrect)
 
