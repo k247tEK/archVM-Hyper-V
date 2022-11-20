@@ -393,7 +393,7 @@ $ cd yay
 $ makepkg -si
 ```
 
-### [Update yay..](#update-yay)
+### [Update `AUR` packages - yay..](#update-yay)
 
 ```console
 $ yay -Syu
@@ -414,6 +414,8 @@ $ yay -Syu
 $
 </code></pre>
 
+## [Paru..](#paru)
+
 update.. 2022-11 - archlinux-2022.11.01-x86_64.iso, to fix xrdp startup.. `openssl-1.1` & `paru` had to be installed..
 
 > Paru - Feature packed AUR helper<br>
@@ -423,6 +425,30 @@ is your standard pacman wrapping AUR helper with lots of features and minimal in
 $ sudo pacman -S openssl-1.1
 $ yay -S paru
 ```
+
+### [### caution of use of `AUR helpers` - yay & paru ###](#caution-of-use-yay)
+
+it is advised that.. 
+
+> Using `makepkg` directly is better then using more minimal AUR helpers,<br>
+ref: https://wiki.archlinux.org/title/makepkg
+
+> ..because you shouldn't trust AUR as there are no safeguards against malicious or (more likely) incompetent PKGBUILDs.
+
+make sure to install `git` , `base-devel` & optional `arch-repro-status`..<br>
+Download `package` using `git`.. & then make package..
+
+```console
+$ cd Downloads
+$ git clone https://aur.archlinux.org/package.git
+$ cd package
+$ makepkg -si
+```
+
+replace `package` with the name of the package you want to bulid & install..<br>
+need to learn more about `makepkg`, `PKGBUILDs` & applying patches.. tbc..
+
+<br>
 
 now, getting ready to enable Enhanced Session Mode.. but first.. check ssh client is working by connecting & disconnecting to host or other server on LAN.. then check home folder for `.ssh`
 
