@@ -426,7 +426,7 @@ $ sudo pacman -S openssl-1.1
 $ yay -S paru
 ```
 
-### [### caution of use of `AUR helpers` - yay & paru ###](#caution-of-use-yay)
+### [### caution of use of `AUR helpers` - `yay` & `paru` ###](#caution-of-use-yay)
 
 it is advised that.. 
 
