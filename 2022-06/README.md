@@ -761,7 +761,7 @@ To manually create a desktop shortcut, create a .desktop file, and place it in e
 
 ```console
 $ mkdir -p ~/.local/share/applications/
-$ nano .local/share/applications/Caja.desktop
+$ nano ~/.local/share/applications/Caja.desktop
 ```
 
 ```console
