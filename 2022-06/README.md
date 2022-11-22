@@ -1621,14 +1621,14 @@ canberra-gtk-module:canberra-gtk-module
 
 > In the Settings Editor set "xsettings/Net/SoundThemeName" to a sound theme located in `/usr/share/sounds/`;
 
-_note: [sound-theme-freedesktop](https://archlinux.org/packages/?name=sound-theme-freedesktop) provides a compatible sound theme, but it lacks many required events.<br>
-A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) from AUR (SoundThemeName should be "Smooth")._<br>
-
 ```console
 $ yay -S sound-theme-smooth
 ```
 
 <p align="left"><img src="images/xSettingsNetSoundTheme.png" alt="tmux session" width="480" /></p>
+
+_note: [sound-theme-freedesktop](https://archlinux.org/packages/?name=sound-theme-freedesktop) provides a compatible sound theme, but it lacks many required events.<br>
+A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) from AUR (SoundThemeName should be "Smooth")._<br>
 
 <br>
 
