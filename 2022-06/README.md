@@ -1451,7 +1451,7 @@ $ yay -S pamac-aur
 
 _Note: pamac-all from `AUR`, failed to build on arch.. its always safer to use ssh session or tty console for Major Updates.._
 
-#### [List of installed packages](#list-of-installed-packages)
+### [List of installed packages](#list-of-installed-packages)
 
 > Maintain a list of all installed packages so that if a complete re-installation is inevitable, it is easier to re-create the original environment.<br>
 https://wiki.archlinux.org/title/Pacman_tips#List_of_installed_packages
@@ -1587,9 +1587,32 @@ LC_ALL is the only LC_* variable which cannot be set in locale.conf files: it is
 $ env LC_ALL=en_US.UTF-8 sol
 ```
 
-works, so you will have to edit the application menu.. `aisleriot`
+works, so you will have to edit the application menu.. `aisleriot`,
 
 <p align="center"><img src="images/sol_LC_ALL.PNG" alt="tmux session" width="600" /></p>
+the last thing to do is enable sound..
+
+## [Sound themes](#Sound-themes)
+
+ref: https://wiki.archlinux.org/title/Xfce#Sound
+
+> XFCE4 supports [freedesktop system sounds](https://www.freedesktop.org/wiki/Specifications/sound-theme-spec/), but it is not configured out of the box.<br>
+
+To enable a sound theme:
+
+Install `libcanberra` for PulseAudio support;
+
+```console
+$ sudo pacman -S libcanberra
+```
+
+> "canberra-gtk-module" should be in the GTK_MODULES environment variable (re-login may be required).
+
+> Check "Enable event sounds" in Settings Manager → Appearance → Settings tab;
+
+> In the Settings Editor set "xsettings/Net/SoundThemeName" to a sound theme located in `/usr/share/sounds/`;
+
+_note: [sound-theme-freedesktop](https://archlinux.org/packages/?name=sound-theme-freedesktop) provides a compatible sound theme, but it lacks many required events. A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) from AUR (SoundThemeName should be "Smooth")._<br>
 
 <br>
 
