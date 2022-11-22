@@ -1614,6 +1614,10 @@ $ sudo pacman -S libcanberra
 
 _note: [sound-theme-freedesktop](https://archlinux.org/packages/?name=sound-theme-freedesktop) provides a compatible sound theme, but it lacks many required events. A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) from AUR (SoundThemeName should be "Smooth")._<br>
 
+```console
+$ yay -S sound-theme-smooth
+```
+
 <br>
 
 ## [setup i3 with xfce-Desktop](#setup-i3-with-xfce-desktop)
