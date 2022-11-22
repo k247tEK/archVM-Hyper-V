@@ -1617,7 +1617,7 @@ canberra-gtk-module:canberra-gtk-module
 
 > Check "Enable event sounds" in Settings Manager → Appearance → Settings tab;
 
-<p align="center"><img src="images/AppearanceSettings.png" alt="tmux session" width="480" /></p>
+<p align="left"><img src="images/AppearanceSettings.png" alt="tmux session" width="480" /></p>
 
 > In the Settings Editor set "xsettings/Net/SoundThemeName" to a sound theme located in `/usr/share/sounds/`;
 
@@ -1627,7 +1627,7 @@ _note: [sound-theme-freedesktop](https://archlinux.org/packages/?name=sound-them
 $ yay -S sound-theme-smooth
 ```
 
-<p align="center"><img src="images/xSettingsNetSoundTheme.png" alt="tmux session" width="480" /></p>
+<p align="left"><img src="images/xSettingsNetSoundTheme.png" alt="tmux session" width="480" /></p>
 
 <br>
 
