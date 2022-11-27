@@ -177,7 +177,7 @@ set a static IPv4 address `192.168.0.100` for the VM with a Default Route `192.1
 
 <p align="center"><img src="images/fixIP02.png" alt="fixStaticIP-info" width="420" /></p>
 
-<p align="left"><img src="images/fixIP04.png" alt="fixStaticIP-eth0" width="240" /> <img src="images/fixIP01.png" alt="fixStaticIP-IPv4" width="240" /> <img src="images/fixIP03.png" alt="fixStaticIP-IPv6" width="240" /></p>
+<p align="center"><img src="images/fixIP04.png" alt="fixStaticIP-eth0" width="240" /> <img src="images/fixIP01.png" alt="fixStaticIP-IPv4" width="240" /> <img src="images/fixIP03.png" alt="fixStaticIP-IPv6" width="240" /></p>
 
 _note: IPv6 has been disabled.._
 
