@@ -173,6 +173,15 @@ before restarting VM, remove ISO image file from DvD.. in Virtual Machines Setti
 <br>
 
 ## [post Installation configuration](#post-installation-configuration)
+set a static IPv4 address `192.168.0.100` for the VM with a Default Route `192.168.0.1` & DNS servers `8.8.8.8,8.8.4.4`..<br>
+
+<p align="center"><img src="images/fixIP02.png" alt="fixStaticIP-info" width="420" /></p>
+
+<p align="left"><img src="images/fixIP04.png" alt="fixStaticIP-eth0" width="240" /> <img src="images/fixIP01.png" alt="fixStaticIP-IPv4" width="240" /> <img src="images/fixIP03.png" alt="fixStaticIP-IPv6" width="240" /></p>
+
+_note: IPv6 has been disabled.._
+
+<br>
 
 archinstall - has setup user k247 with sudo administrator authority & has disabled root account..<br>
 Also sshd service has to be re-enabled & started:
@@ -366,10 +375,11 @@ drwxr-xr-x  2 k247 k247 4.0K Jul 14 21:35 Videos/
 $
 </code></pre>
 
-now that user folders are setup, change to Downloads folder and setup yay..
+now that user folders are setup, create and change to `AUR` folder in Downloads to setup yay..
 
 ```console
-$ cd Downloads
+$ mkdir -p ~/Downloads/AUR
+$ cd ~/Downloads/AUR
 ```
 
 > Yaourt is Dead! Use These Alternatives for AUR in Arch Linux<br>
@@ -439,7 +449,7 @@ make sure to install `git` , `base-devel` & optional `arch-repro-status`..<br>
 Download `package` using `git`.. & then make package..
 
 ```console
-$ cd Downloads
+$ cd ~/Downloads/AUR
 $ git clone https://aur.archlinux.org/package.git
 $ cd package
 $ makepkg -si
@@ -1234,7 +1244,7 @@ $ sudo pacman -S archey3 fortune-mod cmatrix --needed
 
 ### [Microsoft fonts](#microsoft-fonts)
 
-https://wiki.archlinux.org/title/Microsoft_fonts
+ref: https://wiki.archlinux.org/title/Microsoft_fonts
 
 ```console
 $ yay -S ttf-ms-fonts
@@ -1242,12 +1252,12 @@ $ yay -S ttf-ms-fonts
 
 ### [GTK and Qt themes](#gtk-and-qt-themes)
 
-https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
+ref: https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications<br>
 also see.. [XFCE Customization](https://www.youtube.com/watch?v=29ARF14InaU)
 
 ### [Multimedia apps](#multimedia-apps)
 
-https://wiki.archlinux.org/title/List_of_applications/Multimedia
+ref: https://wiki.archlinux.org/title/List_of_applications/Multimedia
 
 ```console
 $ sudo pacman -S vlc gst-libav
@@ -1257,7 +1267,7 @@ _Note: snap vlc.. does not play nice with xrdp.._
 
 ### [Web browsers](#web-browsers)
 
-https://wiki.archlinux.org/title/List_of_applications#Web_browsers
+ref: https://wiki.archlinux.org/title/List_of_applications#Web_browsers
 
 ```console
 $ sudo pacman -S opera
@@ -1550,7 +1560,7 @@ $ sudo  paccache -r
 
 ### [System backup](#system-backup)
 
-https://wiki.archlinux.org/title/System_backup<br>
+ref: https://wiki.archlinux.org/title/System_backup<br>
 
 Using `rsync` See rsync#As a backup utility.<br>
 https://wiki.archlinux.org/title/Rsync#As_a_backup_utility
