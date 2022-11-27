@@ -902,8 +902,10 @@ $ sudo nano /etc/samba/smb.conf
 
 # workgroup = NT-Domain-Name or Workgroup-Name, eg: MIDEARTH
    workgroup = WORKGROUP
-   # client min protocol = NT1    ### use for legacy devices
-   # ntlm auth = yes              ### Enable access for old clients/devices
+   # client min protocol = NT1
+   ### use for legacy devices
+   # ntlm auth = yes
+   ### Enable access for old clients/devices
    client min protocol = SMB2
    server min protocol = SMB2
 ;  server max protocol = SMB3
