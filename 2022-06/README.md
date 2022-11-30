@@ -1041,7 +1041,7 @@ to configure users and Groups in xfce-Desktop, install `gnome-system-tools` from
 $ yay -S gnome-system-tools
 ```
 
-update.. 2022-10 - `archlinux-2022.10.01-x86_64.iso`, removes `python2`.. breaking `gnome-system-tools` & `system-config-users`..<br>until one of these packages gets rebuild with `python3`.. ref: https://wiki.archlinux.org/title/users_and_groups
+update.. 2022-10 - `archlinux-2022.10.01-x86_64.iso`, removes Python2.. breaking `gnome-system-tools` & `system-config-users`..<br>until one of these packages gets rebuild with Python3.. ref: https://wiki.archlinux.org/title/users_and_groups
 
 <p align="left"><img src="images/usersGroups.PNG" alt="usersGroups" width="600" /></p>
 
