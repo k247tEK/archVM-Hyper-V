@@ -1041,11 +1041,13 @@ to configure users and Groups in xfce-Desktop, install `gnome-system-tools` from
 $ yay -S gnome-system-tools
 ```
 
+update.. 2022-10 - `archlinux-2022.10.01-x86_64.iso`, removes `python2`.. breaking `gnome-system-tools` & `system-config-users`.. until one of these packages gets rebuild with `python3`.. <br>ref: https://wiki.archlinux.org/title/users_and_groups
+
 <p align="left"><img src="images/usersGroups.PNG" alt="usersGroups" width="600" /></p>
 
-`Users & Groups` can now be found in application menu & `Settings`..<br>
+~~`Users & Groups` can now be found in application menu & `Settings`..<br>
 other applications from gnome-system-tools, `Network` and <b>[`Shared Folders`](sharedFolders)</b><br>
-are not currently working and can be hidden from application menu.
+are not currently working and can be hidden from application menu.~~
 
 #### [Hide Applications from menu in xfce-Desktop](#hide-applications-from-menu-in-xfce-desktop)
 
