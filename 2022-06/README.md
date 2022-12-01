@@ -1243,8 +1243,33 @@ well.. for now.. this works for notes 1.9.0.
 ref: https://wiki.archlinux.org/title/Category:Eye_candy
 
 ```console
-$ sudo pacman -S archey3 fortune-mod cmatrix --needed
+$ sudo pacman -S archey3 fortune-mod cmatrix figlet hollywood aalib --needed
 ```
+
+<p align="left"><img src="images/eyeCandy.png" alt="Eye Candy="600" /></p>
+
+note.. for `aafire`.. install xorg-fonts..
+
+```console
+$ sudo pacman -S --needed xorg-font-util xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-alias xorg-fonts-encodings xorg-fonts-misc xorg-fonts-type1 xorg-fonts-cyrillic xorg-fonts-type1
+$ sudo pacman -S --needed xorg-mkfontscale
+```
+
+although font files are in `/usr/share/fonts/`.. old programs like aafire.. require you to run `mkfontdir` & `mkfontscale` as root..
+
+```console
+$ cd /usr/share/fonts/
+$ sudo mkfontdir
+$ sudo mkfontscale
+```
+
+now you can use..
+
+```console
+$ aafire -driver curses
+```
+
+to see those toastie ascii flames.. ;-]..
 
 ### [Microsoft fonts](#microsoft-fonts)
 
