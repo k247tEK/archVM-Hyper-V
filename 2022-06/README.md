@@ -1264,7 +1264,7 @@ $ sudo mkfontdir
 $ sudo mkfontscale
 ```
 
-now you can use..
+& reboot VM.. now you can use..
 
 ```console
 $ aafire -driver curses
