@@ -1246,7 +1246,7 @@ ref: https://wiki.archlinux.org/title/Category:Eye_candy
 $ sudo pacman -S archey3 fortune-mod cmatrix figlet hollywood aalib --needed
 ```
 
-<p align="left"><img src="images/eyeCandy.png" alt="Eye Candy" width="600"/>
+<p align="left"><img src="images/eyeCandy.png" alt="Eye Candy" width="800"/>
 
 note.. for `aafire`.. install xorg-fonts..
 
