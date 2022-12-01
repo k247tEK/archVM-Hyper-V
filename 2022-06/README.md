@@ -1251,7 +1251,7 @@ $ sudo pacman -S archey3 fortune-mod cmatrix figlet hollywood aalib --needed
 note.. for `aafire`.. install xorg-fonts..
 
 ```console
-$ sudo pacman -S --needed xorg-font-util xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-alias<br>
+$ sudo pacman -S --needed xorg-font-util xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-alias
 $ sudo pacman -S --needed xorg-fonts-encodings xorg-fonts-misc xorg-fonts-cyrillic xorg-fonts-type1
 $ sudo pacman -S --needed xorg-mkfontscale
 ```
