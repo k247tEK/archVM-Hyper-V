@@ -20,7 +20,7 @@ Chris Titus Tech [How to Setup Hyper V on Windows](https://www.youtube.com/watch
 
 https://github.com/kourbou/how-to-hyperv-arch
 
-[Enabling Enhanced Session Mode for Arch Linux Guests in Hyper-V](https://blog.emptyq.net/a?id=00004-12392ad1-93e2-4f39-bf0b-fbc00200575e)
+[Enabling Enhanced Session Mode for Arch Linux Guests in Hyper-V](#)
 
 ###### <p align="right">[Acknowledgments & Thanks](Acknowledgments.md) | [License](LICENSE.txt) | [<img src="images/Arch-linux-logo.png" alt="klock xfce session lock" width="40" />](https://github.com/k247tEK/archVM-Hyper-V/tree/master/2022-06)</p>
 
