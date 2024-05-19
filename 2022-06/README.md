@@ -497,7 +497,7 @@ Get-VMIntegrationService -VMName "Arch"
 ### [Install, `xrdp`](#install-xrdp)
 
 > provides a graphical login to remote machines using RDP (Microsoft Remote Desktop Protocol).
-https://www.xrdp.org
+https://ww.xrdp.org
 
 ```console
 $ yay -S xrdp
