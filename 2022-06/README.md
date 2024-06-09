@@ -1602,7 +1602,7 @@ $ sudo pacman -S rsync p7zip zip unzip
 ### [ooh.. install the F..ing manual..](#ooh-install-the-fing-manual)
 
 ```console
-$ sudo pacman -S man-db
+$ sudo pacman -S man-db tldr
 ```
 
 <br>
